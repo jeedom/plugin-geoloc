@@ -1,1 +1,13 @@
-TODO
+Voici le plugin Geoloc il permet 3 trucs :
+
+- Attribuer des coordonnées fixes à une commande
+- Attribuer des coordonnées dynamiques à une commande (qui est mise à jour par l’appel d’une simple url)
+- Calculer la distance entre 2 commandes Geoloc (de type fixe ou dynamique)
+
+Comme pour tous les plugins en haut à gauche un signe “+” permet d’ajouter un équipement puis pour chaque équipement on peut ajouter autant de commande que l’on veut.
+
+Il peut servir couplé à tasker pour envoyer la position.
+
+Exemple d’URL à appeler avec tasker :
+
+#URL_JEEDOM#/core/api/jeeApi.php?api=#CLEF_API#&type=geoloc&id=#ID_CMD#&value=%LOCN
