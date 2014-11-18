@@ -6,20 +6,20 @@ image::../images/geoloc.JPG[]
 
 L'onglet « Général » permet de choisir le nom de l'équipement, l’objet parent ainsi que son état et sa visibilité. L’onglet « Commande » permet de rajouter les informations qui nous voulons obtenir. Une fois ajoutée, nous avons le choix entre trois types de commandes : fixe, dynamique et distance.
 
-image::../images/geoloc2.JPG[]
+image::../images/geoloc2.jpg[]
 
 ==== FIXE
 Représente un point ayant des coordonnées qui ne changent pas. Par exemple les coordonnées de votre habitation, de votre travail… Il vous suffit de noter les coordonnées sous la forme : Latitude,Longitude.
 
-image::../images/geoloc3.JPG[]
+image::../images/geoloc3.jpg[]
 
 Pour trouver les coordonnées de votre position fixe, allez simplement sur Google map : https://www.google.com/maps/preview . Si vous recherchez une adresse, alors les coordonnées seront dans l’adresse URL, par exemple pour le 25 rue de Mogador :
 
-image::../images/geoloc4.JPG[]
+image::../images/geoloc4.jpg[]
 
 Vous pouvez également faire un clique gauche sur la carte et les coordonnées apparaitront dans la petite carte en haut à gauche.
 
-image::../images/geoloc4.JPG[]
+image::../images/geoloc4.jpg[]
 
 ==== DYNAMIQUE
 Représente un point ayant des coordonnées variables, l’objet se déplace. Il s’agit en général de votre portable. Cette commande contiendra donc les dernières coordonnées envoyées jusqu’à ce que vous en envoyez des nouvelles. L’URL pour mettre à jour cette commande est :
@@ -30,15 +30,15 @@ Représente un point ayant des coordonnées variables, l’objet se déplace. Il
 
 api=#API_KEY# correspond à votre clé API, propre à votre installation. Pour la trouver vous pouvez soit aller dans le plugin Géoloc, elle est indiquée directement dans l’URL
 
-image::../images/geoloc5.JPG[]
+image::../images/geoloc5.jpg[]
 
 Soit dans le menu « Général », puis « Administration » et « Configuration », en activant le mode Expert vous verrez alors une ligne Clef API.
 
-image::../images/geoloc6.JPG[]
+image::../images/geoloc6.jpg[]
 
 <id=#ID_CMD# correspond à l’id de votre commande. Une fois que vous avez donné un nom à votre commande de Géolocalisation, déterminé son type et sauvegardé, un numéro apparait dans la case « ID » devant votre commande.
 
-image::../images/geoloc7.JPG[]
+image::../images/geoloc7.jpg[]
 
 %LOCN correspond à vos coordonnées sous la forme Latitude,Longitude.
 
@@ -47,77 +47,77 @@ Il vous faut donc réaliser un HTTP POST sur cette adresse en remplaçant %LOCN 
 ==== EXEMPLE SOUS ANDROID AVEC TASKER
 Attention : pour cet exemple, vous avez besoin de l’application Tasker pour Android (https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm). Dans l’onglet « Tâches », nous rajoutons une nouvelle tâche ici appelée « Jeedom ».
 
-image::../images/geoloc8.JPG[]
+image::../images/geoloc8.jpg[]
 
 Nous y ajoutons une première action, dans la catégorie « Divers » nous sélectionnons « Obtenir la localisation ».
 
-image::../images/geoloc9.JPG[]
-image::../images/geoloc10.JPG[]
+image::../images/geoloc9.jpg[]
+image::../images/geoloc10.jpg[]
 
 Nous allons utiliser n’importe quelles sources pour obtenir notre position et nous allons fixer un délai de 30sec afin que Tasker ai le temps d’obtenir précisément nos coordonnées.
 
-image::../images/geoloc11.JPG[]
-image::../images/geoloc12.JPG[]
+image::../images/geoloc11.jpg[]
+image::../images/geoloc12.jpg[]
 
 Un délai trop court pourrait ne pas permettre d’obtenir de coordonnées ou alors des coordonnées imprécises. Il en est de même du type de source. Nous ajoutons une deuxième action, dans la partie « Réseau » cette fois, nous sélectionnons « Post HTTP ».
 
-image::../images/geoloc13.JPG[]
-image::../images/geoloc14.JPG[]
+image::../images/geoloc13.jpg[]
+image::../images/geoloc14.jpg[]
  
 Dans la case « Serveur :Port » nous copions notre URL complétée sauf pour la partie %LOCN.
 
-image::../images/geoloc15.JPG[]
-image::../images/geoloc16.JPG[]
+image::../images/geoloc15.jpg[]
+image::../images/geoloc16.jpg[]
 
 Lorsque nous lançons notre tâche « Jeedom », une icône devrait vous informer de l’utilisation de votre GPS dans votre barre de notification.
 
-image::../images/geoloc17.JPG[]
+image::../images/geoloc17.jpg[]
 
 Une fois le délai écoulé, nous cliquons sur « tester » dans Jeedom et les coordonnées de notre portable apparaissent alors dans le popup. Tasker a automatiquement remplacé la variable %LOCN par vos coordonnées.
 
-image::../images/geoloc18.JPG[]
+image::../images/geoloc18.jpg[]
 
 Il vous suffit à présent de créer un scénario dans Tasker qui ira lancer cette tâche quand vous en avez besoin. Par exemple toutes les heures, quand vous vous connectez en wifi…
 
 ==== DISTANCE
 Permet de calculer la distance entre deux points. Il est donc nécessaire d’avoir déjà renseigné au moins deux commandes. Ici nous avons les coordonnées fixes de notre maison ainsi que les coordonnées mise à jour de notre portable. Nous pouvons donc calculer la distance entre les deux. Nous sélectionnons « Distance » en type et nos deux commandes précédentes dans les options. Une fois sauvegardé, nous utilisons le bouton tester et la distance apparait alors dans le popup. Ici 1.34km.
 
-image::../images/geoloc19.JPG[]
+image::../images/geoloc19.jpg[]
 
 Ce plugin fonctionne comme un module, c’est-à-dire qu’une fois sauvegardé nous pouvons le retrouver dans la liste des actions ou commandes, il est ainsi très simple de l’utiliser lors de la création de scénarios par exemple. Nous pouvons par exemple réaliser un scénario qui se base sur la distance entre notre portable et la maison par exemple.
 
 ==== EXEMPLE DE SCÉNARIO
 Dans la partie « Scénario », nous créons un scénario nommé « Géoloc TV » qui nous permet d’allumer la TV quand nous sommes à moins de 250m de notre maison. Attention : les systèmes de positionnement n’étant pas précis au mètre prêt, pensez à prendre une marge lors de la création de vos scénarios. Dans « Mode de scénario » nous choisissons « Provoqué » et en « Déclencheur » nous ajoutons notre portable. En effet, c’est lorsque les coordonnées de notre portable vont être mises à jour que nous allons déclencher le scénario.
 
-image::../images/geoloc20.JPG[]
+image::../images/geoloc20.jpg[]
 
 Nous ajoutons un élément « Si / Alors / Sinon » avec comme condition une distance inférieur à 250m et comme action la mise sous tension de la TV.
 
-image::../images/geoloc21.JPG[]
+image::../images/geoloc21.jpg[]
 
 Nous n’avons rien mis dans la partie « Sinon » ainsi il ne se passera rien si je suis à plus de 250m. Une fois sauvegardé nous pouvons regarder le log. Nous voyons ici que Jeedom a testé la distance entre le portable et la maison et comme celle-ci est supérieure à 250m alors il ne s’est rien passé.
 
-image::../images/geoloc22.JPG[]
+image::../images/geoloc22.jpg[]
 
 Pour notre test nous vérifions bien que la TV est hors tension, le widget nous affiche bien 0 watt de consommation.
 
-image::../images/geoloc23.JPG[]
+image::../images/geoloc23.jpg[]
 
 Nous nous rapprochons de notre maison et nous lançons la tâche sur Tasker. Nous pouvons voir en testant la distance que celle-ci est de 0.03km désormais. Nous sommes donc bien sous les 250m.
 
-image::../images/geoloc24.JPG[]
+image::../images/geoloc24.jpg[]
 
 La partie scénario nous informe que celui-ci a bien été lancé dernièrement.
 
-image::../images/geoloc25.JPG[]
+image::../images/geoloc25.jpg[]
 
 Un tour dans le log nous permet de voir que celui-ci a bien été lancé suite à la mise à jour des coordonnées du portable et que la distance était bien inférieure à 0.25km.
 
-image::../images/geoloc26.JPG[]
+image::../images/geoloc26.jpg[]
 
 Le plugin de la TV sur l’écran d’accueil montre bien que celle-ci est désormais alimentée.
 
-image::../images/geoloc27.JPG[]
+image::../images/geoloc27.jpg[]
 
 Voilà un exemple d’utilisation du plugin Géolocalisation.
 
