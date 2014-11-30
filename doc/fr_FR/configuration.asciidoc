@@ -2,11 +2,11 @@ Le plugin Géolocalisation permet à Jeedom de recevoir votre position et de pou
 
 Une fois installé et activé à partir du Market, on accède à la page du plugin Géolocalisation.
 
-image::../images/geoloc.JPG[]
+image::../images/geoloc_screenshot1.JPG[]
 
 L'onglet « Général » permet de choisir le nom de l'équipement, l’objet parent ainsi que son état et sa visibilité. L’onglet « Commande » permet de rajouter les informations qui nous voulons obtenir. Une fois ajoutée, nous avons le choix entre trois types de commandes : fixe, dynamique et distance.
 
-image::../images/geoloc2.jpg[]
+image::../images/geoloc_screenshot2.jpg[]
 
 ==== Fixe
 Représente un point ayant des coordonnées qui ne changent pas. Par exemple les coordonnées de votre habitation, de votre travail… Il vous suffit de noter les coordonnées sous la forme : Latitude,Longitude.
