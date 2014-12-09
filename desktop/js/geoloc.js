@@ -17,7 +17,7 @@
 
 optionCmdForDistance = null;
 
-$('#table_cmd tbody').delegate('.cmdAttr[data-l1key=configuration][data-l2key=mode]', 'change', function() {
+$('#table_cmd tbody').delegate('.cmdAttr[data-l1key=configuration][data-l2key=mode]', 'change', function () {
     var tr = $(this).closest('tr');
     tr.find('.modeOption').hide();
     tr.find('.modeOption' + '.' + $(this).value()).show();
@@ -32,11 +32,11 @@ function getCmdForDistance() {
             action: "cmdForDistance"
         },
         dataType: 'json',
-        error: function(request, status, error) {
+        error: function (request, status, error) {
             handleAjaxError(request, status, error);
         },
         async: false,
-        success: function(data) { // si l'appel a bien fonctionné
+        success: function (data) { // si l'appel a bien fonctionné
             if (data.state != 'ok') {
                 $('#div_alert').showAlert({message: data.result, level: 'danger'});
                 return;
@@ -100,6 +100,7 @@ function addCmdToTable(_cmd) {
     tr += '</td>';
     tr += '<td>';
     if (is_numeric(_cmd.id)) {
+        tr += '<a class="btn btn-default btn-xs cmdAction expertModeVisible" data-action="configure"><i class="fa fa-cogs"></i></a> ';
         tr += '<a class="btn btn-default btn-xs cmdAction" data-action="test"><i class="fa fa-rss"></i> {{Tester}}</a>';
     }
     tr += '<i class="fa fa-minus-circle pull-right cmdAction cursor" data-action="remove"></i></td>';
