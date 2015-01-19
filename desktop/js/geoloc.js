@@ -96,6 +96,7 @@ function addCmdToTable(_cmd) {
 
     tr += '</td>';
     tr += '<td>';
+    tr += '<span class="modeOption distance"><input type="checkbox" class="cmdAttr" data-l1key="isHistorized" /> {{Historiser}}<br/></span>';
     tr += '<span><input type="checkbox" class="cmdAttr" data-l1key="isVisible" checked/> {{Afficher}}<br/></span>';
     tr += '</td>';
     tr += '<td>';
