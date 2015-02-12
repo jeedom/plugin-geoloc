@@ -100,8 +100,8 @@ class geolocCmd extends cmd {
                 if (!is_object($to)) {
                     throw new Exception(__('Commande point d\'arrivé introuvable : ', __FILE__) . $this->getConfiguration('to'));
                 }
-                $to = explode('.',explode(',', $to->execCmd(null, 0)));
-                $from = explode('.',explode(',', $from->execCmd(null, 0)));
+                $to = explode(',', $to->execCmd(null, 0));
+                $from = explode(',', $from->execCmd(null, 0));
                 if (count($to) == 2 && count($from) == 2) {
                     return self::distance($from[0], $from[1], $to[0], $to[1]);
                 }
