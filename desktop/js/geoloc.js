@@ -21,6 +21,11 @@ $('#table_cmd tbody').delegate('.cmdAttr[data-l1key=configuration][data-l2key=mo
     var tr = $(this).closest('tr');
     tr.find('.modeOption').hide();
     tr.find('.modeOption' + '.' + $(this).value()).show();
+    if($(this).value() == 'distance'){
+        tr.find('.cmdAttr[data-l1key=subtype]').value('numeric');
+    }else{
+        tr.find('.cmdAttr[data-l1key=subtype]').value('string');
+    }
 });
 
 function getCmdForDistance() {
