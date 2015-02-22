@@ -26,5 +26,9 @@
         "Historiser": "Historiser",
         "Afficher": "Afficher",
         "Tester": "Tester"
+    },
+    "plugins\/geoloc\/plugin_info\/info.xml": {
+        "Plugin pour la géolocalisation": "Plugin pour la géolocalisation",
+        "Aucune": "Aucune"
     }
 }
