@@ -1,7 +1,7 @@
 == Geolocalisation
 
 === Description
-Plugin permetant de gérer des coordonées et le calcul de distance entre 2 points
+Plugin permettant de gérer des coordonnées et le calcul de distance entre 2 points
 
 '''
 === Configuration
