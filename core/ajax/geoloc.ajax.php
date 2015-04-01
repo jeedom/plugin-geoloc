@@ -17,32 +17,32 @@
  */
 
 try {
-    require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
-    include_file('core', 'authentification', 'php');
+	require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
+	include_file('core', 'authentification', 'php');
 
-    if (!isConnect('admin')) {
-        throw new Exception(__('401 - Accès non autorisé', __FILE__));
-    }
+	if (!isConnect('admin')) {
+		throw new Exception(__('401 - Accès non autorisé', __FILE__));
+	}
 
-    if (init('action') == 'cmdForDistance') {
-        $return = array();
-        foreach (geoloc::byType('geoloc') as $eqLogic) {
-            foreach ($eqLogic->getCmd() as $cmd) {
-                if ($cmd->getConfiguration('mode') != 'distance') {
-                    $infoCmd = array(
-                        'id' => $cmd->getId(),
-                        'human_name' => $cmd->getHumanName()
-                    );
-                    $return[] = $infoCmd;
-                }
-            }
-        }
-        ajax::success($return);
-    }
-    
-    throw new Exception(__('Aucune methode correspondante à : ', __FILE__) . init('action'));
-    /*     * *********Catch exeption*************** */
+	if (init('action') == 'cmdForDistance') {
+		$return = array();
+		foreach (geoloc::byType('geoloc') as $eqLogic) {
+			foreach ($eqLogic->getCmd() as $cmd) {
+				if ($cmd->getConfiguration('mode') != 'distance' && $cmd->getConfiguration('mode') != 'travelTime') {
+					$infoCmd = array(
+						'id' => $cmd->getId(),
+						'human_name' => $cmd->getHumanName(),
+					);
+					$return[] = $infoCmd;
+				}
+			}
+		}
+		ajax::success($return);
+	}
+
+	throw new Exception(__('Aucune methode correspondante à : ', __FILE__) . init('action'));
+	/*     * *********Catch exeption*************** */
 } catch (Exception $e) {
-    ajax::error(displayExeption($e), $e->getCode());
+	ajax::error(displayExeption($e), $e->getCode());
 }
 ?>
