@@ -1,6 +1,6 @@
 <?php
 if (!isConnect('admin')) {
-    throw new Exception('{{401 - Accès non autorisé}}');
+	throw new Exception('{{401 - Accès non autorisé}}');
 }
 sendVarToJS('eqType', 'geoloc');
 $eqLogics = eqLogic::byType('geoloc');
@@ -12,10 +12,10 @@ $eqLogics = eqLogic::byType('geoloc');
                 <a class="btn btn-default eqLogicAction" style="width : 100%;margin-top : 5px;margin-bottom: 5px;" data-action="add"><i class="fa fa-plus-circle"></i> {{Ajouter un équipement}}</a>
                 <li class="filter" style="margin-bottom: 5px;"><input class="filter form-control input-sm" placeholder="{{Rechercher}}" style="width: 100%"/></li>
                 <?php
-                foreach ($eqLogics as $eqLogic) {
-                    echo '<li class="cursor li_eqLogic" data-eqLogic_id="' . $eqLogic->getId() . '"><a>' . $eqLogic->getHumanName(true) . '</a></li>';
-                }
-                ?>
+foreach ($eqLogics as $eqLogic) {
+	echo '<li class="cursor li_eqLogic" data-eqLogic_id="' . $eqLogic->getId() . '"><a>' . $eqLogic->getHumanName(true) . '</a></li>';
+}
+?>
             </ul>
         </div>
     </div>
@@ -24,23 +24,23 @@ $eqLogics = eqLogic::byType('geoloc');
         <legend>{{Mes équipements de géolocalisation}}
         </legend>
         <?php
-        if (count($eqLogics) == 0) {
-            echo "<br/><br/><br/><center><span style='color:#767676;font-size:1.2em;font-weight: bold;'>{{Vous n'avez encore d'équipements de géolocalisation, cliquez à gauche sur le bouton ajouter un équipement pour commencer}}</span></center>";
-        } else {
-            ?>
+if (count($eqLogics) == 0) {
+	echo "<br/><br/><br/><center><span style='color:#767676;font-size:1.2em;font-weight: bold;'>{{Vous n'avez encore d'équipements de géolocalisation, cliquez à gauche sur le bouton ajouter un équipement pour commencer}}</span></center>";
+} else {
+	?>
             <div class="eqLogicThumbnailContainer">
                 <?php
-                foreach ($eqLogics as $eqLogic) {
-                    echo '<div class="eqLogicDisplayCard cursor" data-eqLogic_id="' . $eqLogic->getId() . '" style="background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >';
-                    echo "<center>";
-                    echo '<img src="plugins/geoloc/doc/images/geoloc_icon.png" height="105" width="95" />';
-                    echo "</center>";
-                    echo '<span style="font-size : 1.1em;position:relative; top : 15px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;"><center>' . $eqLogic->getHumanName(true, true) . '</center></span>';
-                    echo '</div>';
-                }
-                ?>
+foreach ($eqLogics as $eqLogic) {
+		echo '<div class="eqLogicDisplayCard cursor" data-eqLogic_id="' . $eqLogic->getId() . '" style="background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >';
+		echo "<center>";
+		echo '<img src="plugins/geoloc/doc/images/geoloc_icon.png" height="105" width="95" />';
+		echo "</center>";
+		echo '<span style="font-size : 1.1em;position:relative; top : 15px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;"><center>' . $eqLogic->getHumanName(true, true) . '</center></span>';
+		echo '</div>';
+	}
+	?>
             </div>
-        <?php } ?>
+        <?php }?>
     </div>
 
     <div class="col-lg-10 col-md-9 col-sm-8 eqLogic" style="border-left: solid 1px #EEE; padding-left: 25px;display: none;">
@@ -62,10 +62,10 @@ $eqLogics = eqLogic::byType('geoloc');
                                 <select id="sel_object" class="eqLogicAttr form-control" data-l1key="object_id">
                                     <option value="">{{Aucun}}</option>
                                     <?php
-                                    foreach (object::all() as $object) {
-                                        echo '<option value="' . $object->getId() . '">' . $object->getName() . '</option>';
-                                    }
-                                    ?>
+foreach (object::all() as $object) {
+	echo '<option value="' . $object->getId() . '">' . $object->getName() . '</option>';
+}
+?>
                                 </select>
                             </div>
                         </div>
@@ -79,7 +79,7 @@ $eqLogics = eqLogic::byType('geoloc');
                                 <input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>
                             </div>
                         </div>
-                    </fieldset> 
+                    </fieldset>
                 </form>
             </div>
             <div class="col-sm-6">
@@ -88,7 +88,7 @@ $eqLogics = eqLogic::byType('geoloc');
         </div>
 
         <legend>Commandes</legend>
-        <div class="alert alert-info">Exemple d’URL à appeler avec tasker : #URL_JEEDOM#/core/api/jeeApi.php?api=<?php echo config::byKey('api'); ?>&type=geoloc&id=#ID_CMD#&value=%LOCN</div>
+        <div class="alert alert-info">Exemple d’URL à appeler avec tasker : #URL_JEEDOM#/core/api/jeeApi.php?api=<?php echo config::byKey('api');?>&type=geoloc&id=#ID_CMD#&value=%LOCN</div>
         <a class="btn btn-success btn-sm cmdAction" data-action="add"><i class="fa fa-plus-circle"></i> {{Commandes}}</a><br/><br/>
         <table id="table_cmd" class="table table-bordered table-condensed">
             <thead>
@@ -98,7 +98,7 @@ $eqLogics = eqLogic::byType('geoloc');
                     <th style="width: 200px;">{{Type}}</th>
                     <th>{{Options}}</th>
                     <th style="width: 100px;">{{Paramètres}}</th>
-                    <th style="width: 100px;"></th>
+                    <th style="width: 150px;"></th>
                 </tr>
             </thead>
             <tbody>
@@ -118,5 +118,5 @@ $eqLogics = eqLogic::byType('geoloc');
     </div>
 </div>
 
-<?php include_file('desktop', 'geoloc', 'js', 'geoloc'); ?>
-<?php include_file('core', 'plugin.template', 'js'); ?>
+<?php include_file('desktop', 'geoloc', 'js', 'geoloc');?>
+<?php include_file('core', 'plugin.template', 'js');?>

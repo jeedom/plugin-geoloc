@@ -49,6 +49,42 @@ class geoloc extends eqLogic {
 class geolocCmd extends cmd {
 	/*     * *************************Attributs****************************** */
 
+/*     * ***********************Methode static*************************** */
+	function get_driving_information($start, $finish, $raw = false) {
+		if (strcmp($start, $finish) == 0) {
+			$time = 0;
+			if ($raw) {
+				$time .= ' seconds';
+			}
+			return array('distance' => 0, 'time' => $time);
+		}
+		$start = urlencode($start);
+		$finish = urlencode($finish);
+		$distance = __('Inconnue', __FILE__);
+		$time = __('Inconnue', __FILE__);
+		$url = 'http://maps.googleapis.com/maps/api/directions/xml?origin=' . $start . '&destination=' . $finish . '&sensor=false';
+		if ($data = file_get_contents($url)) {
+			$xml = new SimpleXMLElement($data);
+			if (isset($xml->route->leg->duration->value) AND (int) $xml->route->leg->duration->value > 0) {
+				if ($raw) {
+					$distance = (string) $xml->route->leg->distance->text;
+					$time = (string) $xml->route->leg->duration->text;
+				} else {
+					$distance = (int) $xml->route->leg->distance->value / 1000;
+					$distance = round($distance, 1);
+					$time = (int) $xml->route->leg->duration->value;
+					$time = floor(($time / 60) % 60);
+				}
+			} else {
+				throw new Exception(__('Impossible de trouver une route', __FILE__));
+			}
+			return array('distance' => $distance, 'time' => $time);
+		} else {
+			throw new Exception(__('Impossible de resoudre l\'url', __FILE__));
+		}
+	}
+	/*     * *********************Methode d'instance************************* */
+
 	public function preSave() {
 		switch ($this->getConfiguration('mode')) {
 			case 'fixe':
@@ -62,6 +98,16 @@ class geolocCmd extends cmd {
 			case 'distance':
 				$this->setSubType('numeric');
 				$this->setUnite('Km');
+				$this->setEventOnly(0);
+				break;
+			case 'travelDistance':
+				$this->setSubType('numeric');
+				$this->setUnite('Km');
+				$this->setEventOnly(0);
+				break;
+			case 'travelTime':
+				$this->setSubType('numeric');
+				$this->setUnite('min');
 				$this->setEventOnly(0);
 				break;
 		}
@@ -105,10 +151,16 @@ class geolocCmd extends cmd {
 					return self::distance($from[0], $from[1], $to[0], $to[1]);
 				}
 				throw new Exception(__('Erreur dans les coordonées from : ', __FILE__) . print_r($from, true) . __(' / to : ', __FILE__) . print_r($to, true));
-
 			case 'travelTime':
-
-				return 0;
+				$from = cmd::byId($this->getConfiguration('from'));
+				$to = cmd::byId($this->getConfiguration('to'));
+				$result = self::get_driving_information($from->execCmd(null, 0), $to->execCmd(null, 0));
+				return $result['time'];
+			case 'travelDistance':
+				$from = cmd::byId($this->getConfiguration('from'));
+				$to = cmd::byId($this->getConfiguration('to'));
+				$result = self::get_driving_information($from->execCmd(null, 0), $to->execCmd(null, 0));
+				return $result['distance'];
 		}
 	}
 

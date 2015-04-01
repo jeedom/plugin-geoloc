@@ -21,7 +21,7 @@ $('#table_cmd tbody').delegate('.cmdAttr[data-l1key=configuration][data-l2key=mo
     var tr = $(this).closest('tr');
     tr.find('.modeOption').hide();
     tr.find('.modeOption' + '.' + $(this).value()).show();
-    if($(this).value() == 'distance' || $(this).value() == 'travelTime'){
+    if($(this).value() == 'distance' || $(this).value() == 'travelTime' || $(this).value() == 'travelDistance'){
         tr.find('.cmdAttr[data-l1key=subtype]').value('numeric');
     }else{
         tr.find('.cmdAttr[data-l1key=subtype]').value('string');
@@ -81,6 +81,7 @@ function addCmdToTable(_cmd) {
     tr += '<option value="dynamic">{{Dynamique}}</option>';
     tr += '<option value="distance">{{Distance}}</option>';
     tr += '<option value="travelTime">{{Temps de trajet}}</option>';
+    tr += '<option value="travelDistance">{{Distance trajet}}</option>';
     tr += '</select>';
     tr += '</td>';
 
@@ -89,11 +90,11 @@ function addCmdToTable(_cmd) {
     tr += '<input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="coordinate" placeholder="{{Latitude,Longitude}}" >';
     tr += '</span>';
 
-    tr += '<span class="dynamic travelTime modeOption" style="display : none;">';
+    tr += '<span class="dynamic travelTime travelDistance modeOption" style="display : none;">';
 
     tr += '</span>';
 
-    tr += '<span class="distance travelTime modeOption" style="display : none;">';
+    tr += '<span class="distance travelTime travelDistance modeOption" style="display : none;">';
     tr += 'De ';
     tr += '<select class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="from" style="display : inline-block; width : 400px;">';
     tr += optionCmdForDistance;

@@ -28,7 +28,7 @@ try {
 		$return = array();
 		foreach (geoloc::byType('geoloc') as $eqLogic) {
 			foreach ($eqLogic->getCmd() as $cmd) {
-				if ($cmd->getConfiguration('mode') != 'distance' && $cmd->getConfiguration('mode') != 'travelTime') {
+				if ($cmd->getConfiguration('mode') != 'distance' && $cmd->getConfiguration('mode') != 'travelTime' && $cmd->getConfiguration('mode') != 'travelDistance') {
 					$infoCmd = array(
 						'id' => $cmd->getId(),
 						'human_name' => $cmd->getHumanName(),
