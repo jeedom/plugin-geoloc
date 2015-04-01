@@ -1,6 +1,14 @@
 Le plugin Géolocalisation permet à Jeedom de recevoir votre position et de pouvoir utiliser ces informations pour déclencher des scénarios ou autres.
 
-Une fois installé et activé à partir du Market, on accède à la page du plugin Géolocalisation.
+Une fois installé et activé à partir du Market, on accède à la page du plugin Géolocalisation par : 
+
+image::../images/geoloc28.jpg[]
+
+Vous retrouvez ici tous vos équipement Geoloc : 
+
+image::../images/geoloc29.jpg[]
+
+Une fois un équipement selectionné vous obtenez : 
 
 image::../images/geoloc_screenshot1.JPG[]
 
@@ -79,10 +87,12 @@ image::../images/geoloc18.jpg[]
 
 Il vous suffit à présent de créer un scénario dans Tasker qui ira lancer cette tâche quand vous en avez besoin. Par exemple toutes les heures, quand vous vous connectez en wifi…
 
-==== Distance
-Permet de calculer la distance entre deux points. Il est donc nécessaire d’avoir déjà renseigné au moins deux commandes. Ici nous avons les coordonnées fixes de notre maison ainsi que les coordonnées mise à jour de notre portable. Nous pouvons donc calculer la distance entre les deux. Nous sélectionnons « Distance » en type et nos deux commandes précédentes dans les options. Une fois sauvegardé, nous utilisons le bouton tester et la distance apparait alors dans le popup. Ici 1.34km.
+==== Distance, Temps de trajet et Distance de trajet
+Permet de calculer la distance, le temps de trajet (en voiture, à l'aide de Google Maps) ou la distance d'un trajet (en voiture, à l'aide de Google Maps) entre deux points. Il est donc nécessaire d’avoir déjà renseigné au moins deux commandes. Ici nous avons les coordonnées fixes de notre maison ainsi que les coordonnées mise à jour de notre portable. Nous pouvons donc calculer la distance entre les deux. Nous sélectionnons « Distance » en type et nos deux commandes précédentes dans les options. Une fois sauvegardé, nous utilisons le bouton tester et la distance apparait alors dans le popup. Ici 1.34km.
 
 image::../images/geoloc19.jpg[]
+
+De meme si vous voulez le temps de trajet ou la distance d'un trajet il faut choisir, respectivement, dans type : "Temps de trajet" ou "Distance de trajet"
 
 Ce plugin fonctionne comme un module, c’est-à-dire qu’une fois sauvegardé nous pouvons le retrouver dans la liste des actions ou commandes, il est ainsi très simple de l’utiliser lors de la création de scénarios par exemple. Nous pouvons par exemple réaliser un scénario qui se base sur la distance entre notre portable et la maison par exemple.
 
