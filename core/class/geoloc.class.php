@@ -66,6 +66,8 @@ class geoloc extends eqLogic {
 			$cmdColor = jeedom::getConfiguration('eqLogic:category:' . $this->getPrimaryCategory() . ':' . $vcolor);
 		}
 		$maps = array();
+		$dynamic = array();
+		$cmd_html = '';
 		if ($this->getIsEnable()) {
 			foreach ($this->getCmd(null, null, true) as $cmd) {
 				if ($cmd->getConfiguration('mode') == 'travelTime') {
@@ -92,6 +94,9 @@ class geoloc extends eqLogic {
 					}
 					$maps[$from . '_' . $to]['travelDistance'] = $cmd->execCmd();
 				}
+				if ($cmd->getConfiguration('mode') == 'dynamic' || $cmd->getConfiguration('mode') == 'fixe') {
+					$dynamic[$cmd->getId()] = $cmd;
+				}
 			}
 		}
 
@@ -100,6 +105,12 @@ class geoloc extends eqLogic {
 			if (count($key) != 2) {
 				continue;
 			}
+			foreach ($dynamic as $id => $cmd) {
+				if (in_array($id, $key)) {
+					unset($dynamic[$id]);
+				}
+			}
+
 			$from_cmd = cmd::byId($key[0]);
 			$to_cmd = cmd::byId($key[1]);
 			if (!is_object($from_cmd) || !is_object($to_cmd)) {
@@ -115,6 +126,16 @@ class geoloc extends eqLogic {
 				'#travelTime#' => (isset($map['travelTime'])) ? $map['travelTime'] : __('Inconnue', __FILE__),
 			);
 			$cmd_html .= template_replace($replace, getTemplate('core', $_version, 'geoloc', 'geoloc'));
+		}
+
+		foreach ($dynamic as $id => $cmd) {
+			$replace = array(
+				'#state#' => $cmd->execCmd(),
+				'#name#' => $cmd->getName(),
+				'#collectDate#' => $cmd->getCollectDate(),
+				'#id#' => $cmd->getId(),
+			);
+			$cmd_html .= template_replace($replace, getTemplate('core', $_version, 'geoloc_single', 'geoloc'));
 		}
 
 		$replace = array(
