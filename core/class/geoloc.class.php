@@ -41,9 +41,124 @@ class geoloc extends eqLogic {
 				$distance->event($distance->execute());
 			}
 		}
+		$cmd->getEqLogic()->refreshWidget();
 	}
 
 	/*     * *********************Methode d'instance************************* */
+
+	public function toHtml($_version = 'dashboard') {
+		if ($_version == '') {
+			throw new Exception(__('La version demandée ne peut pas être vide (mobile, dashboard ou scénario)', __FILE__));
+		}
+		if (!$this->hasRight('r')) {
+			return '';
+		}
+
+		$cmd_html = '';
+		$version = jeedom::versionAlias($_version);
+		$vcolor = 'cmdColor';
+		if ($version == 'mobile') {
+			$vcolor = 'mcmdColor';
+		}
+		if ($this->getPrimaryCategory() == '') {
+			$cmdColor = '';
+		} else {
+			$cmdColor = jeedom::getConfiguration('eqLogic:category:' . $this->getPrimaryCategory() . ':' . $vcolor);
+		}
+		$maps = array();
+		if ($this->getIsEnable()) {
+			foreach ($this->getCmd(null, null, true) as $cmd) {
+				if ($cmd->getConfiguration('mode') == 'travelTime') {
+					$from = $cmd->getConfiguration('from');
+					$to = $cmd->getConfiguration('to');
+					if (!isset($maps[$from . '_' . $to])) {
+						$maps[$from . '_' . $to] = array();
+					}
+					$maps[$from . '_' . $to]['travelTime'] = $cmd->execCmd();
+				}
+				if ($cmd->getConfiguration('mode') == 'distance') {
+					$from = $cmd->getConfiguration('from');
+					$to = $cmd->getConfiguration('to');
+					if (!isset($maps[$from . '_' . $to])) {
+						$maps[$from . '_' . $to] = array();
+					}
+					$maps[$from . '_' . $to]['distance'] = $cmd->execCmd();
+				}
+				if ($cmd->getConfiguration('mode') == 'travelDistance') {
+					$from = $cmd->getConfiguration('from');
+					$to = $cmd->getConfiguration('to');
+					if (!isset($maps[$from . '_' . $to])) {
+						$maps[$from . '_' . $to] = array();
+					}
+					$maps[$from . '_' . $to]['travelDistance'] = $cmd->execCmd();
+				}
+			}
+		}
+
+		foreach ($maps as $key => $map) {
+			$key = explode('_', $key);
+			if (count($key) != 2) {
+				continue;
+			}
+			$from_cmd = cmd::byId($key[0]);
+			$to_cmd = cmd::byId($key[1]);
+			if (!is_object($from_cmd) || !is_object($to_cmd)) {
+				contine;
+			}
+			$from = $from_cmd->execCmd();
+			$to = $to_cmd->execCmd();
+			$replace = array(
+				'#from#' => $from,
+				'#to#' => $to,
+				'#travelDistance#' => (isset($map['travelDistance'])) ? $map['travelDistance'] : __('Inconnue', __FILE__),
+				'#distance#' => (isset($map['distance'])) ? $map['distance'] : __('Inconnue', __FILE__),
+				'#travelTime#' => (isset($map['travelTime'])) ? $map['travelTime'] : __('Inconnue', __FILE__),
+			);
+			$cmd_html .= template_replace($replace, getTemplate('core', $_version, 'geoloc', 'geoloc'));
+		}
+
+		$replace = array(
+			'#id#' => $this->getId(),
+			'#name#' => $this->getName(),
+			'#eqLink#' => $this->getLinkToConfiguration(),
+			'#category#' => $this->getPrimaryCategory(),
+			'#background_color#' => $this->getBackgroundColor($version),
+			'#cmd#' => $cmd_html,
+			'#style#' => '',
+			'#noResize#' => 1,
+			'#max_width#' => '650px',
+			'#logicalId#' => $this->getLogicalId(),
+			'#battery#' => $this->getConfiguration('batteryStatus', -2),
+			'#batteryDatetime#' => $this->getConfiguration('batteryStatusDatetime', __('inconnue', __FILE__)),
+		);
+
+		if (($_version == 'dview' || $_version == 'mview') && $this->getDisplay('doNotShowObjectNameOnView', 0) == 0) {
+			$object = $this->getObject();
+			$replace['#object_name#'] = (is_object($object)) ? '(' . $object->getName() . ')' : '';
+		} else {
+			$replace['#object_name#'] = '';
+		}
+		if (($_version == 'dview' || $_version == 'mview') && $this->getDisplay('doNotShowNameOnView') == 1) {
+			$replace['#name#'] = '';
+		}
+		if (($_version == 'mobile' || $_version == 'dashboard') && $this->getDisplay('doNotShowNameOnDashboard') == 1) {
+			$replace['#name#'] = '';
+		}
+		if (($_version == 'dview' || $_version == 'mview') && $this->getDisplay('doNotDisplayBatteryLevelOnView') == 1) {
+			$replace['#battery#'] = -1;
+		}
+		if ($_version == 'dashboard' && $this->getDisplay('doNotDisplayBatteryLevelOnDashboard') == 1) {
+			$replace['#battery#'] = -1;
+		}
+
+		$parameters = $this->getDisplay('parameters');
+		if (is_array($parameters)) {
+			foreach ($parameters as $key => $value) {
+				$replace['#' . $key . '#'] = $value;
+			}
+		}
+		return template_replace($replace, getTemplate('core', $version, 'eqLogic'));
+	}
 }
 
 class geolocCmd extends cmd {
