@@ -94,7 +94,7 @@ class geoloc extends eqLogic {
 					}
 					$maps[$from . '_' . $to]['travelDistance'] = $cmd->execCmd();
 				}
-				if ($cmd->getConfiguration('mode') == 'dynamic' || $cmd->getConfiguration('mode') == 'fixe') {
+				if ($cmd->getConfiguration('mode') == 'dynamic') {
 					$dynamic[$cmd->getId()] = $cmd;
 				}
 			}
