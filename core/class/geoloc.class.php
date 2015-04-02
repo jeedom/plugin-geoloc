@@ -119,6 +119,7 @@ class geoloc extends eqLogic {
 			$from = $from_cmd->execCmd();
 			$to = $to_cmd->execCmd();
 			$replace = array(
+				'#name#' => $from_cmd->getName() . ' <i class="fa fa-arrow-right"></i> ' . $to_cmd->getName(),
 				'#from#' => $from,
 				'#to#' => $to,
 				'#travelDistance#' => (isset($map['travelDistance'])) ? $map['travelDistance'] : __('Inconnue', __FILE__),
@@ -290,13 +291,21 @@ class geolocCmd extends cmd {
 			case 'travelTime':
 				$from = cmd::byId($this->getConfiguration('from'));
 				$to = cmd::byId($this->getConfiguration('to'));
-				$result = self::get_driving_information($from->execCmd(null, 0), $to->execCmd(null, 0));
-				return $result['time'];
+				try {
+					$result = self::get_driving_information($from->execCmd(null, 0), $to->execCmd(null, 0));
+					return $result['time'];
+				} catch (Exception $e) {
+					return 0;
+				}
 			case 'travelDistance':
 				$from = cmd::byId($this->getConfiguration('from'));
 				$to = cmd::byId($this->getConfiguration('to'));
-				$result = self::get_driving_information($from->execCmd(null, 0), $to->execCmd(null, 0));
-				return $result['distance'];
+				try {
+					$result = self::get_driving_information($from->execCmd(null, 0), $to->execCmd(null, 0));
+					return $result['distance'];
+				} catch (Exception $e) {
+					return 0;
+				}
 		}
 	}
 
