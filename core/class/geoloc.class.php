@@ -47,6 +47,9 @@ class geoloc extends eqLogic {
 	/*     * *********************Methode d'instance************************* */
 
 	public function toHtml($_version = 'dashboard') {
+		if ($this->getConfiguration('noSpecifyWidget', 0) == 1) {
+			return parent::toHtml($_version);
+		}
 		if ($_version == '') {
 			throw new Exception(__('La version demandée ne peut pas être vide (mobile, dashboard ou scénario)', __FILE__));
 		}
@@ -210,7 +213,7 @@ class geolocCmd extends cmd {
 					$distance = (int) $xml->route->leg->distance->value / 1000;
 					$distance = round($distance, 1);
 					$time = (int) $xml->route->leg->duration->value;
-					$time = floor(($time / 60) % 60);
+					$time = floor($time / 60);
 				}
 			} else {
 				throw new Exception(__('Impossible de trouver une route', __FILE__));

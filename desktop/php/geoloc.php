@@ -79,6 +79,12 @@ foreach (object::all() as $object) {
                                 <input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>
                             </div>
                         </div>
+                         <div class="form-group">
+                            <label class="col-sm-4 control-label">{{Ne pas utiliser le widget spécifique}}</label>
+                            <div class="col-sm-1">
+                                <input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="noSpecifyWidget" />
+                            </div>
+                        </div>
                     </fieldset>
                 </form>
             </div>
