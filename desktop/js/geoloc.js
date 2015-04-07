@@ -28,6 +28,8 @@ $('#table_cmd tbody').delegate('.cmdAttr[data-l1key=configuration][data-l2key=mo
     }
 });
 
+$("#table_cmd").sortable({axis: "y", cursor: "move", items: ".cmd", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
+
 function getCmdForDistance() {
     var select = '';
     $.ajax({// fonction permettant de faire de l'ajax
