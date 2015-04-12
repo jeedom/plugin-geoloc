@@ -290,7 +290,7 @@ class geolocCmd extends cmd {
 				if (count($to) == 2 && count($from) == 2) {
 					return self::distance($from[0], $from[1], $to[0], $to[1]);
 				}
-				throw new Exception(__('Erreur dans les coordonées from : ', __FILE__) . print_r($from, true) . __(' / to : ', __FILE__) . print_r($to, true));
+				return 0;
 			case 'travelTime':
 				$from = cmd::byId($this->getConfiguration('from'));
 				$to = cmd::byId($this->getConfiguration('to'));
