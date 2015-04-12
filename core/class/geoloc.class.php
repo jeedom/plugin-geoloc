@@ -129,7 +129,7 @@ class geoloc extends eqLogic {
 				'#distance#' => (isset($map['distance'])) ? $map['distance'] : __('Inconnue', __FILE__),
 				'#travelTime#' => (isset($map['travelTime'])) ? $map['travelTime'] : __('Inconnue', __FILE__),
 			);
-			$cmd_html .= template_replace($replace, getTemplate('core', $_version, 'geoloc', 'geoloc'));
+			$cmd_html .= template_replace($replace, getTemplate('core', $version, 'geoloc', 'geoloc'));
 		}
 
 		foreach ($dynamic as $id => $cmd) {
