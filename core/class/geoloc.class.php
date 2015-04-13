@@ -190,7 +190,7 @@ class geolocCmd extends cmd {
 	/*     * *************************Attributs****************************** */
 
 /*     * ***********************Methode static*************************** */
-	function get_driving_information($start, $finish, $raw = false) {
+	function get_driving_information($start, $finish, $highways = true) {
 		if (strcmp($start, $finish) == 0) {
 			$time = 0;
 			if ($raw) {
@@ -203,18 +203,16 @@ class geolocCmd extends cmd {
 		$distance = __('Inconnue', __FILE__);
 		$time = __('Inconnue', __FILE__);
 		$url = 'http://maps.googleapis.com/maps/api/directions/xml?origin=' . $start . '&destination=' . $finish . '&sensor=false';
+		if (!$highways) {
+			$url .= '&avoid=highways';
+		}
 		if ($data = file_get_contents($url)) {
 			$xml = new SimpleXMLElement($data);
 			if (isset($xml->route->leg->duration->value) AND (int) $xml->route->leg->duration->value > 0) {
-				if ($raw) {
-					$distance = (string) $xml->route->leg->distance->text;
-					$time = (string) $xml->route->leg->duration->text;
-				} else {
-					$distance = (int) $xml->route->leg->distance->value / 1000;
-					$distance = round($distance, 1);
-					$time = (int) $xml->route->leg->duration->value;
-					$time = floor($time / 60);
-				}
+				$distance = (int) $xml->route->leg->distance->value / 1000;
+				$distance = round($distance, 1);
+				$time = (int) $xml->route->leg->duration->value;
+				$time = floor($time / 60);
 			} else {
 				throw new Exception(__('Impossible de trouver une route', __FILE__));
 			}
@@ -295,7 +293,11 @@ class geolocCmd extends cmd {
 				$from = cmd::byId($this->getConfiguration('from'));
 				$to = cmd::byId($this->getConfiguration('to'));
 				try {
-					$result = self::get_driving_information($from->execCmd(null, 0), $to->execCmd(null, 0));
+					$highways = true;
+					if ($this->getConfiguration('noHighways', 0) == 1) {
+						$highways = false;
+					}
+					$result = self::get_driving_information($from->execCmd(null, 0), $to->execCmd(null, 0), $highways);
 					return $result['time'];
 				} catch (Exception $e) {
 					return 0;
@@ -304,7 +306,11 @@ class geolocCmd extends cmd {
 				$from = cmd::byId($this->getConfiguration('from'));
 				$to = cmd::byId($this->getConfiguration('to'));
 				try {
-					$result = self::get_driving_information($from->execCmd(null, 0), $to->execCmd(null, 0));
+					$highways = true;
+					if ($this->getConfiguration('noHighways', 0) == 1) {
+						$highways = false;
+					}
+					$result = self::get_driving_information($from->execCmd(null, 0), $to->execCmd(null, 0), $highways);
 					return $result['distance'];
 				} catch (Exception $e) {
 					return 0;
