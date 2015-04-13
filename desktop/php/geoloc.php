@@ -16,112 +16,112 @@ foreach ($eqLogics as $eqLogic) {
 	echo '<li class="cursor li_eqLogic" data-eqLogic_id="' . $eqLogic->getId() . '"><a>' . $eqLogic->getHumanName(true) . '</a></li>';
 }
 ?>
-            </ul>
-        </div>
-    </div>
+           </ul>
+       </div>
+   </div>
 
-    <div class="col-lg-10 col-md-9 col-sm-8 eqLogicThumbnailDisplay" style="border-left: solid 1px #EEE; padding-left: 25px;">
-        <legend>{{Mes équipements de géolocalisation}}
-        </legend>
-        <?php
-if (count($eqLogics) == 0) {
-	echo "<br/><br/><br/><center><span style='color:#767676;font-size:1.2em;font-weight: bold;'>{{Vous n'avez encore d'équipements de géolocalisation, cliquez à gauche sur le bouton ajouter un équipement pour commencer}}</span></center>";
-} else {
-	?>
-            <div class="eqLogicThumbnailContainer">
-                <?php
+   <div class="col-lg-10 col-md-9 col-sm-8 eqLogicThumbnailDisplay" style="border-left: solid 1px #EEE; padding-left: 25px;">
+    <legend>{{Mes équipements de géolocalisation}}
+    </legend>
+    <div class="eqLogicThumbnailContainer">
+      <div class="cursor eqLogicAction" data-action="add" style="background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >
+         <center>
+            <i class="fa fa-plus-circle" style="font-size : 7em;color:#94ca02;"></i>
+        </center>
+        <span style="font-size : 1.1em;position:relative; top : 23px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;color:#94ca02"><center>Ajouter</center></span>
+    </div>
+    <?php
 foreach ($eqLogics as $eqLogic) {
-		echo '<div class="eqLogicDisplayCard cursor" data-eqLogic_id="' . $eqLogic->getId() . '" style="background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >';
-		echo "<center>";
-		echo '<img src="plugins/geoloc/doc/images/geoloc_icon.png" height="105" width="95" />';
-		echo "</center>";
-		echo '<span style="font-size : 1.1em;position:relative; top : 15px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;"><center>' . $eqLogic->getHumanName(true, true) . '</center></span>';
-		echo '</div>';
-	}
-	?>
-            </div>
-        <?php }?>
-    </div>
+	echo '<div class="eqLogicDisplayCard cursor" data-eqLogic_id="' . $eqLogic->getId() . '" style="background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >';
+	echo "<center>";
+	echo '<img src="plugins/geoloc/doc/images/geoloc_icon.png" height="105" width="95" />';
+	echo "</center>";
+	echo '<span style="font-size : 1.1em;position:relative; top : 15px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;"><center>' . $eqLogic->getHumanName(true, true) . '</center></span>';
+	echo '</div>';
+}
+?>
+</div>
+</div>
 
-    <div class="col-lg-10 col-md-9 col-sm-8 eqLogic" style="border-left: solid 1px #EEE; padding-left: 25px;display: none;">
-        <div class="row">
-            <div class="col-sm-6">
-                <form class="form-horizontal">
-                    <fieldset>
-                        <legend><i class="fa fa-arrow-circle-left eqLogicAction cursor" data-action="returnToThumbnailDisplay"></i> {{Général}}<i class='fa fa-cogs eqLogicAction pull-right cursor expertModeVisible' data-action='configure'></i></legend>
-                        <div class="form-group">
-                            <label class="col-sm-4 control-label">{{Nom de l'équipement}}</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="eqLogicAttr form-control" data-l1key="id" style="display : none;" />
-                                <input type="text" class="eqLogicAttr form-control" data-l1key="name" placeholder="{{Nom de l'équipement}}"/>
-                            </div>
+<div class="col-lg-10 col-md-9 col-sm-8 eqLogic" style="border-left: solid 1px #EEE; padding-left: 25px;display: none;">
+    <div class="row">
+        <div class="col-sm-6">
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend><i class="fa fa-arrow-circle-left eqLogicAction cursor" data-action="returnToThumbnailDisplay"></i> {{Général}}<i class='fa fa-cogs eqLogicAction pull-right cursor expertModeVisible' data-action='configure'></i></legend>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">{{Nom de l'équipement}}</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="eqLogicAttr form-control" data-l1key="id" style="display : none;" />
+                            <input type="text" class="eqLogicAttr form-control" data-l1key="name" placeholder="{{Nom de l'équipement}}"/>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-4 control-label">{{Objet parent}}</label>
-                            <div class="col-sm-8">
-                                <select id="sel_object" class="eqLogicAttr form-control" data-l1key="object_id">
-                                    <option value="">{{Aucun}}</option>
-                                    <?php
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">{{Objet parent}}</label>
+                        <div class="col-sm-8">
+                            <select id="sel_object" class="eqLogicAttr form-control" data-l1key="object_id">
+                                <option value="">{{Aucun}}</option>
+                                <?php
 foreach (object::all() as $object) {
 	echo '<option value="' . $object->getId() . '">' . $object->getName() . '</option>';
 }
 ?>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-4 control-label">{{Activer}}</label>
-                            <div class="col-sm-1">
-                                <input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>
-                            </div>
-                            <label class="col-sm-4 control-label">{{Visible}}</label>
-                            <div class="col-sm-1">
-                                <input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>
-                            </div>
-                        </div>
-                         <div class="form-group">
-                            <label class="col-sm-4 control-label">{{Ne pas utiliser le widget spécifique}}</label>
-                            <div class="col-sm-1">
-                                <input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="noSpecifyWidget" />
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-            <div class="col-sm-6">
-
-            </div>
-        </div>
-
-        <legend>Commandes</legend>
-        <div class="alert alert-info">Exemple d’URL à appeler avec tasker : <?php echo network::getNetworkAccess('external') ?>/core/api/jeeApi.php?api=<?php echo config::byKey('api');?>&type=geoloc&id=#ID_CMD#&value=%LOCN</div>
-        <a class="btn btn-success btn-sm cmdAction" data-action="add"><i class="fa fa-plus-circle"></i> {{Commandes}}</a><br/><br/>
-        <table id="table_cmd" class="table table-bordered table-condensed">
-            <thead>
-                <tr>
-                    <th style="width: 50px;">{{ID}}</th>
-                    <th style="width: 200px;">{{Nom}}</th>
-                    <th style="width: 200px;">{{Type}}</th>
-                    <th>{{Options}}</th>
-                    <th style="width: 100px;">{{Paramètres}}</th>
-                    <th style="width: 150px;"></th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
-
-        <form class="form-horizontal">
-            <fieldset>
-                <div class="form-actions">
-                    <a class="btn btn-danger eqLogicAction" data-action="remove"><i class="fa fa-minus-circle"></i> {{Supprimer}}</a>
-                    <a class="btn btn-success eqLogicAction" data-action="save"><i class="fa fa-check-circle"></i> {{Sauvegarder}}</a>
+                           </select>
+                       </div>
+                   </div>
+                   <div class="form-group">
+                    <label class="col-sm-4 control-label">{{Activer}}</label>
+                    <div class="col-sm-1">
+                        <input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>
+                    </div>
+                    <label class="col-sm-4 control-label">{{Visible}}</label>
+                    <div class="col-sm-1">
+                        <input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">{{Ne pas utiliser le widget spécifique}}</label>
+                    <div class="col-sm-1">
+                        <input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="noSpecifyWidget" />
+                    </div>
                 </div>
             </fieldset>
         </form>
+    </div>
+    <div class="col-sm-6">
 
     </div>
+</div>
+
+<legend>Commandes</legend>
+<div class="alert alert-info">Exemple d’URL à appeler avec tasker : <?php echo network::getNetworkAccess('external')?>/core/api/jeeApi.php?api=<?php echo config::byKey('api');?>&type=geoloc&id=#ID_CMD#&value=%LOCN</div>
+<a class="btn btn-success btn-sm cmdAction" data-action="add"><i class="fa fa-plus-circle"></i> {{Commandes}}</a><br/><br/>
+<table id="table_cmd" class="table table-bordered table-condensed">
+    <thead>
+        <tr>
+            <th style="width: 50px;">{{ID}}</th>
+            <th style="width: 200px;">{{Nom}}</th>
+            <th style="width: 200px;">{{Type}}</th>
+            <th>{{Options}}</th>
+            <th style="width: 100px;">{{Paramètres}}</th>
+            <th style="width: 150px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+<form class="form-horizontal">
+    <fieldset>
+        <div class="form-actions">
+            <a class="btn btn-danger eqLogicAction" data-action="remove"><i class="fa fa-minus-circle"></i> {{Supprimer}}</a>
+            <a class="btn btn-success eqLogicAction" data-action="save"><i class="fa fa-check-circle"></i> {{Sauvegarder}}</a>
+        </div>
+    </fieldset>
+</form>
+
+</div>
 </div>
 
 <?php include_file('desktop', 'geoloc', 'js', 'geoloc');?>
