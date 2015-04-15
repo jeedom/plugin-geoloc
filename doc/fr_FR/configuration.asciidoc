@@ -8,6 +8,10 @@ Vous retrouvez ici tous vos équipement Geoloc :
 
 image::../images/geoloc29.jpg[]
 
+[icon="../images/plugin/tip.png"]
+[TIP]
+Comme à beaucoup d'endroit sur Jeedom, mettre la souris tout à gauche permet de faire apparaître un menu d'accès rapide (vous pouvez à partir de votre profils le laisser toujours visible)
+
 Une fois un équipement sélectionné vous obtenez : 
 
 image::../images/geoloc_screenshot1.JPG[]
