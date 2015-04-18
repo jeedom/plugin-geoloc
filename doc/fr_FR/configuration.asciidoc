@@ -4,13 +4,13 @@ Une fois le plugin installé et activé à partir du Market, on accède à la pa
 
 image::../images/geoloc28.jpg[]
 
-Vous retrouvez ici tous vos équipement Geoloc : 
+Vous retrouvez ici tous vos équipements Geoloc : 
 
 image::../images/geoloc29.jpg[]
 
 [icon="../images/plugin/tip.png"]
 [TIP]
-Comme à beaucoup d'endroit sur Jeedom, mettre la souris tout à gauche permet de faire apparaître un menu d'accès rapide (vous pouvez à partir de votre profils le laisser toujours visible)
+Comme à beaucoup d'endroit sur Jeedom, placer la souris tout à gauche permet de faire apparaître un menu d'accès rapide (vous pouvez à partir de votre profil le laisser toujours visible).
 
 Une fois un équipement sélectionné vous obtenez : 
 
@@ -21,7 +21,7 @@ L'onglet « Général » permet de choisir le nom de l'équipement, l’objet pa
 image::../images/geoloc_screenshot2.jpg[]
 
 ==== Fixe
-Représente un point ayant des coordonnées qui ne changent pas. Par exemple les coordonnées de votre habitation, de votre travail… Il vous suffit de noter les coordonnées sous la forme : Latitude,Longitude.
+Représente un point ayant des coordonnées qui ne changent pas. Par exemple les coordonnées de votre habitation, de votre travail... Il vous suffit de noter les coordonnées sous la forme : Latitude,Longitude.
 
 image::../images/geoloc3.jpg[]
 
@@ -29,18 +29,18 @@ Pour trouver les coordonnées de votre position fixe, allez simplement sur Googl
 
 image::../images/geoloc4.jpg[]
 
-Vous pouvez également faire un clic gauche sur la carte et les coordonnées apparaîtront dans la petite carte en haut à gauche.
+Vous pouvez également faire un clic gauche sur la carte, et les coordonnées apparaîtront dans la petite carte en haut à gauche.
 
 image::../images/geoloc4.jpg[]
 
 ==== Dynamique
-Représente un point ayant des coordonnées variables, l’objet se déplace. Il s’agit en général de votre portable. Cette commande contiendra donc les dernières coordonnées envoyées jusqu’à ce que vous en envoyez des nouvelles. L’URL pour mettre à jour cette commande est :
+Représente un point ayant des coordonnées variables, l’objet se déplace. Il s’agit en général de votre portable. Cette commande contiendra donc les dernières coordonnées envoyées jusqu’à ce que vous en envoyez de nouvelles. L’URL pour mettre à jour cette commande est :
 
 #URL_JEEDOM#/core/api/jeeApi.php?api=#API_KEY#&type=geoloc&id=#ID_CMD#&value=%LOCN
 
 #URL_JEEDOM# correspond à votre url d’accès à Jeedom. Il s’agit (sauf si vous êtes connecté à votre réseau local) de l’adresse internet que vous utilisez pour accéder à Jeedom depuis l’extérieur. N’oubliez pas d’indiquer le port ainsi que /jeedom/.
 
-api=#API_KEY# correspond à votre clé API, propre à votre installation. Pour la trouver vous pouvez soit aller dans le plugin Géoloc, elle est indiquée directement dans l’URL
+api=#API_KEY# correspond à votre clé API, propre à votre installation. Pour la trouver vous pouvez soit aller dans le plugin Géoloc, elle est indiquée directement dans l’URL.
 
 image::../images/geoloc5.jpg[]
 
@@ -48,7 +48,7 @@ Soit dans le menu « Général », puis « Administration » et « Configuration
 
 image::../images/geoloc6.jpg[]
 
-<id=#ID_CMD# correspond à l’id de votre commande. Une fois que vous avez donné un nom à votre commande de Géolocalisation, déterminé son type et sauvegardé, un numéro apparaît dans la case « ID » devant votre commande.
+<id=#ID_CMD# correspond à l’id de votre commande. Une fois que vous avez donné un nom à votre commande de Géolocalisation, déterminez son type et sauvegardez, un numéro apparaît dans la case « ID » devant votre commande.
 
 image::../images/geoloc7.jpg[]
 
@@ -61,12 +61,12 @@ Attention : pour cet exemple, vous avez besoin de l’application Tasker pour An
 
 image::../images/geoloc8.jpg[]
 
-Nous y ajoutons une première action, dans la catégorie « Divers » nous sélectionnons « Obtenir la localisation ».
+Nous y ajoutons une première action, dans la catégorie « Divers », nous sélectionnons « Obtenir la localisation ».
 
 image::../images/geoloc9.jpg[]
 image::../images/geoloc10.jpg[]
 
-Nous allons utiliser n’importe quelles sources pour obtenir notre position et nous allons fixer un délai de 30 sec afin que Tasker ait le temps d’obtenir précisément nos coordonnées.
+Nous allons utiliser n’importe quelle source pour obtenir notre position, et nous allons fixer un délai de 30 sec afin que Tasker ait le temps d’obtenir précisément nos coordonnées.
 
 image::../images/geoloc11.jpg[]
 image::../images/geoloc12.jpg[]
@@ -96,12 +96,12 @@ Permet de calculer la distance, le temps de trajet (en voiture, à l'aide de Goo
 
 image::../images/geoloc19.jpg[]
 
-De même si vous voulez le temps de trajet ou la distance d'un trajet il faut choisir, respectivement, dans type : "Temps de trajet" ou "Distance de trajet"
+De même si vous voulez le temps de trajet ou la distance d'un trajet, il faut choisir respectivement dans type : "Temps de trajet" ou "Distance de trajet".
 
 Ce plugin fonctionne comme un module, c’est-à-dire qu’une fois sauvegardé nous pouvons le retrouver dans la liste des actions ou commandes, il est ainsi très simple de l’utiliser lors de la création de scénarios par exemple. Nous pouvons par exemple réaliser un scénario qui se base sur la distance entre notre portable et la maison par exemple.
 
 ==== Exemple de scénario
-Dans la partie « Scénario », nous créons un scénario nommé « Géoloc TV » qui nous permet d’allumer la TV quand nous sommes à moins de 250 m de notre maison. Attention : les systèmes de positionnement n’étant pas précis au mètre prêt, pensez à prendre une marge lors de la création de vos scénarios. Dans « Mode de scénario » nous choisissons « Provoqué » et en « Déclencheur » nous ajoutons notre portable. En effet, c’est lorsque les coordonnées de notre portable vont être mises à jour que nous allons déclencher le scénario.
+Dans la partie « Scénario », nous créons un scénario nommé « Géoloc TV » qui nous permet d’allumer la TV quand nous sommes à moins de 250 m de notre maison. Attention : les systèmes de positionnement n’étant pas précis au mètre près, pensez à prendre une marge lors de la création de vos scénarios. Dans « Mode de scénario » nous choisissons « Provoqué » et en « Déclencheur » nous ajoutons notre portable. En effet, c’est lorsque les coordonnées de notre portable vont être mises à jour que nous allons déclencher le scénario.
 
 image::../images/geoloc20.jpg[]
 
@@ -109,7 +109,7 @@ Nous ajoutons un élément « Si / Alors / Sinon » avec comme condition une dis
 
 image::../images/geoloc21.jpg[]
 
-Nous n’avons rien mis dans la partie « Sinon » ainsi il ne se passera rien si je suis à plus de 250 m. Une fois sauvegardé nous pouvons regarder le log. Nous voyons ici que Jeedom a testé la distance entre le portable et la maison et comme celle-ci est supérieure à 250 m alors il ne s’est rien passé.
+Nous n’avons rien mis dans la partie « Sinon » ainsi il ne se passera rien si je suis à plus de 250 m. Une fois sauvegardé, nous pouvons regarder le log. Nous voyons ici que Jeedom a testé la distance entre le portable et la maison et comme celle-ci est supérieure à 250 m, alors il ne s’est rien passé.
 
 image::../images/geoloc22.jpg[]
 
