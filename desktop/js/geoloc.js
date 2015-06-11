@@ -106,13 +106,13 @@ function addCmdToTable(_cmd) {
     tr += optionCmdForDistance;
     tr += '</select>';
     tr += '</span>';
-    tr += '<span class="travelTime travelDistance modeOption" style="display : none;">';
-    tr += '<input type="checkbox" class="cmdAttr input-sm" data-l1key="configuration" data-l2key="noHighways" style="position:relative;top:10px;" > {{Ne pas prendre d\'autoroutes}}';
+    tr += '<span class="travelTime travelDistance modeOption" style="display : none;"> ';
+    tr += '<input type="checkbox" class="cmdAttr bootstrapSwitch input-sm" data-l1key="configuration" data-l2key="noHighways" style="position:relative;top:10px;" data-size="small" data-label-text="{{Autoroutes}}"> ';
     tr += '</span>';
     tr += '</td>';
     tr += '<td>';
-    tr += '<span class="modeOption distance"><input type="checkbox" class="cmdAttr" data-l1key="isHistorized" /> {{Historiser}}<br/></span>';
-    tr += '<span><input type="checkbox" class="cmdAttr" data-l1key="isVisible" checked/> {{Afficher}}<br/></span>';
+    tr += '<span class="modeOption distance"><input type="checkbox" class="cmdAttr" data-l1key="isHistorized"  data-size="mini" data-label-text="{{Historiser}}" /></span> ';
+    tr += '<span><input type="checkbox" class="cmdAttr bootstrapSwitch" data-l1key="isVisible" data-size="mini" data-label-text="{{Afficher}}" checked/></span> ';
     tr += '</td>';
     tr += '<td>';
     if (is_numeric(_cmd.id)) {

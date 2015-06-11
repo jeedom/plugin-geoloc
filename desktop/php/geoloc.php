@@ -25,12 +25,12 @@ foreach ($eqLogics as $eqLogic) {
     </legend>
     <div class="eqLogicThumbnailContainer">
       <div class="cursor eqLogicAction" data-action="add" style="background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >
-         <center>
-            <i class="fa fa-plus-circle" style="font-size : 7em;color:#94ca02;"></i>
-        </center>
-        <span style="font-size : 1.1em;position:relative; top : 23px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;color:#94ca02"><center>Ajouter</center></span>
-    </div>
-    <?php
+       <center>
+        <i class="fa fa-plus-circle" style="font-size : 7em;color:#94ca02;"></i>
+    </center>
+    <span style="font-size : 1.1em;position:relative; top : 23px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;color:#94ca02"><center>Ajouter</center></span>
+</div>
+<?php
 foreach ($eqLogics as $eqLogic) {
 	echo '<div class="eqLogicDisplayCard cursor" data-eqLogic_id="' . $eqLogic->getId() . '" style="background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >';
 	echo "<center>";
@@ -70,19 +70,16 @@ foreach (object::all() as $object) {
                        </div>
                    </div>
                    <div class="form-group">
-                    <label class="col-sm-4 control-label">{{Activer}}</label>
-                    <div class="col-sm-1">
-                        <input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>
-                    </div>
-                    <label class="col-sm-4 control-label">{{Visible}}</label>
-                    <div class="col-sm-1">
-                        <input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>
+                    <label class="col-sm-4 control-label"></label>
+                    <div class="col-sm-8">
+                        <input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-label-text="{{Activer}}" data-l1key="isEnable" checked/>
+                        <input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-label-text="{{Visible}}" data-l1key="isVisible" checked/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-4 control-label">{{Ne pas utiliser le widget spécifique}}</label>
                     <div class="col-sm-1">
-                        <input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="noSpecifyWidget" />
+                    <input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-l1key="configuration" data-l2key="noSpecifyWidget" />
                     </div>
                 </div>
             </fieldset>
