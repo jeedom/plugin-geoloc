@@ -145,7 +145,7 @@ class geoloc extends eqLogic {
 		$replace = array(
 			'#id#' => $this->getId(),
 			'#name#' => $this->getName(),
-			'#eqLink#' => $this->getLinkToConfiguration(),
+			'#eqLink#' => ($this->hasRight('w')) ? $this->getLinkToConfiguration() : '#',
 			'#category#' => $this->getPrimaryCategory(),
 			'#background_color#' => $this->getBackgroundColor($version),
 			'#cmd#' => $cmd_html,
@@ -156,10 +156,6 @@ class geoloc extends eqLogic {
 			'#battery#' => $this->getConfiguration('batteryStatus', -2),
 			'#batteryDatetime#' => $this->getConfiguration('batteryStatusDatetime', __('inconnue', __FILE__)),
 		);
-		if (!$this->hasRight('w')) {
-			$replace['#eqLink#'] = '#';
-		}
-
 		if (($_version == 'dview' || $_version == 'mview') && $this->getDisplay('doNotShowObjectNameOnView', 0) == 0) {
 			$object = $this->getObject();
 			$replace['#object_name#'] = (is_object($object)) ? '(' . $object->getName() . ')' : '';
