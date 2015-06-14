@@ -156,6 +156,9 @@ class geoloc extends eqLogic {
 			'#battery#' => $this->getConfiguration('batteryStatus', -2),
 			'#batteryDatetime#' => $this->getConfiguration('batteryStatusDatetime', __('inconnue', __FILE__)),
 		);
+		if (!$this->hasRight('w')) {
+			$replace['#eqLink#'] = '#';
+		}
 
 		if (($_version == 'dview' || $_version == 'mview') && $this->getDisplay('doNotShowObjectNameOnView', 0) == 0) {
 			$object = $this->getObject();
