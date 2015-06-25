@@ -35,7 +35,11 @@ class geoloc extends eqLogic {
 		if ($cmd->getConfiguration('mode') != 'dynamic') {
 			throw new Exception(__('Cette commande de géoloc n\'est pas dynamique : ', __FILE__) . init('id'));
 		}
-		$cmd->event(init('value'));
+		$value = init('value');
+		if (strpos($value, 'http://') !== false) {
+			$value = str_replace(array('https://maps.google.com/?ll=', '&z=21'), '', $value);
+		}
+		$cmd->event($value);
 		foreach ($cmd->getEqLogic()->getCmd('info') as $distance) {
 			if ($distance->getConfiguration('mode') == 'distance' && ($distance->getConfiguration('from') == $cmd->getId() || $distance->getConfiguration('to') == $cmd->getId())) {
 				$distance->event($distance->execute());
