@@ -36,8 +36,15 @@ class geoloc extends eqLogic {
 			throw new Exception(__('Cette commande de géoloc n\'est pas dynamique : ', __FILE__) . init('id'));
 		}
 		$value = init('value');
-		if (strpos($value, 'http://') !== false) {
-			$value = str_replace(array('https://maps.google.com/?ll=', '&z=21'), '', $value);
+		if (strpos($value, 'https://') !== false || strpos($value, 'http://') !== false) {
+			$url = parse_url($value);
+			parse_str($url['query'], $output);
+			if (isset($output['q'])) {
+				$value = $output['q'];
+			}
+			if (isset($output['ll'])) {
+				$value = $output['ll'];
+			}
 		}
 		$cmd->event($value);
 		foreach ($cmd->getEqLogic()->getCmd('info') as $distance) {
