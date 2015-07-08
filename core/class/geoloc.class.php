@@ -202,11 +202,7 @@ class geolocCmd extends cmd {
 /*     * ***********************Methode static*************************** */
 	function get_driving_information($start, $finish, $highways = true) {
 		if (strcmp($start, $finish) == 0) {
-			$time = 0;
-			if ($raw) {
-				$time .= ' seconds';
-			}
-			return array('distance' => 0, 'time' => $time);
+			return array('distance' => 0, 'time' => 0);
 		}
 		$start = urlencode($start);
 		$finish = urlencode($finish);
