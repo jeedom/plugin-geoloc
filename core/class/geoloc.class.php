@@ -291,6 +291,12 @@ class geolocCmd extends cmd {
 				}
 				$to = explode(',', $to->execCmd(null, 0));
 				$from = explode(',', $from->execCmd(null, 0));
+				if (count($to) > 2) {
+					$to[2] = implode(',', array_slice($to, 1));
+				}
+				if (count($from) > 2) {
+					$from[2] = implode(',', array_slice($from, 1));
+				}
 				if (count($to) == 2 && count($from) == 2) {
 					return self::distance($from[0], $from[1], $to[0], $to[1]);
 				}
