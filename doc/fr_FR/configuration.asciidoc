@@ -1,4 +1,4 @@
-Le plugin Géolocalisation permet à Jeedom de recevoir votre position et de pouvoir utiliser ces informations pour déclencher des scénarios ou autres.
+== Configuration
 
 Une fois le plugin installé et activé à partir du Market, on accède à la page du plugin Géolocalisation par : 
 
