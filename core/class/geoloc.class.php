@@ -67,6 +67,10 @@ class geoloc extends eqLogic {
 		if (!$this->hasRight('r')) {
 			return '';
 		}
+		$version = jeedom::versionAlias($_version);
+		if ($this->getDisplay('hideOn' . $version) == 1) {
+			return '';
+		}
 
 		$cmd_html = '';
 		$version = jeedom::versionAlias($_version);
