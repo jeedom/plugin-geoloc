@@ -139,6 +139,7 @@ class geoloc extends eqLogic {
 			$replace = array(
 				'#name#' => $from_cmd->getName() . ' <i class="fa fa-arrow-right"></i> ' . $to_cmd->getName(),
 				'#from#' => $from,
+				'#collectDate#' => ($from_cmd->getCollectDate() > $to_cmd->getCollectDate()) ? $from_cmd->getCollectDate() : $to_cmd->getCollectDate(),
 				'#to#' => $to,
 				'#travelDistance#' => (isset($map['travelDistance'])) ? $map['travelDistance'] : __('Inconnue', __FILE__),
 				'#distance#' => (isset($map['distance'])) ? $map['distance'] : __('Inconnue', __FILE__),
