@@ -238,7 +238,7 @@ class geolocCmd extends cmd {
 		switch ($this->getConfiguration('mode')) {
 			case 'fixe':
 				$this->setSubType('string');
-				$this->setEventOnly(0);
+				$this->setEventOnly(1);
 				break;
 			case 'dynamic':
 				$this->setSubType('string');
@@ -247,17 +247,17 @@ class geolocCmd extends cmd {
 			case 'distance':
 				$this->setSubType('numeric');
 				$this->setUnite('Km');
-				$this->setEventOnly(0);
+				$this->setEventOnly(1);
 				break;
 			case 'travelDistance':
 				$this->setSubType('numeric');
 				$this->setUnite('Km');
-				$this->setEventOnly(0);
+				$this->setEventOnly(1);
 				break;
 			case 'travelTime':
 				$this->setSubType('numeric');
 				$this->setUnite('min');
-				$this->setEventOnly(0);
+				$this->setEventOnly(1);
 				break;
 		}
 	}
