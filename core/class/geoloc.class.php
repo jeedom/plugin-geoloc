@@ -46,12 +46,16 @@ class geoloc extends eqLogic {
 				$value = $output['ll'];
 			}
 		}
-		$cmd->event($value);
+		//For compatibility with older version which not use the Value property, set the Value if needed
 		foreach ($cmd->getEqLogic()->getCmd('info') as $distance) {
-			if ($distance->getConfiguration('mode') == 'distance' && ($distance->getConfiguration('from') == $cmd->getId() || $distance->getConfiguration('to') == $cmd->getId())) {
-				$distance->event($distance->execute());
+			if ($distance->getConfiguration('mode') == 'distance' ||  $distance->getConfiguration('mode') == 'travelDistance' || $distance->getConfiguration('mode') == 'travelTime') {
+				if ($distance->setDependency())
+				{
+						$distance->save();
+				}
 			}
 		}
+		$cmd->event($value);
 		$cmd->getEqLogic()->refreshWidget();
 	}
 
@@ -239,6 +243,7 @@ class geolocCmd extends cmd {
 			case 'fixe':
 				$this->setSubType('string');
 				$this->setEventOnly(1);
+				$this->event($this->execute());
 				break;
 			case 'dynamic':
 				$this->setSubType('string');
@@ -248,18 +253,47 @@ class geolocCmd extends cmd {
 				$this->setSubType('numeric');
 				$this->setUnite('Km');
 				$this->setEventOnly(1);
+				$this->setDependency();
 				break;
 			case 'travelDistance':
 				$this->setSubType('numeric');
 				$this->setUnite('Km');
 				$this->setEventOnly(1);
+				$this->setDependency();
 				break;
 			case 'travelTime':
 				$this->setSubType('numeric');
 				$this->setUnite('min');
 				$this->setEventOnly(1);
+				$this->setDependency();
 				break;
 		}
+	}
+
+	function setDependency()
+	{
+		$fromto = array('from' => '#'.$this->getConfiguration('from').'#','to' => '#'.$this->getConfiguration('to').'#');
+		$dependency = '';
+		foreach ($fromto as $key => $value){
+			preg_match_all("/#([0-9]*)#/", $value, $matches);
+			foreach ($matches[1] as $cmd_id) {
+				if (is_numeric($cmd_id)) {
+					$cmd = self::byId($cmd_id);
+					if (is_object($cmd) && $cmd->getType() == 'info') {
+						if (strpos($dependency,'#' . $cmd_id . '#') === false){
+							$dependency .= '#' . $cmd_id . '#';
+						}
+					}
+				}
+			}
+		}
+		if ($this->getValue() != $dependency)
+		{
+			$this->setValue($dependency);
+			return true;
+		}
+		return false;
+
 	}
 
 	function distance($lat1, $lng1, $lat2, $lng2) {
@@ -279,11 +313,6 @@ class geolocCmd extends cmd {
 		switch ($this->getConfiguration('mode')) {
 			case 'fixe':
 				$result = $this->getConfiguration('coordinate');
-				foreach ($this->getEqLogic()->getCmd('info') as $cmd) {
-					if ($cmd->getConfiguration('mode') == 'distance') {
-
-					}
-				}
 				return $result;
 			case 'distance':
 				$from = cmd::byId($this->getConfiguration('from'));
