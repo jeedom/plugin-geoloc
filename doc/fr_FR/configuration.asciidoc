@@ -1,4 +1,4 @@
-== Configuration
+= Configuration
 
 Une fois le plugin installé et activé à partir du Market, on accède à la page du plugin Géolocalisation par : 
 
@@ -19,7 +19,7 @@ L'onglet « Général » permet de choisir le nom de l'équipement, l’objet pa
 
 image::../images/geoloc_screenshot2.jpg[]
 
-=== Fixe
+== Fixe
 Représente un point ayant des coordonnées qui ne changent pas. Par exemple les coordonnées de votre habitation, de votre travail... Il vous suffit de noter les coordonnées sous la forme : Latitude,Longitude.
 
 image::../images/geoloc3.jpg[]
@@ -32,7 +32,7 @@ Vous pouvez également faire un clic gauche sur la carte, et les coordonnées ap
 
 image::../images/geoloc4.jpg[]
 
-=== Dynamique
+== Dynamique
 Représente un point ayant des coordonnées variables, l’objet se déplace. Il s’agit en général de votre portable. Cette commande contiendra donc les dernières coordonnées envoyées jusqu’à ce que vous en envoyez de nouvelles. L’URL pour mettre à jour cette commande est :
 
 \#URL_JEEDOM#/core/api/jeeApi.php?api=\#API_KEY#&type=geoloc&id=\#ID_CMD#&value=%LOC
@@ -55,7 +55,7 @@ image::../images/geoloc7.jpg[]
 
 Il vous faut donc réaliser un HTTP POST sur cette adresse en remplaçant %LOC par vos coordonnées.
 
-=== Exemple sous Android avec Tasker
+== Exemple sous Android avec Tasker
 Attention : pour cet exemple, vous avez besoin de l’application Tasker pour Android (https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm). Dans l’onglet « Tâches », nous rajoutons une nouvelle tâche ici appelée « Jeedom ».
 
 image::../images/geoloc8.jpg[]
@@ -90,7 +90,7 @@ image::../images/geoloc18.jpg[]
 
 Il vous suffit à présent de créer un scénario dans Tasker qui ira lancer cette tâche quand vous en avez besoin. Par exemple toutes les heures, quand vous vous connectez en wifi…
 
-=== Distance, Temps de trajet et Distance de trajet
+== Distance, Temps de trajet et Distance de trajet
 Permet de calculer la distance, le temps de trajet (en voiture, à l'aide de Google Maps) ou la distance d'un trajet (en voiture, à l'aide de Google Maps) entre deux points. Il est donc nécessaire d’avoir déjà renseigné au moins deux commandes. Ici nous avons les coordonnées fixes de notre maison ainsi que les coordonnées mises à jour de notre portable. Nous pouvons donc calculer la distance entre les deux. Nous sélectionnons « Distance » en type et nos deux commandes précédentes dans les options. Une fois sauvegardé, nous utilisons le bouton tester et la distance apparaît alors dans le popup. Ici 1,34 km.
 
 image::../images/geoloc19.jpg[]
@@ -99,7 +99,7 @@ De même si vous voulez le temps de trajet ou la distance d'un trajet, il faut c
 
 Ce plugin fonctionne comme un module, c’est-à-dire qu’une fois sauvegardé nous pouvons le retrouver dans la liste des actions ou commandes, il est ainsi très simple de l’utiliser lors de la création de scénarios par exemple. Nous pouvons par exemple réaliser un scénario qui se base sur la distance entre notre portable et la maison par exemple.
 
-=== Exemple de scénario
+== Exemple de scénario
 Dans la partie « Scénario », nous créons un scénario nommé « Géoloc TV » qui nous permet d’allumer la TV quand nous sommes à moins de 250 m de notre maison. Attention : les systèmes de positionnement n’étant pas précis au mètre près, pensez à prendre une marge lors de la création de vos scénarios. Dans « Mode de scénario » nous choisissons « Provoqué » et en « Déclencheur » nous ajoutons notre portable. En effet, c’est lorsque les coordonnées de notre portable vont être mises à jour que nous allons déclencher le scénario.
 
 image::../images/geoloc20.jpg[]
