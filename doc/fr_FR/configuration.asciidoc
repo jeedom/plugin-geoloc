@@ -35,7 +35,7 @@ image::../images/geoloc4.jpg[]
 === Dynamique
 Représente un point ayant des coordonnées variables, l’objet se déplace. Il s’agit en général de votre portable. Cette commande contiendra donc les dernières coordonnées envoyées jusqu’à ce que vous en envoyez de nouvelles. L’URL pour mettre à jour cette commande est :
 
-\#URL_JEEDOM#/core/api/jeeApi.php?api=\#API_KEY#&type=geoloc&id=\#ID_CMD#&value=%LOCN
+\#URL_JEEDOM#/core/api/jeeApi.php?api=\#API_KEY#&type=geoloc&id=\#ID_CMD#&value=%LOC
 
 \#URL_JEEDOM# correspond à votre url d’accès à Jeedom. Il s’agit (sauf si vous êtes connecté à votre réseau local) de l’adresse internet que vous utilisez pour accéder à Jeedom depuis l’extérieur. N’oubliez pas d’indiquer le port ainsi que /jeedom/.
 
@@ -51,9 +51,9 @@ image::../images/geoloc6.jpg[]
 
 image::../images/geoloc7.jpg[]
 
-%LOCN correspond à vos coordonnées sous la forme Latitude,Longitude.
+%LOC correspond à vos coordonnées sous la forme Latitude,Longitude.
 
-Il vous faut donc réaliser un HTTP POST sur cette adresse en remplaçant %LOCN par vos coordonnées.
+Il vous faut donc réaliser un HTTP POST sur cette adresse en remplaçant %LOC par vos coordonnées.
 
 === Exemple sous Android avec Tasker
 Attention : pour cet exemple, vous avez besoin de l’application Tasker pour Android (https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm). Dans l’onglet « Tâches », nous rajoutons une nouvelle tâche ici appelée « Jeedom ».
@@ -75,7 +75,7 @@ Un délai trop court pourrait ne pas permettre d’obtenir de coordonnées ou al
 image::../images/geoloc13.jpg[]
 image::../images/geoloc14.jpg[]
  
-Dans la case « Serveur :Port » nous copions notre URL complétée sauf pour la partie %LOCN.
+Dans la case « Serveur :Port » nous copions notre URL complétée sauf pour la partie %LOC.
 
 image::../images/geoloc15.jpg[]
 image::../images/geoloc16.jpg[]
@@ -84,7 +84,7 @@ Lorsque nous lançons notre tâche « Jeedom », une icône devrait vous informe
 
 image::../images/geoloc17.jpg[]
 
-Une fois le délai écoulé, nous cliquons sur « tester » dans Jeedom et les coordonnées de notre portable apparaissent alors dans le popup. Tasker a automatiquement remplacé la variable %LOCN par vos coordonnées.
+Une fois le délai écoulé, nous cliquons sur « tester » dans Jeedom et les coordonnées de notre portable apparaissent alors dans le popup. Tasker a automatiquement remplacé la variable %LOC par vos coordonnées.
 
 image::../images/geoloc18.jpg[]
 
