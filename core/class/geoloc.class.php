@@ -48,10 +48,9 @@ class geoloc extends eqLogic {
 		}
 		//For compatibility with older version which not use the Value property, set the Value if needed
 		foreach ($cmd->getEqLogic()->getCmd('info') as $distance) {
-			if ($distance->getConfiguration('mode') == 'distance' ||  $distance->getConfiguration('mode') == 'travelDistance' || $distance->getConfiguration('mode') == 'travelTime') {
-				if ($distance->setDependency())
-				{
-						$distance->save();
+			if ($distance->getConfiguration('mode') == 'distance' || $distance->getConfiguration('mode') == 'travelDistance' || $distance->getConfiguration('mode') == 'travelTime') {
+				if ($distance->setDependency()) {
+					$distance->save();
 				}
 			}
 		}
@@ -270,25 +269,23 @@ class geolocCmd extends cmd {
 		}
 	}
 
-	function setDependency()
-	{
-		$fromto = array('from' => '#'.$this->getConfiguration('from').'#','to' => '#'.$this->getConfiguration('to').'#');
+	function setDependency() {
+		$fromto = array('from' => '#' . $this->getConfiguration('from') . '#', 'to' => '#' . $this->getConfiguration('to') . '#');
 		$dependency = '';
-		foreach ($fromto as $key => $value){
+		foreach ($fromto as $key => $value) {
 			preg_match_all("/#([0-9]*)#/", $value, $matches);
 			foreach ($matches[1] as $cmd_id) {
 				if (is_numeric($cmd_id)) {
 					$cmd = self::byId($cmd_id);
 					if (is_object($cmd) && $cmd->getType() == 'info') {
-						if (strpos($dependency,'#' . $cmd_id . '#') === false){
+						if (strpos($dependency, '#' . $cmd_id . '#') === false) {
 							$dependency .= '#' . $cmd_id . '#';
 						}
 					}
 				}
 			}
 		}
-		if ($this->getValue() != $dependency)
-		{
+		if ($this->getValue() != $dependency) {
 			$this->setValue($dependency);
 			return true;
 		}
