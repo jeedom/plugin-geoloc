@@ -241,29 +241,24 @@ class geolocCmd extends cmd {
 		switch ($this->getConfiguration('mode')) {
 			case 'fixe':
 				$this->setSubType('string');
-				$this->setEventOnly(1);
 				$this->event($this->execute());
 				break;
 			case 'dynamic':
 				$this->setSubType('string');
-				$this->setEventOnly(1);
 				break;
 			case 'distance':
 				$this->setSubType('numeric');
 				$this->setUnite('Km');
-				$this->setEventOnly(1);
 				$this->setDependency();
 				break;
 			case 'travelDistance':
 				$this->setSubType('numeric');
 				$this->setUnite('Km');
-				$this->setEventOnly(1);
 				$this->setDependency();
 				break;
 			case 'travelTime':
 				$this->setSubType('numeric');
 				$this->setUnite('min');
-				$this->setEventOnly(1);
 				$this->setDependency();
 				break;
 		}
@@ -320,8 +315,8 @@ class geolocCmd extends cmd {
 				if (!is_object($to)) {
 					throw new Exception(__('Commande point d\'arrivé introuvable : ', __FILE__) . $this->getConfiguration('to'));
 				}
-				$to = explode(',', $to->execCmd(null, 0));
-				$from = explode(',', $from->execCmd(null, 0));
+				$to = explode(',', $to->execCmd());
+				$from = explode(',', $from->execCmd());
 				if (count($to) > 2) {
 					$to[2] = implode(',', array_slice($to, 1));
 				}
@@ -340,7 +335,7 @@ class geolocCmd extends cmd {
 					if ($this->getConfiguration('noHighways', 0) == 1) {
 						$highways = false;
 					}
-					$result = self::get_driving_information($from->execCmd(null, 0), $to->execCmd(null, 0), $highways);
+					$result = self::get_driving_information($from->execCmd(), $to->execCmd(), $highways);
 					return $result['time'];
 				} catch (Exception $e) {
 					return 0;
@@ -353,7 +348,7 @@ class geolocCmd extends cmd {
 					if ($this->getConfiguration('noHighways', 0) == 1) {
 						$highways = false;
 					}
-					$result = self::get_driving_information($from->execCmd(null, 0), $to->execCmd(null, 0), $highways);
+					$result = self::get_driving_information($from->execCmd(), $to->execCmd(), $highways);
 					return $result['distance'];
 				} catch (Exception $e) {
 					return 0;
