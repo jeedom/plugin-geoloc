@@ -164,6 +164,7 @@ class geoloc extends eqLogic {
 		$replace = array(
 			'#id#' => $this->getId(),
 			'#name#' => $this->getName(),
+			'#name_display#' => $this->getName(),
 			'#eqLink#' => ($this->hasRight('w')) ? $this->getLinkToConfiguration() : '#',
 			'#category#' => $this->getPrimaryCategory(),
 			'#background_color#' => $this->getBackgroundColor($version),
@@ -182,10 +183,10 @@ class geoloc extends eqLogic {
 			$replace['#object_name#'] = '';
 		}
 		if (($_version == 'dview' || $_version == 'mview') && $this->getDisplay('doNotShowNameOnView') == 1) {
-			$replace['#name#'] = '';
+			$replace['#name_display#'] = '';
 		}
 		if (($_version == 'mobile' || $_version == 'dashboard') && $this->getDisplay('doNotShowNameOnDashboard') == 1) {
-			$replace['#name#'] = '';
+			$replace['#name_display#'] = '';
 		}
 		if (($_version == 'dview' || $_version == 'mview') && $this->getDisplay('doNotDisplayBatteryLevelOnView') == 1) {
 			$replace['#battery#'] = -1;
