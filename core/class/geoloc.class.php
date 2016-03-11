@@ -22,6 +22,8 @@ require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 class geoloc extends eqLogic {
 	/*     * *************************Attributs****************************** */
 
+	public static $_widgetPossibility = array('custom' => true);
+
 	/*     * ***********************Methode static*************************** */
 
 	public static function event() {
@@ -64,28 +66,12 @@ class geoloc extends eqLogic {
 		if ($this->getConfiguration('noSpecifyWidget', 0) == 1) {
 			return parent::toHtml($_version);
 		}
-		if ($_version == '') {
-			throw new Exception(__('La version demandée ne peut pas être vide (mobile, dashboard ou scénario)', __FILE__));
+		$replace = $this->preToHtml($_version);
+		if (!is_array($replace)) {
+			return $replace;
 		}
-		if (!$this->hasRight('r')) {
-			return '';
-		}
-		$version = jeedom::versionAlias($_version);
-		if ($this->getDisplay('hideOn' . $version) == 1) {
-			return '';
-		}
-
 		$cmd_html = '';
 		$version = jeedom::versionAlias($_version);
-		$vcolor = 'cmdColor';
-		if ($version == 'mobile') {
-			$vcolor = 'mcmdColor';
-		}
-		if ($this->getPrimaryCategory() == '') {
-			$cmdColor = '';
-		} else {
-			$cmdColor = jeedom::getConfiguration('eqLogic:category:' . $this->getPrimaryCategory() . ':' . $vcolor);
-		}
 		$maps = array();
 		$dynamic = array();
 		$cmd_html = '';
@@ -131,15 +117,14 @@ class geoloc extends eqLogic {
 					unset($dynamic[$id]);
 				}
 			}
-
 			$from_cmd = cmd::byId($key[0]);
 			$to_cmd = cmd::byId($key[1]);
 			if (!is_object($from_cmd) || !is_object($to_cmd)) {
-				contine;
+				continue;
 			}
 			$from = $from_cmd->execCmd();
 			$to = $to_cmd->execCmd();
-			$replace = array(
+			$replaceCmd = array(
 				'#name#' => $from_cmd->getName() . ' <i class="fa fa-arrow-right"></i> ' . $to_cmd->getName(),
 				'#from#' => $from,
 				'#collectDate#' => ($from_cmd->getCollectDate() > $to_cmd->getCollectDate()) ? $from_cmd->getCollectDate() : $to_cmd->getCollectDate(),
@@ -148,59 +133,20 @@ class geoloc extends eqLogic {
 				'#distance#' => (isset($map['distance'])) ? $map['distance'] : __('Inconnue', __FILE__),
 				'#travelTime#' => (isset($map['travelTime'])) ? $map['travelTime'] : __('Inconnue', __FILE__),
 			);
-			$cmd_html .= template_replace($replace, getTemplate('core', $version, 'geoloc', 'geoloc'));
+			$cmd_html .= template_replace($replaceCmd, getTemplate('core', $version, 'geoloc', 'geoloc'));
 		}
 
 		foreach ($dynamic as $id => $cmd) {
-			$replace = array(
+			$replaceCmd = array(
 				'#state#' => $cmd->execCmd(),
 				'#name#' => $cmd->getName(),
 				'#collectDate#' => $cmd->getCollectDate(),
 				'#id#' => $cmd->getId(),
 			);
-			$cmd_html .= template_replace($replace, getTemplate('core', $_version, 'geoloc_single', 'geoloc'));
+			$cmd_html .= template_replace($replaceCmd, getTemplate('core', $_version, 'geoloc_single', 'geoloc'));
 		}
-
-		$replace = array(
-			'#id#' => $this->getId(),
-			'#name#' => $this->getName(),
-			'#name_display#' => $this->getName(),
-			'#eqLink#' => ($this->hasRight('w')) ? $this->getLinkToConfiguration() : '#',
-			'#category#' => $this->getPrimaryCategory(),
-			'#background_color#' => $this->getBackgroundColor($version),
-			'#cmd#' => $cmd_html,
-			'#style#' => '',
-			'#noResize#' => 1,
-			'#max_width#' => '650px',
-			'#logicalId#' => $this->getLogicalId(),
-			'#battery#' => $this->getConfiguration('batteryStatus', -2),
-			'#batteryDatetime#' => $this->getConfiguration('batteryStatusDatetime', __('inconnue', __FILE__)),
-		);
-		if (($_version == 'dview' || $_version == 'mview') && $this->getDisplay('doNotShowObjectNameOnView', 0) == 0) {
-			$object = $this->getObject();
-			$replace['#object_name#'] = (is_object($object)) ? '(' . $object->getName() . ')' : '';
-		} else {
-			$replace['#object_name#'] = '';
-		}
-		if (($_version == 'dview' || $_version == 'mview') && $this->getDisplay('doNotShowNameOnView') == 1) {
-			$replace['#name_display#'] = '';
-		}
-		if (($_version == 'mobile' || $_version == 'dashboard') && $this->getDisplay('doNotShowNameOnDashboard') == 1) {
-			$replace['#name_display#'] = '';
-		}
-		if (($_version == 'dview' || $_version == 'mview') && $this->getDisplay('doNotDisplayBatteryLevelOnView') == 1) {
-			$replace['#battery#'] = -1;
-		}
-		if ($_version == 'dashboard' && $this->getDisplay('doNotDisplayBatteryLevelOnDashboard') == 1) {
-			$replace['#battery#'] = -1;
-		}
-
-		$parameters = $this->getDisplay('parameters');
-		if (is_array($parameters)) {
-			foreach ($parameters as $key => $value) {
-				$replace['#' . $key . '#'] = $value;
-			}
-		}
+		$replace['#cmd#'] = $cmd_html;
+		$replace['#max_width#'] = '650px';
 		return template_replace($replace, getTemplate('core', $version, 'eqLogic'));
 	}
 }
