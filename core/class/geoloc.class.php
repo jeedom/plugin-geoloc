@@ -143,7 +143,7 @@ class geoloc extends eqLogic {
 				'#collectDate#' => $cmd->getCollectDate(),
 				'#id#' => $cmd->getId(),
 			);
-			$replace['#cmd#'] .= template_replace($replaceCmd, getTemplate('core', $_version, 'geoloc_single', 'geoloc'));
+			$replace['#cmd#'] .= template_replace($replaceCmd, getTemplate('core', $version, 'geoloc_single', 'geoloc'));
 		}
 		$replace['#max_width#'] = '650px';
 		return template_replace($replace, getTemplate('core', $version, 'eqLogic'));
