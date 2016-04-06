@@ -70,7 +70,7 @@ class geoloc extends eqLogic {
 		if (!is_array($replace)) {
 			return $replace;
 		}
-		$cmd_html = '';
+		$replace['#cmd#'] = '';
 		$version = jeedom::versionAlias($_version);
 		$maps = array();
 		$dynamic = array();
@@ -133,7 +133,7 @@ class geoloc extends eqLogic {
 				'#distance#' => (isset($map['distance'])) ? $map['distance'] : __('Inconnue', __FILE__),
 				'#travelTime#' => (isset($map['travelTime'])) ? $map['travelTime'] : __('Inconnue', __FILE__),
 			);
-			$cmd_html .= template_replace($replaceCmd, getTemplate('core', $version, 'geoloc', 'geoloc'));
+			$replace['#cmd#'] .= template_replace($replaceCmd, getTemplate('core', $version, 'geoloc', 'geoloc'));
 		}
 
 		foreach ($dynamic as $id => $cmd) {
@@ -143,9 +143,8 @@ class geoloc extends eqLogic {
 				'#collectDate#' => $cmd->getCollectDate(),
 				'#id#' => $cmd->getId(),
 			);
-			$cmd_html .= template_replace($replaceCmd, getTemplate('core', $_version, 'geoloc_single', 'geoloc'));
+			$replace['#cmd#'] .= template_replace($replaceCmd, getTemplate('core', $_version, 'geoloc_single', 'geoloc'));
 		}
-		$replace['#cmd#'] = $cmd_html;
 		$replace['#max_width#'] = '650px';
 		return template_replace($replace, getTemplate('core', $version, 'eqLogic'));
 	}
