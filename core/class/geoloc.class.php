@@ -125,7 +125,7 @@ class geoloc extends eqLogic {
 			$from = $from_cmd->execCmd();
 			$to = $to_cmd->execCmd();
 			$replaceCmd = array(
-				'#name#' => $from_cmd->getName() . ' <i class="fa fa-arrow-right"></i> ' . $to_cmd->getName(),
+				'#name_display#' => $from_cmd->getName() . ' <i class="fa fa-arrow-right"></i> ' . $to_cmd->getName(),
 				'#from#' => $from,
 				'#collectDate#' => ($from_cmd->getCollectDate() > $to_cmd->getCollectDate()) ? $from_cmd->getCollectDate() : $to_cmd->getCollectDate(),
 				'#to#' => $to,
