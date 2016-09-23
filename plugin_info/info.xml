@@ -3,12 +3,9 @@
     <id>geoloc</id>
     <name>Geoloc</name>
     <description>Plugin pour la géolocalisation</description>
-    <icon>fa fa-crosshairs</icon>
     <licence>AGPL</licence>
-    <author>Loïc Gevrey</author>
-    <installation>Aucune</installation>
+    <author>Loïc</author>
     <require>2.2</require>
-    <version>1.0</version>
     <category>travel</category>
 </info>
 
