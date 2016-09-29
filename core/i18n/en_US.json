@@ -1,0 +1,34 @@
+{
+    "plugins/geoloc/desktop/php/geoloc.php": {
+        "Ajouter un équipement": "Add device",
+        "Rechercher": "Search",
+        "Mes équipements de géolocalisation": "My geolocation devices",
+        "Général": "Main",
+        "Nom de l'équipement": "Device name",
+        "Objet parent": "Parent object",
+        "Aucun": "None",
+        "Activer": "Activate",
+        "Visible": "Visible",
+        "Commandes": "Commands",
+        "ID": "ID",
+        "Nom": "Name",
+        "Type": "Type",
+        "Options": "Options",
+        "Paramètres": "Settings",
+        "Supprimer": "Delete",
+        "Sauvegarder": "Save"
+    },
+    "plugins/geoloc/desktop/js/geoloc.js": {
+        "Fixe": "fixed",
+        "Dynamique": "Dynamic",
+        "Distance": "Distance",
+        "Latitude,Longitude": "Latitude,Longitude",
+        "Historiser": "Historize",
+        "Afficher": "Show",
+        "Tester": "Test"
+    },
+    "plugins/geoloc/plugin_info/info.xml": {
+        "Plugin pour la géolocalisation": "Plugin for geolocalization",
+        "Aucune": "None"
+    }
+}

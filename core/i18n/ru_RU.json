@@ -1,0 +1,34 @@
+{
+    "plugins/geoloc/desktop/php/geoloc.php": {
+        "Ajouter un équipement": "Добавить оборудование",
+        "Rechercher": "Искать",
+        "Mes équipements de géolocalisation": "Мой оборудование геолокации ",
+        "Général": "Главная",
+        "Nom de l'équipement": "Название оборудования",
+        "Objet parent": "Родительский объект",
+        "Aucun": "Нет",
+        "Activer": "Активировать",
+        "Visible": "Видимый",
+        "Commandes": "Команды",
+        "ID": "Идентификатор",
+        "Nom": "Имя",
+        "Type": "Тип",
+        "Options": "Опции",
+        "Paramètres": "Параметры",
+        "Supprimer": "Удалить",
+        "Sauvegarder": "Сохранить"
+    },
+    "plugins/geoloc/desktop/js/geoloc.js": {
+        "Fixe": "Фиксированный",
+        "Dynamique": "Динамический",
+        "Distance": "Расстояние",
+        "Latitude,Longitude": "Широта,Долгота",
+        "Historiser": "История",
+        "Afficher": "Отобразить",
+        "Tester": "Тест"
+    },
+    "plugins/geoloc/plugin_info/info.xml": {
+        "Plugin pour la géolocalisation": "Плагин для геолокации",
+        "Aucune": "Нет"
+    }
+}
