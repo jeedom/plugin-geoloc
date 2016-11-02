@@ -47,7 +47,7 @@ Soit dans le menu « Général », puis « Administration » et « Configuration
 
 image::../images/geoloc6.jpg[]
 
-<id=\#ID_CMD# correspond à l’id de votre commande. Une fois que vous avez donné un nom à votre commande de Géolocalisation, déterminez son type et sauvegardez, un numéro apparaît dans la case « ID » devant votre commande.
+<id=\#ID_CMD# correspond à l’id de votre commande. Une fois que vous avez donné un nom à votre commande de Géolocalisation, déterminez son type et sauvegardez, un numéro apparaît dans la case « # » devant le nom votre commande.
 
 image::../images/geoloc7.jpg[]
 
