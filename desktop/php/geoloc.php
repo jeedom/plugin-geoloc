@@ -45,22 +45,24 @@ foreach ($eqLogics as $eqLogic) {
 </div>
 </div>
 
-<div class="col-lg-10 col-md-9 col-sm-8 eqLogic" style="border-left: solid 1px #EEE; padding-left: 25px;display: none;">
-    <div class="row">
-        <div class="col-sm-6">
-            <form class="form-horizontal">
-                <fieldset>
-                    <legend><i class="fa fa-arrow-circle-left eqLogicAction cursor" data-action="returnToThumbnailDisplay"></i> {{Général}}<i class='fa fa-cogs eqLogicAction pull-right cursor expertModeVisible' data-action='configure'></i></legend>
+<div class="tab-content" style="height:calc(100% - 50px);overflow:auto;overflow-x: hidden;">
+	<div role="tabpanel" class="tab-pane active" id="eqlogictab">
+    	<form class="form-horizontal">
+        	<fieldset>
+            	<legend>
+					<i class="fa fa-arrow-circle-left eqLogicAction cursor" data-action="returnToThumbnailDisplay"></i> {{Général}}
+                    <i class="fa fa-cogs eqLogicAction pull-right cursor expertModeVisible" data-action="configure"></i>
+				</legend>
                     <div class="form-group">
-                        <label class="col-sm-4 control-label">{{Nom de l'équipement}}</label>
-                        <div class="col-sm-8">
+                        <label class="col-sm-2 control-label">{{Nom de l'équipement}}</label>
+                        <div class="col-sm-3">
                             <input type="text" class="eqLogicAttr form-control" data-l1key="id" style="display : none;" />
                             <input type="text" class="eqLogicAttr form-control" data-l1key="name" placeholder="{{Nom de l'équipement}}"/>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-4 control-label">{{Objet parent}}</label>
-                        <div class="col-sm-8">
+                        <label class="col-sm-2 control-label">{{Objet parent}}</label>
+                        <div class="col-sm-3">
                             <select id="sel_object" class="eqLogicAttr form-control" data-l1key="object_id">
                                 <option value="">{{Aucun}}</option>
                                 <?php
@@ -72,54 +74,44 @@ foreach (object::all() as $object) {
                        </div>
                    </div>
                    <div class="form-group">
-                    <label class="col-sm-4 control-label"></label>
-                    <div class="col-sm-8">
+                    <label class="col-sm-2 control-label"></label>
+                    <div class="col-sm-9">
 			<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>{{Activer}}</label>
  			<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-4 control-label">{{Ne pas utiliser le widget spécifique}}</label>
-                    <div class="col-sm-1">
+                    <label class="col-sm-2 control-label">{{Ne pas utiliser le widget spécifique}}</label>
+                    <div class="col-sm-9">
                     <input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="noSpecifyWidget" />
                     </div>
                 </div>
             </fieldset>
         </form>
     </div>
-    <div class="col-sm-6">
 
-    </div>
+<div role="tabpanel" class="tab-pane" id="commandtab">	
+	<legend><i class="fa fa-list-alt"></i>  {{Tableau de commandes}}</legend>
+	<div class="alert alert-info">Exemple d’URL à appeler avec tasker : <?php echo network::getNetworkAccess('external')?>/core/api/jeeApi.php?api=<?php echo config::byKey('api');?>&type=geoloc&id=#ID_CMD#&value=%LOCN</div>
+	<a class="btn btn-success btn-sm pull-right cmdAction" data-action="add"><i class="fa fa-plus-circle"></i> {{Commandes}}</a>
+	<a class="control-label pull-right" href="http://www.coordonnees-gps.fr/" target="_blank"><i class="icon nature-planet5"></i> Cliquez-ici pour retrouver vos coordonnées</a><br/><br/>
+	<table id="table_cmd" class="table table-bordered table-condensed">
+    	<thead>
+        	<tr>
+            	<th style="width: 50px;">#</th>
+            	<th style="width: 200px;">{{Nom}}</th>
+            	<th style="width: 200px;">{{Type}}</th>
+            	<th>{{Options}}</th>
+            	<th style="width: 100px;">{{Paramètres}}</th>
+            	<th style="width: 150px;"></th>
+        	</tr>
+    	</thead>
+    	<tbody>
+    	</tbody>
+	</table>
+
 </div>
-
-<legend><i class="fa fa-list-alt"></i>  {{Tableau de commandes}}</legend>
-<div class="alert alert-info">Exemple d’URL à appeler avec tasker : <?php echo network::getNetworkAccess('external')?>/core/api/jeeApi.php?api=<?php echo config::byKey('api');?>&type=geoloc&id=#ID_CMD#&value=%LOCN</div>
-<a class="btn btn-success btn-sm cmdAction" data-action="add"><i class="fa fa-plus-circle"></i> {{Commandes}}</a>      <a class="control-label" href="http://www.coordonnees-gps.fr/" target="_blank"><i class="icon nature-planet5"></i> Cliquez-ici pour retrouver vos coordonnées</a><br/><br/>
-<table id="table_cmd" class="table table-bordered table-condensed">
-    <thead>
-        <tr>
-            <th style="width: 50px;">{{ID}}</th>
-            <th style="width: 200px;">{{Nom}}</th>
-            <th style="width: 200px;">{{Type}}</th>
-            <th>{{Options}}</th>
-            <th style="width: 100px;">{{Paramètres}}</th>
-            <th style="width: 150px;"></th>
-        </tr>
-    </thead>
-    <tbody>
-
-    </tbody>
-</table>
-
-<form class="form-horizontal">
-    <fieldset>
-        <div class="form-actions">
-            <a class="btn btn-danger eqLogicAction" data-action="remove"><i class="fa fa-minus-circle"></i> {{Supprimer}}</a>
-            <a class="btn btn-success eqLogicAction" data-action="save"><i class="fa fa-check-circle"></i> {{Sauvegarder}}</a>
-        </div>
-    </fieldset>
-</form>
-
+</div>
 </div>
 </div>
 
