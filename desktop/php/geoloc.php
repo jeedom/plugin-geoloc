@@ -58,13 +58,9 @@ foreach ($eqLogics as $eqLogic) {
 
 <div class="tab-content" style="height:calc(100% - 50px);overflow:auto;overflow-x: hidden;">
 	<div role="tabpanel" class="tab-pane active" id="eqlogictab">
-		<br/>
+	<br/>
     	<form class="form-horizontal">
         	<fieldset>
-            	<legend>
-					<i class="fa fa-arrow-circle-left eqLogicAction cursor" data-action="returnToThumbnailDisplay"></i> {{Général}}
-                    <i class="fa fa-cogs eqLogicAction pull-right cursor expertModeVisible" data-action="configure"></i>
-				</legend>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">{{Nom de l'équipement}}</label>
                         <div class="col-sm-3">
