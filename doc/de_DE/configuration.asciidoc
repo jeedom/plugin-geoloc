@@ -1,4 +1,4 @@
-= Configuration
+= Konfiguration
 
 Une fois le plugin installé et activé à partir du Market, on accède à la page du plugin Géolocalisation par : 
 
