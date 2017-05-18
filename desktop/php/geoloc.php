@@ -96,9 +96,9 @@ foreach (object::all() as $object) {
         </form>
     </div>
 
-<div role="tabpanel" class="tab-pane" id="commandtab">	
+<div role="tabpanel" class="tab-pane" id="commandtab">
 	<br/>
-	<div class="alert alert-info">Exemple d’URL à appeler avec tasker : <?php echo network::getNetworkAccess('external')?>/core/api/jeeApi.php?api=<?php echo config::byKey('api');?>&type=geoloc&id=#ID_CMD#&value=%LOCN</div>
+	<div class="alert alert-info">Exemple d’URL à appeler avec tasker : <?php echo network::getNetworkAccess('external')?>/plugins/geoloc/core/api/jeeGeoloc.php?api=<?php echo  jeedom::getApiKey('geoloc');?>&id=#ID_CMD#&value=%LOCN</div>
 	<a class="btn btn-success btn-sm pull-right cmdAction" data-action="add"><i class="fa fa-plus-circle"></i> {{Commandes}}</a>
 	<a class="control-label pull-left" href="http://www.coordonnees-gps.fr/" target="_blank"><i class="icon nature-planet5"></i>{{Cliquez-ici pour retrouver vos coordonnées}}</a><br/><br/>
 	<table id="table_cmd" class="table table-bordered table-condensed">
