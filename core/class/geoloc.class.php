@@ -159,7 +159,7 @@ class geolocCmd extends cmd {
     }
     /*     * *********************Methode d'instance************************* */
 
-    public function preSave() {
+    public function preAjax() {
         switch ($this->getConfiguration('mode')) {
             case 'fixe':
             $this->setSubType('string');
