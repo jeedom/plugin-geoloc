@@ -176,7 +176,7 @@ class geolocCmd extends cmd {
     public function postSave() {
         switch ($this->getConfiguration('mode')) {
             case 'fixe':
-            $this->event($this->execute());
+            $this->event($this->getConfiguration('coordinate'));
             break;
             /*case 'distance':
              $this->setDependency();
