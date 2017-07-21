@@ -160,29 +160,33 @@ class geolocCmd extends cmd {
     /*     * *********************Methode d'instance************************* */
 
     public function preAjax() {
+        if ($this->getConfiguration('mode') == 'fixe' || $this->getConfiguration('mode') == 'dynamic') {
+            $this->setSubType('string');
+        } else {
+            $this->setSubType('numeric');
+            if ($this->getConfiguration('mode') == 'fixe') {
+                $this->setUnite('min');
+            } else {
+                $this->setUnite('Km');
+            }
+            //$this->setDependency();
+        }
+    }
+    
+    public function postSave() {
         switch ($this->getConfiguration('mode')) {
             case 'fixe':
-            $this->setSubType('string');
-            $this->event($this->execute());
+            $this->event($this->getConfiguration('coordinate'));
             break;
-            case 'dynamic':
-            $this->setSubType('string');
-            break;
-            case 'distance':
-            $this->setSubType('numeric');
-            $this->setUnite('Km');
-            $this->setDependency();
+            /*case 'distance':
+             $this->setDependency();
             break;
             case 'travelDistance':
-            $this->setSubType('numeric');
-            $this->setUnite('Km');
             $this->setDependency();
             break;
             case 'travelTime':
-            $this->setSubType('numeric');
-            $this->setUnite('min');
             $this->setDependency();
-            break;
+            break;*/
         }
     }
 
