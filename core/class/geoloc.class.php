@@ -173,7 +173,7 @@ class geolocCmd extends cmd {
         }
     }
     
-    public function preSave() {
+    public function postSave() {
         switch ($this->getConfiguration('mode')) {
             case 'fixe':
             $this->event($this->execute());
