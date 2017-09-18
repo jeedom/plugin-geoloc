@@ -4,5 +4,7 @@
 	"licence" : "AGPL",
 	"author" : "Loïc",
 	"require" : "2.4",
-	"category" : "organization"
+	"category" : "organization",
+	"changelog" : "https://github.com/jeedom/plugin-geoloc/blob/stable/doc/#language#/changelog.asciidoc",
+	"documentation" : "https://github.com/jeedom/plugin-geoloc/blob/stable/doc/#language#/index.asciidoc"
 }
