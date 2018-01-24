@@ -93,7 +93,7 @@ Il vous faut donc réaliser un HTTP POST sur cette adresse en remplaçant
 %LOC par vos coordonnées.
 
 Exemple sous Android avec Tasker 
---------------------------------
+=============
 
 Attention : pour cet exemple, vous avez besoin de l’application Tasker
 pour Android
@@ -150,7 +150,7 @@ cette tâche quand vous en avez besoin. Par exemple toutes les heures,
 quand vous vous connectez en wifi…
 
 Distance, Temps de trajet et Distance de trajet 
------------------------------------------------
+=============
 
 Permet de calculer la distance, le temps de trajet (en voiture, à l’aide
 de Google Maps) ou la distance d’un trajet (en voiture, à l’aide de
@@ -175,7 +175,7 @@ scénarios par exemple. Nous pouvons par exemple réaliser un scénario qui
 se base sur la distance entre notre portable et la maison par exemple.
 
 Exemple de scénario 
--------------------
+=============
 
 Dans la partie « Scénario », nous créons un scénario nommé « Géoloc TV »
 qui nous permet d’allumer la TV quand nous sommes à moins de 250 m de
