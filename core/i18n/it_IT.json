@@ -2,7 +2,7 @@
     "plugins/geoloc/desktop/php/geoloc.php": {
         "Ajouter un équipement": "Aggiungi dispositivo",
         "Rechercher": "Cerca",
-        "Mes équipements de géolocalisation": "Mes équipements de géolocalisation",
+        "Mes équipements de géolocalisation": "La mia attrezzatura geolocalizzazione",
         "Général": "Principale",
         "Nom de l'équipement": "Nome dispositivo",
         "Objet parent": "Oggetto padre",
@@ -19,16 +19,16 @@
         "Sauvegarder": "Salva"
     },
     "plugins/geoloc/desktop/js/geoloc.js": {
-        "Fixe": "Fixe",
-        "Dynamique": "Dynamique",
-        "Distance": "Distance",
-        "Latitude,Longitude": "Latitude,Longitude",
+        "Fixe": "fisso",
+        "Dynamique": "dinamico",
+        "Distance": "distanza",
+        "Latitude,Longitude": "Latitudine, Longitudine",
         "Historiser": "Storicizza",
         "Afficher": "Mostra",
         "Tester": "Prova"
     },
     "plugins/geoloc/plugin_info/info.xml": {
-        "Plugin pour la géolocalisation": "Plugin pour la géolocalisation",
+        "Plugin pour la géolocalisation": "Plugin per la geolocalizzazione",
         "Aucune": "Nessuno"
     }
 }
