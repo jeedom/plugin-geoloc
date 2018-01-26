@@ -1,0 +1,34 @@
+{
+    "plugins/geoloc/desktop/php/geoloc.php": {
+        "Ajouter un équipement": "Donanım ekle",
+        "Rechercher": "Arayın",
+        "Mes équipements de géolocalisation": "Harita cihazlarım",
+        "Général": "Genel",
+        "Nom de l'équipement": "Ekipman ismi",
+        "Objet parent": "Üst nesne",
+        "Aucun": "Hiçbir",
+        "Activer": "Etkinleştirmek",
+        "Visible": "Görülebilir",
+        "Commandes": "Komutalar",
+        "ID": "ID",
+        "Nom": "İsim",
+        "Type": "Ceşit",
+        "Options": "Opsiyonlar",
+        "Paramètres": "Ayarlar ( Séçenekler )",
+        "Supprimer": "Sil",
+        "Sauvegarder": "Kaydet"
+    },
+    "plugins/geoloc/desktop/js/geoloc.js": {
+        "Fixe": "Sabit",
+        "Dynamique": "Dinamik",
+        "Distance": "Uzaklık",
+        "Latitude,Longitude": "Enlem,Boylam",
+        "Historiser": "Tarihe göre sırala",
+        "Afficher": "Göster",
+        "Tester": "Dene"
+    },
+    "plugins/geoloc/plugin_info/info.xml": {
+        "Plugin pour la géolocalisation": "Harita için eklenti",
+        "Aucune": "Hiçbir"
+    }
+}

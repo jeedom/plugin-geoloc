@@ -1,0 +1,34 @@
+{
+    "plugins/geoloc/desktop/php/geoloc.php": {
+        "Ajouter un équipement": "機器を追加します",
+        "Rechercher": "検索する",
+        "Mes équipements de géolocalisation": "私のジオロケーション機器",
+        "Général": "コモン",
+        "Nom de l'équipement": "機器の名前",
+        "Objet parent": "親オブジェクト",
+        "Aucun": "何でもありません",
+        "Activer": "アクティブにし",
+        "Visible": "目に見えます",
+        "Commandes": "コマンド",
+        "ID": "ID",
+        "Nom": "表題",
+        "Type": "タイプ",
+        "Options": "オプション",
+        "Paramètres": "設定",
+        "Supprimer": "取り除きます",
+        "Sauvegarder": "セーブ"
+    },
+    "plugins/geoloc/desktop/js/geoloc.js": {
+        "Fixe": "一定",
+        "Dynamique": "ダイナミック",
+        "Distance": "距離",
+        "Latitude,Longitude": "緯度、経度",
+        "Historiser": "historicize",
+        "Afficher": "ディスプレイ",
+        "Tester": "テスト"
+    },
+    "plugins/geoloc/plugin_info/info.xml": {
+        "Plugin pour la géolocalisation": "ジオロケーションのためのプラグイン",
+        "Aucune": "何でもありません"
+    }
+}
