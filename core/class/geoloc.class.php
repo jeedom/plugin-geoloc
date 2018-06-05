@@ -100,7 +100,7 @@ class geoloc extends eqLogic {
         $dynamic = array();
         $cmd_html = '';
         if ($this->getIsEnable()) {
-            foreach ($this->getCmd(null, null, true) as $cmd) {
+            foreach ($this->getCmd('info', null, true) as $cmd) {
                 if ($cmd->getConfiguration('mode') == 'travelTime') {
                     $from = $cmd->getConfiguration('from');
                     $to = $cmd->getConfiguration('to');
