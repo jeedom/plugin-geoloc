@@ -73,7 +73,7 @@ foreach ($eqLogics as $eqLogic) {
                             <select id="sel_object" class="eqLogicAttr form-control" data-l1key="object_id">
                                 <option value="">{{Aucun}}</option>
                                 <?php
-foreach (object::all() as $object) {
+foreach (jeeObject::all() as $object) {
 	echo '<option value="' . $object->getId() . '">' . $object->getName() . '</option>';
 }
 ?>
@@ -87,6 +87,38 @@ foreach (object::all() as $object) {
  			<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
                     </div>
                 </div>
+				 <div class="form-group">
+                    <label class="col-sm-2 control-label">{{Appareil Ios}}</label>
+                    <div class="col-sm-9">
+                    <input type="checkbox" class="eqLogicAttr isIos" data-l1key="configuration" data-l2key="isIos" />
+                    </div>
+                </div>
+				<div class="form-group ios" style="display:none;">
+                    	<label class="col-md-2 control-label">{{Login iCloud}}</label>
+                    	<div class="col-md-3">
+                        	<input type="text" id="username_icloud" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="username" placeholder="Login iCloud"/>
+                   		</div>
+                		</div>
+                		<div class="form-group ios" style="display:none;">
+                    	<label class="col-md-2 control-label"">{{Password iCloud}}</label>
+                    	<div class="col-md-3">
+                        	<input type="password" id="password_icloud" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="password" placeholder="Client Secret"/>
+                    	</div>
+                		</div>
+                		<div class="form-group ios" style="display:none;">
+                    	<label class="col-md-2 control-label">{{Device}}</label>
+                    	<div class="col-md-3">
+                    		<input type="text" id="device" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="device" placeholder="device"/>
+                    	</div>
+                    	<div class="col-md-3 ios" style="display:none">
+                        	<select id="sel_device" class="eqLogicAttr configuration form-control" disabled>
+                            
+                        	</select>
+                    	</div>
+                    	<div class="col-md-3 ios" style="display:none">
+                        	<a class="btn btn-default" id="searchDevices">{{Charger les devices}}</a>
+                    	</div>
+                		</div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label">{{Ne pas utiliser le widget spécifique}}</label>
                     <div class="col-sm-9">
