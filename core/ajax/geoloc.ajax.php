@@ -39,14 +39,6 @@ try {
 		}
 		ajax::success($return);
 	}
-	
-	if (init('action') == 'getDevicesList') {
-        $geoloc = geoloc::getDevicesListIos(init('id'),init('username'),init('password'));
-        $return['cmd'] = array();
-		$return['cmd'] = $geoloc;
-        
-        ajax::success($return);
-    }
 
 	throw new Exception(__('Aucune methode correspondante à : ', __FILE__) . init('action'));
 	/*     * *********Catch exeption*************** */

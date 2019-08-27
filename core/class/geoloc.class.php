@@ -18,9 +18,6 @@
 
 /* * ***************************Includes********************************* */
 require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
-if (!class_exists('FindMyiPhone')) {
-	require_once dirname(__FILE__) . '/../../3rdparty/class.findmyiphone.php';
-}
 
 class geoloc extends eqLogic {
     /*     * *************************Attributs****************************** */
@@ -37,51 +34,6 @@ class geoloc extends eqLogic {
                 }
             }
         }
-    }
-	
-	public static function cron5($_options) {
-		$eqLogics = ($_eqlogic_id !== null) ? array(eqLogic::byId($_eqlogic_id)) : eqLogic::byType('geoloc', true);
-		foreach ($eqLogics as $geoloc) {
-			if (is_object($geoloc) && $geoloc->getConfiguration('isIos','')==1) {
-            	$geoloc_xml = $geoloc->getLocation();
-            	foreach ($geoloc->getCmd('info') as $cmd) {
-                	if($cmd->getConfiguration('mode') == 'dynamic'){
-						$cmd->event($geoloc_xml);
-					}else{
-						$cmd->event($cmd->execCmd());
-					}
-            	}
-				foreach ($geoloc->getCmd('info') as $cmd) {
-                	if($cmd->getConfiguration('mode') == 'distance' ){
-						$cmd->event($cmd->execute());
-					}
-            	}
-        	}
-			
-		}
-         
-    }
-	
-	public static function getDevicesListIos($_id, $_username, $_password) {
-		
-		try {
-			$fmi = new FindMyiPhone($_username, $_password);
-		} catch (Exception $e) {
-			print "Error: ".$e->getMessage();
-			exit;
-		}
-		$devicelist= array() ;
-		$i=0;
-		if (sizeof($fmi->devices) == 0) $fmi->getDevices();
-		foreach($fmi->devices as $device){
-			$devicelist['devices'][$i]['name']=$device->name;
-			$devicelist['devices'][$i]['id']=$device->ID;
-			$devicelist['devices'][$i]['deviceClass']=$device->class;
-			$i++;
-		}
-		
-		return $devicelist;
-
     }
 
     /*     * *********************Methode d'instance************************* */
@@ -100,7 +52,7 @@ class geoloc extends eqLogic {
         $dynamic = array();
         $cmd_html = '';
         if ($this->getIsEnable()) {
-            foreach ($this->getCmd('info', null, true) as $cmd) {
+            foreach ($this->getCmd(null, null, true) as $cmd) {
                 if ($cmd->getConfiguration('mode') == 'travelTime') {
                     $from = $cmd->getConfiguration('from');
                     $to = $cmd->getConfiguration('to');
@@ -171,49 +123,6 @@ class geoloc extends eqLogic {
         }
         $replace['#max_width#'] = '650px';
         return template_replace($replace, getTemplate('core', $version, 'eqLogic'));
-    }
-	
-	public function getLocation() {
-    	
-        if ($this->getConfiguration('username') == '' || $this->getConfiguration('password') == '') {
-            return false;
-        }
-        	try {
-				$fmi = new FindMyiPhone($this->getConfiguration('username'), $this->getConfiguration('password'));
-				$location = $fmi->locate($this->getConfiguration('device'));
-            	$geoloc=$location->latitude.','.$location->longitude;
-			} catch (Exception $e) {
-				print "Error: ".$e->getMessage();
-				exit;
-			}
-       
-		foreach ($this->getCmd('info') as $cmd) {
-			if($cmd->getConfiguration('mode') == 'dynamic'){
-				$cmd->event($geoloc);
-			}else{
-				$cmd->event($cmd->execCmd());
-			}	
-		}
-		foreach ($this->getCmd('info') as $cmd) {
-        	if($cmd->getConfiguration('mode') == 'distance'){
-				$cmd->event($cmd->execCmd());
-			}
-    	}
-        return $geoloc;
-    }
-	
-	 public function postSave() {
-        $refreshCmd = $this->getCmd(null, 'refresh');
-		if (!is_object($refreshCmd)) {
-			$refreshCmd = new geolocCmd();
-			$refreshCmd->setName(__('Rafraichir', __FILE__));
-			$refreshCmd->setIsVisible(false);
-		}
-		$refreshCmd->setEqLogic_id($this->getId());
-		$refreshCmd->setLogicalId('refresh');
-		$refreshCmd->setType('action');
-		$refreshCmd->setSubType('other');
-		$refreshCmd->save();
     }
 }
 
@@ -319,10 +228,6 @@ class geolocCmd extends cmd {
     }
 
     public function execute($_options = array()) {
-		if($this->getType()=="action"){
-    		$geoloc=$this->getEqLogic();
-            $geoloc->cron5($geoloc->getId());
-    	}
         switch ($this->getConfiguration('mode')) {
             case 'fixe':
             $result = $this->getConfiguration('coordinate');
