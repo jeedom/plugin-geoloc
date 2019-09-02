@@ -28,6 +28,23 @@
     }
 });
 
+$("#searchDevices").on('click', function(event) {
+        searchDevices($(this).attr('data-eqLogic_id'),$('#username_icloud').val(),$('#password_icloud').val());
+        return false;
+    });
+    $("#sel_device").on('change', function() {
+        $("#device").val(this.value);
+        return false;
+    });
+
+$('.isIos').on('change', function ()  {
+    if (this.checked) {
+        $(".ios").show();
+    } else {
+        $(".ios").hide();
+    }
+});
+
  $("#table_cmd").sortable({axis: "y", cursor: "move", items: ".cmd", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
 
  function getCmdForDistance() {
@@ -78,6 +95,7 @@ function addCmdToTable(_cmd) {
     tr += '<input class="cmdAttr form-control input-sm" data-l1key="name" >';
     tr += '</td>';
     tr += '<td>';
+	if (_cmd.logicalId != 'refresh'){
     tr += '<select class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="mode">';
     tr += '<option value="fixe">{{Fixe}}</option>';
     tr += '<option value="dynamic">{{Dynamique}}</option>';
@@ -86,8 +104,9 @@ function addCmdToTable(_cmd) {
     tr += '<option value="travelDistance">{{Distance trajet}}</option>';
     tr += '</select>';
     tr += '</td>';
-
+	}
     tr += '<td>';
+	if (_cmd.logicalId != 'refresh'){
     tr += '<span class="fixe modeOption">';
     tr += '<input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="coordinate" placeholder="{{Latitude,Longitude}}" >';
     tr += '</span>';
@@ -110,6 +129,7 @@ function addCmdToTable(_cmd) {
     tr += '<label class="checkbox-inline"><input type="checkbox" class="cmdAttr input-sm" data-l1key="configuration" data-l2key="noHighways" style="position:relative;top:10px;" data-size="small" checked/>{{Autoroutes}}</label> ';
     tr += '</span>';
     tr += '</td>';
+	}
     tr += '<td>';
     tr += '<span class="modeOption distance" style="display : none;"> ';
     tr += '<label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isHistorized" data-size="mini" checked/>{{Historiser}}</label></span> ';
@@ -124,4 +144,35 @@ function addCmdToTable(_cmd) {
     tr += '</tr>';
     $('#table_cmd tbody').append(tr);
     $('#table_cmd tbody tr:last').setValues(_cmd, '.cmdAttr');
+}
+
+function searchDevices(_geoloc_iosEq_id,username,password) {
+	$.ajax({// fonction permettant de faire de l'ajax
+        type: "POST", // methode de transmission des données au fichier php
+        url: "plugins/geoloc/core/ajax/geoloc.ajax.php", // url du fichier php
+        data: {
+            action: "getDevicesList",
+            username: username,
+            password: password
+        },
+        dataType: 'json',
+        error: function(request, status, error) {
+            handleAjaxError(request, status, error);
+        },
+        success: function(data) { // si l'appel a bien fonctionné
+            if (data.state != 'ok') {
+            	$('#div_alert').showAlert({message:  data.result,level: 'danger'});
+                return;
+            }
+           $('#sel_device').empty();
+            for (var i in data.result.cmd.devices) {
+            	$('#sel_device').prop('disabled', false);
+            	$('#sel_device').append(new Option(data.result.cmd.devices[i].name,data.result.cmd.devices[i].id));
+            	if($('#device').val() ==""){
+            		$('#device').val(data.result.cmd.devices[i].id);
+            	}
+            }
+           
+        }
+    });
 }
