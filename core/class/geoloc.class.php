@@ -39,7 +39,7 @@ class geoloc extends eqLogic {
         }
     }
 	
-	public static function cron5($_options) {
+	public static function cron5($_eqlogic_id = null) {
 		$eqLogics = ($_eqlogic_id !== null) ? array(eqLogic::byId($_eqlogic_id)) : eqLogic::byType('geoloc', true);
 		foreach ($eqLogics as $geoloc) {
 			if (is_object($geoloc) && $geoloc->getConfiguration('isIos','')==1) {
@@ -207,7 +207,7 @@ class geoloc extends eqLogic {
 		if (!is_object($refreshCmd)) {
 			$refreshCmd = new geolocCmd();
 			$refreshCmd->setName(__('Rafraichir', __FILE__));
-			$refreshCmd->setIsVisible(false);
+			$refreshCmd->setIsVisible(0);
 		}
 		$refreshCmd->setEqLogic_id($this->getId());
 		$refreshCmd->setLogicalId('refresh');
