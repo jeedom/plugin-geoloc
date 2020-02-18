@@ -1,33 +1,56 @@
 {
-    "plugins/geoloc/desktop/php/geoloc.php": {
-        "Ajouter un équipement": "Добавить оборудование",
-        "Rechercher": "Искать",
+    "desktop\/js\/geoloc.js": {
+        "Fixe": "Фиксированный",
+        "Dynamique": "Динамический",
+        "Distance": "Расстояние",
+        "Temps de trajet": "Temps de trajet",
+        "Distance trajet": "Distance trajet",
+        "Latitude,Longitude": "Широта,Долгота",
+        "Autoroutes": "Autoroutes",
+        "Historiser": "История",
+        "Afficher": "Отобразить",
+        "Tester": "Тест"
+    },
+    "desktop\/php\/geoloc.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Mes équipements de géolocalisation": "Мой оборудование геолокации ",
-        "Général": "Главная",
+        "Ajouter": "Ajouter",
+        "Configuration avancée": "Configuration avancée",
+        "Dupliquer": "Dupliquer",
+        "Sauvegarder": "Сохранить",
+        "Supprimer": "Удалить",
+        "Equipement": "Equipement",
+        "Commandes": "Команды",
         "Nom de l'équipement": "Название оборудования",
         "Objet parent": "Родительский объект",
         "Aucun": "Нет",
         "Activer": "Активировать",
         "Visible": "Видимый",
-        "Commandes": "Команды",
-        "ID": "Идентификатор",
+        "Appareil Ios": "Appareil Ios",
+        "Login iCloud": "Login iCloud",
+        "Password iCloud": "Password iCloud",
+        "Device": "Device",
+        "Charger les devices": "Charger les devices",
+        "Ne pas utiliser le widget spécifique": "Ne pas utiliser le widget spécifique",
+        "Cliquez-ici pour retrouver vos coordonnées": "Cliquez-ici pour retrouver vos coordonnées",
         "Nom": "Имя",
         "Type": "Тип",
         "Options": "Опции",
-        "Paramètres": "Параметры",
-        "Supprimer": "Удалить",
-        "Sauvegarder": "Сохранить"
+        "Paramètres": "Параметры"
     },
-    "plugins/geoloc/desktop/js/geoloc.js": {
-        "Fixe": "Фиксированный",
-        "Dynamique": "Динамический",
-        "Distance": "Расстояние",
-        "Latitude,Longitude": "Широта,Долгота",
-        "Historiser": "История",
-        "Afficher": "Отобразить",
-        "Tester": "Тест"
+    "core\/ajax\/geoloc.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "plugins/geoloc/plugin_info/info.xml": {
+    "core\/class\/geoloc.class.php": {
+        "Inconnue": "Inconnue",
+        "Rafraichir": "Rafraichir",
+        "Impossible de trouver une route": "Impossible de trouver une route",
+        "Impossible de resoudre l\\'url": "Impossible de resoudre l\\'url",
+        "Commande point de départ introuvable : ": "Commande point de départ introuvable : ",
+        "Commande point d\\'arrivé introuvable : ": "Commande point d\\'arrivé introuvable : "
+    },
+    "core\/api\/jeeGeoloc.php": {
         "Plugin pour la géolocalisation": "Плагин для геолокации",
         "Aucune": "Нет"
     }

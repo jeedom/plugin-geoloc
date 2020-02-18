@@ -1,33 +1,56 @@
 {
-    "plugins/geoloc/desktop/php/geoloc.php": {
-        "Ajouter un équipement": "a adição de equipamentos",
-        "Rechercher": "pesquisa",
+    "desktop\/js\/geoloc.js": {
+        "Fixe": "fixo",
+        "Dynamique": "dinâmico",
+        "Distance": "distância",
+        "Temps de trajet": "Temps de trajet",
+        "Distance trajet": "Distance trajet",
+        "Latitude,Longitude": "Latitude, Longitude",
+        "Autoroutes": "Autoroutes",
+        "Historiser": "historicizar",
+        "Afficher": "display",
+        "Tester": "teste"
+    },
+    "desktop\/php\/geoloc.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Mes équipements de géolocalisation": "Meu equipamento de geolocalização",
-        "Général": "geral",
+        "Ajouter": "Ajouter",
+        "Configuration avancée": "Configuration avancée",
+        "Dupliquer": "Dupliquer",
+        "Sauvegarder": "salvar",
+        "Supprimer": "remover",
+        "Equipement": "Equipement",
+        "Commandes": "comandos",
         "Nom de l'équipement": "Nome de equipamentos",
         "Objet parent": "objeto pai",
         "Aucun": "não",
         "Activer": "ativar",
         "Visible": "visível",
-        "Commandes": "comandos",
-        "ID": "ID",
+        "Appareil Ios": "Appareil Ios",
+        "Login iCloud": "Login iCloud",
+        "Password iCloud": "Password iCloud",
+        "Device": "Device",
+        "Charger les devices": "Charger les devices",
+        "Ne pas utiliser le widget spécifique": "Ne pas utiliser le widget spécifique",
+        "Cliquez-ici pour retrouver vos coordonnées": "Cliquez-ici pour retrouver vos coordonnées",
         "Nom": "nome",
         "Type": "tipo",
         "Options": "opções",
-        "Paramètres": "configurações",
-        "Supprimer": "remover",
-        "Sauvegarder": "salvar"
+        "Paramètres": "configurações"
     },
-    "plugins/geoloc/desktop/js/geoloc.js": {
-        "Fixe": "fixo",
-        "Dynamique": "dinâmico",
-        "Distance": "distância",
-        "Latitude,Longitude": "Latitude, Longitude",
-        "Historiser": "historicizar",
-        "Afficher": "display",
-        "Tester": "teste"
+    "core\/ajax\/geoloc.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "plugins/geoloc/plugin_info/info.xml": {
+    "core\/class\/geoloc.class.php": {
+        "Inconnue": "Inconnue",
+        "Rafraichir": "Rafraichir",
+        "Impossible de trouver une route": "Impossible de trouver une route",
+        "Impossible de resoudre l\\'url": "Impossible de resoudre l\\'url",
+        "Commande point de départ introuvable : ": "Commande point de départ introuvable : ",
+        "Commande point d\\'arrivé introuvable : ": "Commande point d\\'arrivé introuvable : "
+    },
+    "core\/api\/jeeGeoloc.php": {
         "Plugin pour la géolocalisation": "Plugin para geolocalização",
         "Aucune": "não"
     }

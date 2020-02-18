@@ -1,33 +1,56 @@
 {
-    "plugins/geoloc/desktop/php/geoloc.php": {
-        "Ajouter un équipement": "Donanım ekle",
-        "Rechercher": "Arayın",
+    "desktop\/js\/geoloc.js": {
+        "Fixe": "Sabit",
+        "Dynamique": "Dinamik",
+        "Distance": "Uzaklık",
+        "Temps de trajet": "Temps de trajet",
+        "Distance trajet": "Distance trajet",
+        "Latitude,Longitude": "Enlem,Boylam",
+        "Autoroutes": "Autoroutes",
+        "Historiser": "Tarihe göre sırala",
+        "Afficher": "Göster",
+        "Tester": "Dene"
+    },
+    "desktop\/php\/geoloc.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Mes équipements de géolocalisation": "Harita cihazlarım",
-        "Général": "Genel",
+        "Ajouter": "Ajouter",
+        "Configuration avancée": "Configuration avancée",
+        "Dupliquer": "Dupliquer",
+        "Sauvegarder": "Kaydet",
+        "Supprimer": "Sil",
+        "Equipement": "Equipement",
+        "Commandes": "Komutalar",
         "Nom de l'équipement": "Ekipman ismi",
         "Objet parent": "Üst nesne",
         "Aucun": "Hiçbir",
         "Activer": "Etkinleştirmek",
         "Visible": "Görülebilir",
-        "Commandes": "Komutalar",
-        "ID": "ID",
+        "Appareil Ios": "Appareil Ios",
+        "Login iCloud": "Login iCloud",
+        "Password iCloud": "Password iCloud",
+        "Device": "Device",
+        "Charger les devices": "Charger les devices",
+        "Ne pas utiliser le widget spécifique": "Ne pas utiliser le widget spécifique",
+        "Cliquez-ici pour retrouver vos coordonnées": "Cliquez-ici pour retrouver vos coordonnées",
         "Nom": "İsim",
         "Type": "Ceşit",
         "Options": "Opsiyonlar",
-        "Paramètres": "Ayarlar ( Séçenekler )",
-        "Supprimer": "Sil",
-        "Sauvegarder": "Kaydet"
+        "Paramètres": "Ayarlar ( Séçenekler )"
     },
-    "plugins/geoloc/desktop/js/geoloc.js": {
-        "Fixe": "Sabit",
-        "Dynamique": "Dinamik",
-        "Distance": "Uzaklık",
-        "Latitude,Longitude": "Enlem,Boylam",
-        "Historiser": "Tarihe göre sırala",
-        "Afficher": "Göster",
-        "Tester": "Dene"
+    "core\/ajax\/geoloc.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "plugins/geoloc/plugin_info/info.xml": {
+    "core\/class\/geoloc.class.php": {
+        "Inconnue": "Inconnue",
+        "Rafraichir": "Rafraichir",
+        "Impossible de trouver une route": "Impossible de trouver une route",
+        "Impossible de resoudre l\\'url": "Impossible de resoudre l\\'url",
+        "Commande point de départ introuvable : ": "Commande point de départ introuvable : ",
+        "Commande point d\\'arrivé introuvable : ": "Commande point d\\'arrivé introuvable : "
+    },
+    "core\/api\/jeeGeoloc.php": {
         "Plugin pour la géolocalisation": "Harita için eklenti",
         "Aucune": "Hiçbir"
     }

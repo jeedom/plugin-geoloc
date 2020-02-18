@@ -1,33 +1,56 @@
 {
-    "plugins/geoloc/desktop/php/geoloc.php": {
-        "Ajouter un équipement": "Gerät hinzufügen",
-        "Rechercher": "Suchen nach",
+    "desktop\/js\/geoloc.js": {
+        "Fixe": "fest",
+        "Dynamique": "Dynamik",
+        "Distance": "Entfernung",
+        "Temps de trajet": "Reisezeit",
+        "Distance trajet": "Reisestrecke",
+        "Latitude,Longitude": "Breite, Länge",
+        "Autoroutes": "Autobahnen",
+        "Historiser": "Chronik",
+        "Afficher": "anzeigen",
+        "Tester": "Test"
+    },
+    "desktop\/php\/geoloc.php": {
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
         "Mes équipements de géolocalisation": "Meine Geolocation-Geräte",
-        "Général": "Allgemein",
+        "Ajouter": "hinzufügen",
+        "Configuration avancée": "Erweiterte Konfiguration",
+        "Dupliquer": "Duplikat",
+        "Sauvegarder": "Speichern",
+        "Supprimer": "Löschen",
+        "Equipement": "Ausrüstung",
+        "Commandes": "Befehle",
         "Nom de l'équipement": "Gerätename",
         "Objet parent": "Eltern-Objekt",
         "Aucun": "Ohne",
         "Activer": "Aktivieren",
         "Visible": "Sichtbar",
-        "Commandes": "Befehle",
-        "ID": "ID",
+        "Appareil Ios": "Ios Gerät",
+        "Login iCloud": "ICloud Login",
+        "Password iCloud": "ICloud Passwort",
+        "Device": "Gerät",
+        "Charger les devices": "Geräte laden",
+        "Ne pas utiliser le widget spécifique": "Verwenden Sie nicht das spezifische Widget",
+        "Cliquez-ici pour retrouver vos coordonnées": "Klicken Sie hier, um Ihre Kontaktdaten zu finden",
         "Nom": "Name",
         "Type": "Typ",
         "Options": "Optionen",
-        "Paramètres": "Parameter",
-        "Supprimer": "Löschen",
-        "Sauvegarder": "Speichern"
+        "Paramètres": "Parameter"
     },
-    "plugins/geoloc/desktop/js/geoloc.js": {
-        "Fixe": "fest",
-        "Dynamique": "Dynamik",
-        "Distance": "Entfernung",
-        "Latitude,Longitude": "Breite, Länge",
-        "Historiser": "Chronik",
-        "Afficher": "anzeigen",
-        "Tester": "Test"
+    "core\/ajax\/geoloc.ajax.php": {
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "Aucune methode correspondante à : ": "Keine Methode entsprechend:"
     },
-    "plugins/geoloc/plugin_info/info.xml": {
+    "core\/class\/geoloc.class.php": {
+        "Inconnue": "unbekannt",
+        "Rafraichir": "auffrischen",
+        "Impossible de trouver une route": "Route kann nicht gefunden werden",
+        "Impossible de resoudre l\\'url": "URL kann nicht aufgelöst werden",
+        "Commande point de départ introuvable : ": "Startpunktbefehl nicht gefunden:",
+        "Commande point d\\'arrivé introuvable : ": "POI-Befehl nicht gefunden:"
+    },
+    "core\/api\/jeeGeoloc.php": {
         "Plugin pour la géolocalisation": "Plugin für Geolocation",
         "Aucune": "Ohne"
     }

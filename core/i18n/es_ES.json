@@ -1,33 +1,56 @@
 {
-    "plugins/geoloc/desktop/php/geoloc.php": {
-        "Ajouter un équipement": "Añadir un dispositivo",
-        "Rechercher": "Buscar",
-        "Mes équipements de géolocalisation": "Mis dispositivos de geolocalización",
-        "Général": "General",
-        "Nom de l'équipement": "Nombre del dispositivo",
-        "Objet parent": "Objeto padre",
-        "Aucun": "Ninguno",
-        "Activer": "Activar",
-        "Visible": "Visible",
-        "Commandes": "Comandos",
-        "ID": "ID",
-        "Nom": "Nombre",
-        "Type": "Tipo",
-        "Options": "Opciones",
-        "Paramètres": "Parámetros ",
-        "Supprimer": "Borrar",
-        "Sauvegarder": "Guardar"
-    },
-    "plugins/geoloc/desktop/js/geoloc.js": {
+    "desktop\/js\/geoloc.js": {
         "Fixe": "Fijo",
         "Dynamique": "Dinámico",
         "Distance": "Distancia",
+        "Temps de trajet": "Tiempo de viaje",
+        "Distance trajet": "Distancia de viaje",
         "Latitude,Longitude": "Latitud, Longitud",
+        "Autoroutes": "carreteras",
         "Historiser": "Guardar historial",
         "Afficher": "Mostrar",
         "Tester": "Probar"
     },
-    "plugins/geoloc/plugin_info/info.xml": {
+    "desktop\/php\/geoloc.php": {
+        "401 - Accès non autorisé": "401 - Acceso no autorizado",
+        "Mes équipements de géolocalisation": "Mis dispositivos de geolocalización",
+        "Ajouter": "añadir",
+        "Configuration avancée": "Configuración avanzada",
+        "Dupliquer": "duplicado",
+        "Sauvegarder": "Guardar",
+        "Supprimer": "Borrar",
+        "Equipement": "equipo",
+        "Commandes": "Comandos",
+        "Nom de l'équipement": "Nombre del dispositivo",
+        "Objet parent": "Objeto padre",
+        "Aucun": "Ninguno",
+        "Activer": "Activar",
+        "Visible": "visible",
+        "Appareil Ios": "Dispositivo ios",
+        "Login iCloud": "Inicio de sesión en ICloud",
+        "Password iCloud": "Contraseña de iCloud",
+        "Device": "dispositivo",
+        "Charger les devices": "Cargar dispositivos",
+        "Ne pas utiliser le widget spécifique": "No use el widget específico",
+        "Cliquez-ici pour retrouver vos coordonnées": "Haga clic aquí para encontrar sus datos de contacto.",
+        "Nom": "Nombre",
+        "Type": "Tipo",
+        "Options": "Opciones",
+        "Paramètres": "Parámetros "
+    },
+    "core\/ajax\/geoloc.ajax.php": {
+        "401 - Accès non autorisé": "401 - Acceso no autorizado",
+        "Aucune methode correspondante à : ": "Ningún método correspondiente a:"
+    },
+    "core\/class\/geoloc.class.php": {
+        "Inconnue": "desconocida",
+        "Rafraichir": "refrescar",
+        "Impossible de trouver une route": "Incapaz de encontrar una ruta",
+        "Impossible de resoudre l\\'url": "No se puede resolver la URL",
+        "Commande point de départ introuvable : ": "Comando de punto de partida no encontrado:",
+        "Commande point d\\'arrivé introuvable : ": "Comando de PDI no encontrado:"
+    },
+    "core\/api\/jeeGeoloc.php": {
         "Plugin pour la géolocalisation": "Plugin para la geolocalización",
         "Aucune": "Ninguna"
     }

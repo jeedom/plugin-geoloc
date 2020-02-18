@@ -1,33 +1,56 @@
 {
-    "plugins/geoloc/desktop/php/geoloc.php": {
-        "Ajouter un équipement": "Tambahan peralatan",
-        "Rechercher": "Mencari",
+    "desktop\/js\/geoloc.js": {
+        "Fixe": "Tetap",
+        "Dynamique": "Dinamis",
+        "Distance": "Jarak",
+        "Temps de trajet": "Temps de trajet",
+        "Distance trajet": "Distance trajet",
+        "Latitude,Longitude": "Lintang, Bujur",
+        "Autoroutes": "Autoroutes",
+        "Historiser": "Historicize",
+        "Afficher": "Memenitikan",
+        "Tester": "Coba"
+    },
+    "desktop\/php\/geoloc.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Mes équipements de géolocalisation": "Peralatanku geolocation",
-        "Général": "Umum",
+        "Ajouter": "Ajouter",
+        "Configuration avancée": "Configuration avancée",
+        "Dupliquer": "Dupliquer",
+        "Sauvegarder": "Menyimpan",
+        "Supprimer": "Menghapus",
+        "Equipement": "Equipement",
+        "Commandes": "Perintah",
         "Nom de l'équipement": "Nama peralatan",
         "Objet parent": "Objek induk",
         "Aucun": "Tak ada",
         "Activer": "Mengaktifkan",
         "Visible": "Terlihat",
-        "Commandes": "Perintah",
-        "ID": "ID",
+        "Appareil Ios": "Appareil Ios",
+        "Login iCloud": "Login iCloud",
+        "Password iCloud": "Password iCloud",
+        "Device": "Device",
+        "Charger les devices": "Charger les devices",
+        "Ne pas utiliser le widget spécifique": "Ne pas utiliser le widget spécifique",
+        "Cliquez-ici pour retrouver vos coordonnées": "Cliquez-ici pour retrouver vos coordonnées",
         "Nom": "Nama",
         "Type": "Jenis",
         "Options": "Pilihan",
-        "Paramètres": "Parameter²",
-        "Supprimer": "Menghapus",
-        "Sauvegarder": "Menyimpan"
+        "Paramètres": "Parameter²"
     },
-    "plugins/geoloc/desktop/js/geoloc.js": {
-        "Fixe": "Tetap",
-        "Dynamique": "Dinamis",
-        "Distance": "Jarak",
-        "Latitude,Longitude": "Lintang, Bujur",
-        "Historiser": "Historicize",
-        "Afficher": "Memenitikan",
-        "Tester": "Coba"
+    "core\/ajax\/geoloc.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "plugins/geoloc/plugin_info/info.xml": {
+    "core\/class\/geoloc.class.php": {
+        "Inconnue": "Inconnue",
+        "Rafraichir": "Rafraichir",
+        "Impossible de trouver une route": "Impossible de trouver une route",
+        "Impossible de resoudre l\\'url": "Impossible de resoudre l\\'url",
+        "Commande point de départ introuvable : ": "Commande point de départ introuvable : ",
+        "Commande point d\\'arrivé introuvable : ": "Commande point d\\'arrivé introuvable : "
+    },
+    "core\/api\/jeeGeoloc.php": {
         "Plugin pour la géolocalisation": "Plugin buat geolocation",
         "Aucune": "Tak ada"
     }
