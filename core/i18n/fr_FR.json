@@ -1,17 +1,5 @@
 {
-    "desktop\/js\/geoloc.js": {
-        "Fixe": "Fixe",
-        "Dynamique": "Dynamique",
-        "Distance": "Distance",
-        "Temps de trajet": "Temps de trajet",
-        "Distance trajet": "Distance trajet",
-        "Latitude,Longitude": "Latitude,Longitude",
-        "Autoroutes": "Autoroutes",
-        "Historiser": "Historiser",
-        "Afficher": "Afficher",
-        "Tester": "Tester"
-    },
-    "desktop\/php\/geoloc.php": {
+    "plugins\/geoloc\/desktop\/php\/geoloc.php": {
         "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Mes équipements de géolocalisation": "Mes équipements de géolocalisation",
         "Ajouter": "Ajouter",
@@ -38,11 +26,23 @@
         "Options": "Options",
         "Paramètres": "Paramètres"
     },
-    "core\/ajax\/geoloc.ajax.php": {
+    "plugins\/geoloc\/desktop\/js\/geoloc.js": {
+        "Fixe": "Fixe",
+        "Dynamique": "Dynamique",
+        "Distance": "Distance",
+        "Temps de trajet": "Temps de trajet",
+        "Distance trajet": "Distance trajet",
+        "Latitude,Longitude": "Latitude,Longitude",
+        "Autoroutes": "Autoroutes",
+        "Historiser": "Historiser",
+        "Afficher": "Afficher",
+        "Tester": "Tester"
+    },
+    "plugins\/geoloc\/core\/ajax\/geoloc.ajax.php": {
         "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "core\/class\/geoloc.class.php": {
+    "plugins\/geoloc\/core\/class\/geoloc.class.php": {
         "Inconnue": "Inconnue",
         "Rafraichir": "Rafraichir",
         "Impossible de trouver une route": "Impossible de trouver une route",
@@ -50,8 +50,8 @@
         "Commande point de départ introuvable : ": "Commande point de départ introuvable : ",
         "Commande point d\\'arrivé introuvable : ": "Commande point d\\'arrivé introuvable : "
     },
-    "core\/api\/jeeGeoloc.php": {
-        "Clef API non valide": "Clef API non valide",
+    "plugins\/geoloc\/core\/api\/jeeGeoloc.php": {
+        "Clef API non valide, vous n\\'êtes pas autorisé à effectuer cette action (geoloc)": "Clef API non valide, vous n\\'êtes pas autorisé à effectuer cette action (geoloc)",
         "Commande ID geoloc inconnu : ": "Commande ID geoloc inconnu : ",
         "Cette commande n\\'est pas de type geoloc : ": "Cette commande n\\'est pas de type geoloc : ",
         "Cette commande de géoloc n\\'est pas dynamique : ": "Cette commande de géoloc n\\'est pas dynamique : "

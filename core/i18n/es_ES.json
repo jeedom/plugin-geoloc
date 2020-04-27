@@ -1,57 +1,59 @@
 {
-    "desktop\/js\/geoloc.js": {
-        "Fixe": "Fijo",
-        "Dynamique": "Dinámico",
-        "Distance": "Distancia",
-        "Temps de trajet": "Tiempo de viaje",
-        "Distance trajet": "Distancia de viaje",
-        "Latitude,Longitude": "Latitud, Longitud",
-        "Autoroutes": "carreteras",
+    "plugins\/geoloc\/desktop\/php\/geoloc.php": {
+        "401 - Accès non autorisé": "401 - Acceso no autorizado",
+        "Mes équipements de géolocalisation": "",
+        "Ajouter": "Añadir",
+        "Configuration avancée": "Configuración avanzada",
+        "Dupliquer": "Duplicar",
+        "Sauvegarder": "Guardar",
+        "Supprimer": "Borrar",
+        "Equipement": "Dispositivos",
+        "Commandes": "Comandos",
+        "Nom de l'équipement": "Nombre del equipo",
+        "Objet parent": "Objeto padre",
+        "Aucun": "Ninguna",
+        "Activer": "Activar",
+        "Visible": "Visible",
+        "Appareil Ios": "",
+        "Login iCloud": "",
+        "Password iCloud": "",
+        "Device": "Device",
+        "Charger les devices": "",
+        "Ne pas utiliser le widget spécifique": "",
+        "Cliquez-ici pour retrouver vos coordonnées": "",
+        "Nom": "Nombre",
+        "Type": "Tipo",
+        "Options": "Opciones",
+        "Paramètres": "Configuraciones"
+    },
+    "plugins\/geoloc\/desktop\/js\/geoloc.js": {
+        "Fixe": "",
+        "Dynamique": "",
+        "Distance": "",
+        "Temps de trajet": "",
+        "Distance trajet": "",
+        "Latitude,Longitude": "",
+        "Autoroutes": "",
         "Historiser": "Guardar historial",
         "Afficher": "Mostrar",
         "Tester": "Probar"
     },
-    "desktop\/php\/geoloc.php": {
-        "401 - Accès non autorisé": "401 - Acceso no autorizado",
-        "Mes équipements de géolocalisation": "Mis dispositivos de geolocalización",
-        "Ajouter": "añadir",
-        "Configuration avancée": "Configuración avanzada",
-        "Dupliquer": "duplicado",
-        "Sauvegarder": "Guardar",
-        "Supprimer": "Borrar",
-        "Equipement": "equipo",
-        "Commandes": "Comandos",
-        "Nom de l'équipement": "Nombre del dispositivo",
-        "Objet parent": "Objeto padre",
-        "Aucun": "Ninguno",
-        "Activer": "Activar",
-        "Visible": "visible",
-        "Appareil Ios": "Dispositivo ios",
-        "Login iCloud": "Inicio de sesión en ICloud",
-        "Password iCloud": "Contraseña de iCloud",
-        "Device": "dispositivo",
-        "Charger les devices": "Cargar dispositivos",
-        "Ne pas utiliser le widget spécifique": "No use el widget específico",
-        "Cliquez-ici pour retrouver vos coordonnées": "Haga clic aquí para encontrar sus datos de contacto.",
-        "Nom": "Nombre",
-        "Type": "Tipo",
-        "Options": "Opciones",
-        "Paramètres": "Parámetros "
-    },
-    "core\/ajax\/geoloc.ajax.php": {
+    "plugins\/geoloc\/core\/ajax\/geoloc.ajax.php": {
         "401 - Accès non autorisé": "401 - Acceso no autorizado",
         "Aucune methode correspondante à : ": "Ningún método correspondiente a:"
     },
-    "core\/class\/geoloc.class.php": {
-        "Inconnue": "desconocida",
-        "Rafraichir": "refrescar",
-        "Impossible de trouver une route": "Incapaz de encontrar una ruta",
-        "Impossible de resoudre l\\'url": "No se puede resolver la URL",
-        "Commande point de départ introuvable : ": "Comando de punto de partida no encontrado:",
-        "Commande point d\\'arrivé introuvable : ": "Comando de PDI no encontrado:"
+    "plugins\/geoloc\/core\/class\/geoloc.class.php": {
+        "Inconnue": "Desconocido",
+        "Rafraichir": "Refrescar",
+        "Impossible de trouver une route": "",
+        "Impossible de resoudre l\\'url": "",
+        "Commande point de départ introuvable : ": "",
+        "Commande point d\\'arrivé introuvable : ": ""
     },
-    "core\/api\/jeeGeoloc.php": {
-        "Plugin pour la géolocalisation": "Plugin para la geolocalización",
-        "Aucune": "Ninguna"
+    "plugins\/geoloc\/core\/api\/jeeGeoloc.php": {
+        "Clef API non valide, vous n\\'êtes pas autorisé à effectuer cette action (geoloc)": "",
+        "Commande ID geoloc inconnu : ": "",
+        "Cette commande n\\'est pas de type geoloc : ": "",
+        "Cette commande de géoloc n\\'est pas dynamique : ": ""
     }
 }

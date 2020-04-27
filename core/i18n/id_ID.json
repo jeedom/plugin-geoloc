@@ -1,57 +1,59 @@
 {
-    "desktop\/js\/geoloc.js": {
-        "Fixe": "Tetap",
-        "Dynamique": "Dinamis",
-        "Distance": "Jarak",
-        "Temps de trajet": "Temps de trajet",
-        "Distance trajet": "Distance trajet",
-        "Latitude,Longitude": "Lintang, Bujur",
-        "Autoroutes": "Autoroutes",
-        "Historiser": "Historicize",
-        "Afficher": "Memenitikan",
-        "Tester": "Coba"
-    },
-    "desktop\/php\/geoloc.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
-        "Mes équipements de géolocalisation": "Peralatanku geolocation",
-        "Ajouter": "Ajouter",
-        "Configuration avancée": "Configuration avancée",
-        "Dupliquer": "Dupliquer",
+    "plugins\/geoloc\/desktop\/php\/geoloc.php": {
+        "401 - Accès non autorisé": "401 - Akses tidak sah",
+        "Mes équipements de géolocalisation": "",
+        "Ajouter": "Tambahan",
+        "Configuration avancée": "Konfigurasi lanjutan",
+        "Dupliquer": "Duplikat",
         "Sauvegarder": "Menyimpan",
         "Supprimer": "Menghapus",
-        "Equipement": "Equipement",
+        "Equipement": "Peralatan",
         "Commandes": "Perintah",
         "Nom de l'équipement": "Nama peralatan",
         "Objet parent": "Objek induk",
         "Aucun": "Tak ada",
         "Activer": "Mengaktifkan",
         "Visible": "Terlihat",
-        "Appareil Ios": "Appareil Ios",
-        "Login iCloud": "Login iCloud",
-        "Password iCloud": "Password iCloud",
-        "Device": "Device",
-        "Charger les devices": "Charger les devices",
-        "Ne pas utiliser le widget spécifique": "Ne pas utiliser le widget spécifique",
-        "Cliquez-ici pour retrouver vos coordonnées": "Cliquez-ici pour retrouver vos coordonnées",
+        "Appareil Ios": "",
+        "Login iCloud": "",
+        "Password iCloud": "",
+        "Device": "",
+        "Charger les devices": "",
+        "Ne pas utiliser le widget spécifique": "",
+        "Cliquez-ici pour retrouver vos coordonnées": "",
         "Nom": "Nama",
         "Type": "Jenis",
         "Options": "Pilihan",
         "Paramètres": "Parameter²"
     },
-    "core\/ajax\/geoloc.ajax.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
+    "plugins\/geoloc\/desktop\/js\/geoloc.js": {
+        "Fixe": "",
+        "Dynamique": "",
+        "Distance": "",
+        "Temps de trajet": "",
+        "Distance trajet": "",
+        "Latitude,Longitude": "",
+        "Autoroutes": "",
+        "Historiser": "Historicize",
+        "Afficher": "Memenitikan",
+        "Tester": "Coba"
+    },
+    "plugins\/geoloc\/core\/ajax\/geoloc.ajax.php": {
+        "401 - Accès non autorisé": "401 - Akses tidak sah",
         "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "core\/class\/geoloc.class.php": {
-        "Inconnue": "Inconnue",
-        "Rafraichir": "Rafraichir",
-        "Impossible de trouver une route": "Impossible de trouver une route",
-        "Impossible de resoudre l\\'url": "Impossible de resoudre l\\'url",
-        "Commande point de départ introuvable : ": "Commande point de départ introuvable : ",
-        "Commande point d\\'arrivé introuvable : ": "Commande point d\\'arrivé introuvable : "
+    "plugins\/geoloc\/core\/class\/geoloc.class.php": {
+        "Inconnue": "Tidak dikenal",
+        "Rafraichir": "Dingin",
+        "Impossible de trouver une route": "",
+        "Impossible de resoudre l\\'url": "",
+        "Commande point de départ introuvable : ": "",
+        "Commande point d\\'arrivé introuvable : ": ""
     },
-    "core\/api\/jeeGeoloc.php": {
-        "Plugin pour la géolocalisation": "Plugin buat geolocation",
-        "Aucune": "Tak ada"
+    "plugins\/geoloc\/core\/api\/jeeGeoloc.php": {
+        "Clef API non valide, vous n\\'êtes pas autorisé à effectuer cette action (geoloc)": "",
+        "Commande ID geoloc inconnu : ": "",
+        "Cette commande n\\'est pas de type geoloc : ": "",
+        "Cette commande de géoloc n\\'est pas dynamique : ": ""
     }
 }

@@ -1,57 +1,59 @@
 {
-    "desktop\/js\/geoloc.js": {
-        "Fixe": "fisso",
-        "Dynamique": "dinamico",
-        "Distance": "distanza",
-        "Temps de trajet": "Temps de trajet",
-        "Distance trajet": "Distance trajet",
-        "Latitude,Longitude": "Latitudine, Longitudine",
-        "Autoroutes": "Autoroutes",
-        "Historiser": "Storicizza",
-        "Afficher": "Mostra",
-        "Tester": "Prova"
-    },
-    "desktop\/php\/geoloc.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
-        "Mes équipements de géolocalisation": "La mia attrezzatura geolocalizzazione",
-        "Ajouter": "Ajouter",
-        "Configuration avancée": "Configuration avancée",
-        "Dupliquer": "Dupliquer",
+    "plugins\/geoloc\/desktop\/php\/geoloc.php": {
+        "401 - Accès non autorisé": "401 - Accesso non autorizzato",
+        "Mes équipements de géolocalisation": "",
+        "Ajouter": "Aggiungi",
+        "Configuration avancée": "Configurazione avanzata",
+        "Dupliquer": "Duplicato",
         "Sauvegarder": "Salva",
-        "Supprimer": "Elimina",
-        "Equipement": "Equipement",
+        "Supprimer": "Rimuovere",
+        "Equipement": "Dispositivo",
         "Commandes": "Comandi",
         "Nom de l'équipement": "Nome dispositivo",
         "Objet parent": "Oggetto padre",
         "Aucun": "Nessuno",
         "Activer": "Attivare",
         "Visible": "Visibile",
-        "Appareil Ios": "Appareil Ios",
-        "Login iCloud": "Login iCloud",
-        "Password iCloud": "Password iCloud",
-        "Device": "Device",
-        "Charger les devices": "Charger les devices",
-        "Ne pas utiliser le widget spécifique": "Ne pas utiliser le widget spécifique",
-        "Cliquez-ici pour retrouver vos coordonnées": "Cliquez-ici pour retrouver vos coordonnées",
+        "Appareil Ios": "",
+        "Login iCloud": "",
+        "Password iCloud": "",
+        "Device": "",
+        "Charger les devices": "",
+        "Ne pas utiliser le widget spécifique": "",
+        "Cliquez-ici pour retrouver vos coordonnées": "",
         "Nom": "Nome",
         "Type": "Tipo",
         "Options": "Opzioni",
-        "Paramètres": "Parametri"
+        "Paramètres": "Impostazioni"
     },
-    "core\/ajax\/geoloc.ajax.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
-        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
+    "plugins\/geoloc\/desktop\/js\/geoloc.js": {
+        "Fixe": "",
+        "Dynamique": "",
+        "Distance": "",
+        "Temps de trajet": "",
+        "Distance trajet": "",
+        "Latitude,Longitude": "",
+        "Autoroutes": "",
+        "Historiser": "Storicizza",
+        "Afficher": "Mostra",
+        "Tester": "Prova"
     },
-    "core\/class\/geoloc.class.php": {
-        "Inconnue": "Inconnue",
-        "Rafraichir": "Rafraichir",
-        "Impossible de trouver une route": "Impossible de trouver une route",
-        "Impossible de resoudre l\\'url": "Impossible de resoudre l\\'url",
-        "Commande point de départ introuvable : ": "Commande point de départ introuvable : ",
-        "Commande point d\\'arrivé introuvable : ": "Commande point d\\'arrivé introuvable : "
+    "plugins\/geoloc\/core\/ajax\/geoloc.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accesso non autorizzato",
+        "Aucune methode correspondante à : ": "Nessun metodo corrispondente a:"
     },
-    "core\/api\/jeeGeoloc.php": {
-        "Plugin pour la géolocalisation": "Plugin per la geolocalizzazione",
-        "Aucune": "Nessuno"
+    "plugins\/geoloc\/core\/class\/geoloc.class.php": {
+        "Inconnue": "Sconosciuto",
+        "Rafraichir": "Aggiorna",
+        "Impossible de trouver une route": "",
+        "Impossible de resoudre l\\'url": "",
+        "Commande point de départ introuvable : ": "",
+        "Commande point d\\'arrivé introuvable : ": ""
+    },
+    "plugins\/geoloc\/core\/api\/jeeGeoloc.php": {
+        "Clef API non valide, vous n\\'êtes pas autorisé à effectuer cette action (geoloc)": "",
+        "Commande ID geoloc inconnu : ": "",
+        "Cette commande n\\'est pas de type geoloc : ": "",
+        "Cette commande de géoloc n\\'est pas dynamique : ": ""
     }
 }

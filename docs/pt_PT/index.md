@@ -2,10 +2,10 @@
 
 .
 
-Setup 
+Configuração 
 =============
 
-Once the plugin is installed and activated from the Market, you access the
+
  :
 
 ![geoloc28](../images/geoloc28.jpg)
@@ -14,13 +14,13 @@ Once the plugin is installed and activated from the Market, you access the
 
 ![geoloc29](../images/geoloc29.jpg)
 
-> **Tip**
+> ****
 >
-> As in many places on Jeedom, place the mouse on the far left
-> brings up a quick access menu (you can
-> from your profile always leave it visible).
+> 
+> 
+> .
 
-Once an equipment is selected you get :
+ :
 
 ![geoloc screenshot1](../images/geoloc_screenshot1.JPG)
 
@@ -42,7 +42,7 @@ L'onglet « Général » permet de choisir le nom de l'équipement, l'objet
 ![geoloc3](../images/geoloc3.jpg)
 
 
- : <https:.> . If you
+ : <https:.> . 
 ,
  :
 
@@ -75,8 +75,8 @@ L'onglet « Général » permet de choisir le nom de l'équipement, l'objet
 ![geoloc5](../images/geoloc5.jpg)
 
 Soit dans le menu « Général », puis « Administration » et «
-Setup », en activant le mode Expert vous verrez alors une ligne
-API key.
+Configuração », en activant le mode Expert vous verrez alors une ligne
+.
 
 ![geoloc6](../images/geoloc6.jpg)
 
@@ -95,11 +95,11 @@ son type et sauvegardé, un numéro apparaît dans la case « \# » devant le
  
 =============
 
-Be careful : 
+Atenção : 
 
 :?.
 Dans l'onglet « Tâches », nous rajoutons une nouvelle tâche ici appelée
-« Jeedom ».
+«  ».
 
 ![geoloc8](../images/geoloc8.jpg)
 
@@ -134,12 +134,12 @@ Dans la case « Serveur :Port » nous copions notre URL complétée sauf
 
 ![geoloc16](../images/geoloc16.jpg)
 
-Lorsque nous lançons notre tâche « Jeedom », une icône devrait vous
+Lorsque nous lançons notre tâche «  », une icône devrait vous
 .
 
 ![geoloc17](../images/geoloc17.jpg)
 
- le délai écoulé, nous cliquons sur « tester » dans Jeedom et
+ le délai écoulé, nous cliquons sur « tester » dans  et
 .
 .
 
@@ -179,7 +179,7 @@ sélectionnons « Distance » en type et nos deux commandes précédentes
 
 Dans la partie « Scénario », nous créons un scénario nommé « Géoloc  »
 
-. Be careful : 
+. Atenção : 
 
 . Dans « Mode de scénario » nous choisissons « Provoqué »
 et en « Déclencheur » nous ajoutons notre portable. 
