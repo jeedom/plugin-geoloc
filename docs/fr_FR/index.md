@@ -1,4 +1,4 @@
-# Geoloc
+# Plugin Geoloc
 
 Plugin permettant de gérer des coordonnées et le calcul de distance entre 2 points, le temps de trajet (en voiture) entre 2 points ainsi que la distance.
 
