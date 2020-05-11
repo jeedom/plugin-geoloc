@@ -12,7 +12,7 @@ Aqui você encontra todo o seu equipamento Geoloc :
 
 ![geoloc29](../images/geoloc29.jpg)
 
-> **Tip**
+> **Dica**
 >
 > Como em muitos lugares do Jeedom, posicionar o mouse na extremidade esquerda permite que um menu de acesso rápido apareça (você sempre pode deixá-lo visível em seu perfil).
 
@@ -40,7 +40,7 @@ Você também pode clicar com o botão esquerdo no mapa e as coordenadas aparece
 
 ## Dynamique
 
-Representa um ponto com coordenadas variáveis, o objeto se move. Este é geralmente o seu laptop. Portanto, esse pedido conterá os últimos detalhes de contato enviados até você enviar novos.. O URL para atualizar este comando é :
+Representa um ponto com coordenadas variáveis, o objeto se move. Este é geralmente o seu laptop. Portanto, esse pedido conterá os últimos detalhes de contato enviados até você enviar novos. O URL para atualizar este comando é :
 
 ``\#URL\_JEEDOM\#/core/api/jeeApi.php?api=\#API\_KEY\#&type=geoloc&id=\#ID\_CMD\#&value=%LOC``
 
@@ -102,7 +102,7 @@ Une fois le délai écoulé, nous cliquons sur « tester » dans Jeedom et les c
 
 ![geoloc18](../images/geoloc18.jpg)
 
-Agora você só precisa criar um cenário no Tasker que iniciará esta tarefa quando você precisar.. Por exemplo, a cada hora, quando você se conecta por wifi…
+Agora você só precisa criar um cenário no Tasker que iniciará esta tarefa quando você precisar. Por exemplo, a cada hora, quando você se conecta por wifi…
 
 # Distância, Tempo de Viagem e Distância de Viagem
 
@@ -114,7 +114,7 @@ Da mesma forma, se você deseja o tempo ou a distância de uma jornada,
 deve escolher respectivamente no tipo : "Tempo de viagem "ou" Distância
 viagem".
 
-Esse plug-in funciona como um módulo, ou seja, uma vez salvo, podemos encontrá-lo na lista de ações ou comandos; portanto, é muito simples usá-lo ao criar cenários, por exemplo.. Podemos, por exemplo, realizar um cenário baseado na distância entre o laptop e a casa, por exemplo.
+Esse plug-in funciona como um módulo, ou seja, uma vez salvo, podemos encontrá-lo na lista de ações ou comandos; portanto, é muito simples usá-lo ao criar cenários, por exemplo. Podemos, por exemplo, realizar um cenário baseado na distância entre o laptop e a casa, por exemplo.
 
 # Cenário de exemplo
 
@@ -126,7 +126,7 @@ Nous ajoutons un élément « Si / Alors / Sinon » avec comme condition une dis
 
 ![geoloc21](../images/geoloc21.jpg)
 
-Nous n'avons rien mis dans la partie « Sinon » ainsi il ne se passera rien si je suis à plus de 250 m. Uma vez salvos, podemos olhar para o log. Vemos aqui que Jeedom testou a distância entre o laptop e a casa e, como o último tem mais de 250 m, nada aconteceu..
+Nous n'avons rien mis dans la partie « Sinon » ainsi il ne se passera rien si je suis à plus de 250 m. Uma vez salvos, podemos olhar para o log. Vemos aqui que Jeedom testou a distância entre o laptop e a casa e, como o último tem mais de 250 m, nada aconteceu.
 
 ![geoloc22](../images/geoloc22.jpg)
 

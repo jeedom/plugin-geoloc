@@ -12,7 +12,7 @@ Aquí encontrarás todos tus equipos Geoloc :
 
 ![geoloc29](../images/geoloc29.jpg)
 
-> **Tip**
+> **Punta**
 >
 > Como en muchos lugares de Jeedom, colocar el mouse en el extremo izquierdo permite que aparezca un menú de acceso rápido (siempre puede dejarlo visible desde su perfil).
 
@@ -20,13 +20,13 @@ Una vez que se selecciona un equipo, obtienes :
 
 ![geoloc screenshot1](../images/geoloc_screenshot1.JPG)
 
-L'onglet « Général » permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité. L'onglet « Commande » permet de rajouter les informations que nous voulons obtenir. Una vez que se ha agregado el equipo, tenemos la opción de elegir entre tres tipos de controles. : fijo, dinámico y distancia.
+L'onglet « Général » permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité. L'onglet « Commande » permet de rajouter les informations que nous voulons obtenir. Una vez que se ha agregado el equipo, tenemos la opción de elegir entre tres tipos de controles : fijo, dinámico y distancia.
 
 ![geoloc screenshot2](../images/geoloc_screenshot2.jpg)
 
 ## Fixe
 
-Representa un punto con coordenadas que no cambian.. Por ejemplo, las coordenadas de su hogar, su trabajo ... Solo tiene que anotar las coordenadas en el formulario : Latitud longitud.
+Representa un punto con coordenadas que no cambian. Por ejemplo, las coordenadas de su hogar, su trabajo ... Solo tiene que anotar las coordenadas en el formulario : Latitud longitud.
 
 ![geoloc3](../images/geoloc3.jpg)
 
@@ -40,7 +40,7 @@ También puede hacer clic izquierdo en el mapa, y las coordenadas aparecerán en
 
 ## Dynamique
 
-Representa un punto con coordenadas variables, el objeto se mueve. Esta suele ser tu computadora portátil. Por lo tanto, este pedido contendrá los últimos detalles de contacto enviados hasta que envíe otros nuevos.. La URL para actualizar este comando es :
+Representa un punto con coordenadas variables, el objeto se mueve. Esta suele ser tu computadora portátil. Por lo tanto, este pedido contendrá los últimos detalles de contacto enviados hasta que envíe otros nuevos. La URL para actualizar este comando es :
 
 ``\#URL\_JEEDOM\#/core/api/jeeApi.php?api=\#API\_KEY\#&type=geoloc&id=\#ID\_CMD\#&value=%LOC``
 
@@ -82,7 +82,7 @@ hora de obtener nuestros datos de contacto.
 
 ![geoloc12](../images/geoloc12.jpg)
 
-Un período de tiempo demasiado corto puede no permitir obtener detalles de contacto o detalles de contacto inexactos. Es lo mismo para el tipo de fuente.. Nous ajoutons une deuxième action, dans la partie « Réseau » cette fois, nous sélectionnons « Post HTTP ».
+Un período de tiempo demasiado corto puede no permitir obtener detalles de contacto o detalles de contacto inexactos. Es lo mismo para el tipo de fuente. Nous ajoutons une deuxième action, dans la partie « Réseau » cette fois, nous sélectionnons « Post HTTP ».
 
 ![geoloc13](../images/geoloc13.jpg)
 
@@ -102,11 +102,11 @@ Une fois le délai écoulé, nous cliquons sur « tester » dans Jeedom et les c
 
 ![geoloc18](../images/geoloc18.jpg)
 
-Ahora solo necesita crear un escenario en Tasker que inicie esta tarea cuando la necesite.. Por ejemplo, cada hora, cuando te conectas por wifi ...
+Ahora solo necesita crear un escenario en Tasker que inicie esta tarea cuando la necesite. Por ejemplo, cada hora, cuando te conectas por wifi
 
 # Distancia, tiempo de viaje y distancia de viaje
 
-Calcula la distancia, el tiempo de viaje (en automóvil, usando Google Maps) o la distancia de un viaje (en automóvil, usando Google Maps) entre dos puntos. Por lo tanto, es necesario haber completado al menos dos comandos. Aquí tenemos las coordenadas fijas de nuestra casa, así como las coordenadas actualizadas de nuestro móvil.. Entonces podemos calcular la distancia entre los dos. Nous sélectionnons « Distance » en type et nos deux commandes précédentes dans les options. Una vez guardado, usamos el botón de prueba y la distancia aparece en la ventana emergente. Aquí 1.34 km.
+Calcula la distancia, el tiempo de viaje (en automóvil, usando Google Maps) o la distancia de un viaje (en automóvil, usando Google Maps) entre dos puntos. Por lo tanto, es necesario haber completado al menos dos comandos. Aquí tenemos las coordenadas fijas de nuestra casa, así como las coordenadas actualizadas de nuestro móvil. Entonces podemos calcular la distancia entre los dos. Nous sélectionnons « Distance » en type et nos deux commandes précédentes dans les options. Una vez guardado, usamos el botón de prueba y la distancia aparece en la ventana emergente. Aquí 1.34 km.
 
 ![geoloc19](../images/geoloc19.jpg)
 

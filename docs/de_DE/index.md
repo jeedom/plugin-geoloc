@@ -12,9 +12,9 @@ Hier finden Sie alle Ihre Geoloc-Geräte :
 
 ![geoloc29](../images/geoloc29.jpg)
 
-> **Tip**
+> **Spitze**
 >
-> Wie an vielen Stellen in Jeedom wird durch Platzieren der Maus ganz links ein Schnellzugriffsmenü angezeigt (Sie können es jederzeit in Ihrem Profil sichtbar lassen)..
+> Wie an vielen Stellen in Jeedom wird durch Platzieren der Maus ganz links ein Schnellzugriffsmenü angezeigt (Sie können es jederzeit in Ihrem Profil sichtbar lassen).
 
 Sobald ein Gerät ausgewählt ist, erhalten Sie :
 
@@ -40,11 +40,11 @@ Sie können auch mit der linken Maustaste auf die Karte klicken. Die Koordinaten
 
 ## Dynamique
 
-Stellt einen Punkt mit variablen Koordinaten dar, das Objekt bewegt sich. Dies ist normalerweise Ihr Laptop. Diese Bestellung enthält daher die zuletzt gesendeten Kontaktdaten, bis Sie neue senden.. Die URL zum Aktualisieren dieses Befehls lautet :
+Stellt einen Punkt mit variablen Koordinaten dar, das Objekt bewegt sich. Dies ist normalerweise Ihr Laptop. Diese Bestellung enthält daher die zuletzt gesendeten Kontaktdaten, bis Sie neue senden. Die URL zum Aktualisieren dieses Befehls lautet :
 
 ``\.#URL\._JEEDOM\.#/core/api/jeeApi.php?api=\.#API\._KEY\.#&type=geoloc&id=\.#ID\._CMD\.#&value=%LOC``
 
-\.#URL\._JEEDOM\.# entspricht Ihrer Jeedom-Zugriffs-URL. Dies ist (sofern Sie nicht mit Ihrem lokalen Netzwerk verbunden sind) die Internetadresse, mit der Sie von außen auf Jeedom zugreifen. Vergessen Sie nicht, den Port sowie / jeedom / anzugeben..
+\.#URL\._JEEDOM\.# entspricht Ihrer Jeedom-Zugriffs-URL. Dies ist (sofern Sie nicht mit Ihrem lokalen Netzwerk verbunden sind) die Internetadresse, mit der Sie von außen auf Jeedom zugreifen. Vergessen Sie nicht, den Port sowie / jeedom / anzugeben.
 
 api=\.#API\._KEY\.# entspricht Ihrem API-Schlüssel, der für Ihre Installation spezifisch ist. Um es zu finden, können Sie entweder zum Géoloc-Plugin gehen, es wird direkt in der URL angegeben.
 
@@ -102,7 +102,7 @@ Une fois le délai écoulé, nous cliquons sur « tester » dans Jeedom et les c
 
 ![geoloc18](../images/geoloc18.jpg)
 
-Jetzt müssen Sie nur noch ein Szenario in Tasker erstellen, das diese Aufgabe bei Bedarf startet.. Zum Beispiel jede Stunde, wenn Sie eine Verbindung über WLAN herstellen…
+Jetzt müssen Sie nur noch ein Szenario in Tasker erstellen, das diese Aufgabe bei Bedarf startet. Zum Beispiel jede Stunde, wenn Sie eine Verbindung über WLAN herstellen…
 
 # Entfernung, Reisezeit und Reisestrecke
 

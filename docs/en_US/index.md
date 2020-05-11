@@ -40,7 +40,7 @@ You can also left click on the map, and the coordinates will appear in the small
 
 ## Dynamique
 
-Represents a point with variable coordinates, the object moves. This is usually your laptop. This order will therefore contain the last contact details sent until you send new ones.. The URL to update this command is :
+Represents a point with variable coordinates, the object moves. This is usually your laptop. This order will therefore contain the last contact details sent until you send new ones. The URL to update this command is :
 
 ``\#URL\_JEEDOM\#/core/api/jeeApi.php?api=\#API\_KEY\#&type=geoloc&id=\#ID\_CMD\#&value=%LOC``
 
@@ -102,7 +102,7 @@ Une fois le délai écoulé, nous cliquons sur « tester » dans Jeedom et les c
 
 ![geoloc18](../images/geoloc18.jpg)
 
-Now you just need to create a scenario in Tasker which will launch this task when you need it.. For example every hour, when you connect by wifi…
+Now you just need to create a scenario in Tasker which will launch this task when you need it. For example every hour, when you connect by wifi…
 
 # Distance, Travel Time and Travel Distance
 

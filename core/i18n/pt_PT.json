@@ -40,7 +40,7 @@
     },
     "plugins\/geoloc\/core\/ajax\/geoloc.ajax.php": {
         "401 - Accès non autorisé": "401 - Acesso não autorizado",
-        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à :"
     },
     "plugins\/geoloc\/core\/class\/geoloc.class.php": {
         "Inconnue": "Desconhecido",
