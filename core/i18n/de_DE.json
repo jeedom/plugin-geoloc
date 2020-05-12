@@ -1,34 +1,59 @@
 {
-    "plugins/geoloc/desktop/php/geoloc.php": {
-        "Ajouter un équipement": "Gerät hinzufügen",
-        "Rechercher": "Suchen nach",
-        "Mes équipements de géolocalisation": "Meine Geolocation-Geräte",
-        "Général": "Allgemein",
-        "Nom de l'équipement": "Gerätename",
-        "Objet parent": "Eltern-Objekt",
+    "plugins\/geoloc\/desktop\/php\/geoloc.php": {
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "Mes équipements de géolocalisation": "Meine Geolokalisierungsausrüstung",
+        "Ajouter": "Hinzufügen",
+        "Configuration avancée": "Erweiterte Konfiguration",
+        "Dupliquer": "Duplikat",
+        "Sauvegarder": "Speichern",
+        "Supprimer": "Löschen",
+        "Equipement": "Gerät",
+        "Commandes": "Befehle",
+        "Nom de l'équipement": "Name der Ausrüstung",
+        "Objet parent": "Übergeordnetes Objekt",
         "Aucun": "Ohne",
         "Activer": "Aktivieren",
         "Visible": "Sichtbar",
-        "Commandes": "Befehle",
-        "ID": "ID",
+        "Appareil Ios": "Ios Gerät",
+        "Login iCloud": "ICloud Login",
+        "Password iCloud": "ICloud Passwort",
+        "Device": "Gerät",
+        "Charger les devices": "Geräte laden",
+        "Ne pas utiliser le widget spécifique": "Verwenden Sie nicht das spezifische Widget",
+        "Cliquez-ici pour retrouver vos coordonnées": "Klicken Sie hier, um Ihre Kontaktdaten zu finden",
         "Nom": "Name",
         "Type": "Typ",
         "Options": "Optionen",
-        "Paramètres": "Parameter",
-        "Supprimer": "Löschen",
-        "Sauvegarder": "Speichern"
+        "Paramètres": "Einstellungen"
     },
-    "plugins/geoloc/desktop/js/geoloc.js": {
-        "Fixe": "fest",
-        "Dynamique": "Dynamik",
+    "plugins\/geoloc\/desktop\/js\/geoloc.js": {
+        "Fixe": "Behoben",
+        "Dynamique": "Dynamisch",
         "Distance": "Entfernung",
+        "Temps de trajet": "Reisezeit",
+        "Distance trajet": "Reisestrecke",
         "Latitude,Longitude": "Breite, Länge",
+        "Autoroutes": "Autobahnen",
         "Historiser": "Chronik",
-        "Afficher": "anzeigen",
+        "Afficher": "Anzeige",
         "Tester": "Test"
     },
-    "plugins/geoloc/plugin_info/info.xml": {
-        "Plugin pour la géolocalisation": "Plugin für Geolocation",
-        "Aucune": "Ohne"
+    "plugins\/geoloc\/core\/ajax\/geoloc.ajax.php": {
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "Aucune methode correspondante à : ": "Keine Methode entsprechend:"
+    },
+    "plugins\/geoloc\/core\/class\/geoloc.class.php": {
+        "Inconnue": "Unbekannt",
+        "Rafraichir": "Aktualisieren",
+        "Impossible de trouver une route": "Route kann nicht gefunden werden",
+        "Impossible de resoudre l\\'url": "URL kann nicht aufgelöst werden",
+        "Commande point de départ introuvable : ": "Startpunktbefehl nicht gefunden:",
+        "Commande point d\\'arrivé introuvable : ": "POI-Befehl nicht gefunden:"
+    },
+    "plugins\/geoloc\/core\/api\/jeeGeoloc.php": {
+        "Clef API non valide, vous n\\'êtes pas autorisé à effectuer cette action (geoloc)": "API-Schlüssel ungültig, Sie sind nicht berechtigt, diese Aktion auszuführen (Geoloc)",
+        "Commande ID geoloc inconnu : ": "Unbekannter Geoloc-ID-Befehl:",
+        "Cette commande n\\'est pas de type geoloc : ": "Dieser Befehl ist nicht vom Typ Geoloc:",
+        "Cette commande de géoloc n\\'est pas dynamique : ": "Dieser Geoloc-Befehl ist nicht dynamisch:"
     }
 }

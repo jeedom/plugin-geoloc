@@ -1,34 +1,59 @@
 {
-    "plugins/geoloc/desktop/php/geoloc.php": {
-        "Ajouter un équipement": "Donanım ekle",
-        "Rechercher": "Arayın",
-        "Mes équipements de géolocalisation": "Harita cihazlarım",
-        "Général": "Genel",
+    "plugins\/geoloc\/desktop\/php\/geoloc.php": {
+        "401 - Accès non autorisé": "401 - Yetkisiz erişim",
+        "Mes équipements de géolocalisation": "",
+        "Ajouter": "Ekle",
+        "Configuration avancée": "Gelişmiş ayarlar",
+        "Dupliquer": "Kopyala",
+        "Sauvegarder": "Kaydet",
+        "Supprimer": "Sil",
+        "Equipement": "Cihaz",
+        "Commandes": "Komutalar",
         "Nom de l'équipement": "Ekipman ismi",
         "Objet parent": "Üst nesne",
         "Aucun": "Hiçbir",
-        "Activer": "Etkinleştirmek",
+        "Activer": "Etkinleştir",
         "Visible": "Görülebilir",
-        "Commandes": "Komutalar",
-        "ID": "ID",
+        "Appareil Ios": "",
+        "Login iCloud": "",
+        "Password iCloud": "",
+        "Device": "",
+        "Charger les devices": "",
+        "Ne pas utiliser le widget spécifique": "",
+        "Cliquez-ici pour retrouver vos coordonnées": "",
         "Nom": "İsim",
-        "Type": "Ceşit",
+        "Type": "Çeşit",
         "Options": "Opsiyonlar",
-        "Paramètres": "Ayarlar ( Séçenekler )",
-        "Supprimer": "Sil",
-        "Sauvegarder": "Kaydet"
+        "Paramètres": "Ayarlar ( Séçenekler )"
     },
-    "plugins/geoloc/desktop/js/geoloc.js": {
-        "Fixe": "Sabit",
-        "Dynamique": "Dinamik",
-        "Distance": "Uzaklık",
-        "Latitude,Longitude": "Enlem,Boylam",
+    "plugins\/geoloc\/desktop\/js\/geoloc.js": {
+        "Fixe": "",
+        "Dynamique": "",
+        "Distance": "",
+        "Temps de trajet": "",
+        "Distance trajet": "",
+        "Latitude,Longitude": "",
+        "Autoroutes": "",
         "Historiser": "Tarihe göre sırala",
         "Afficher": "Göster",
-        "Tester": "Dene"
+        "Tester": "Test et"
     },
-    "plugins/geoloc/plugin_info/info.xml": {
-        "Plugin pour la géolocalisation": "Harita için eklenti",
-        "Aucune": "Hiçbir"
+    "plugins\/geoloc\/core\/ajax\/geoloc.ajax.php": {
+        "401 - Accès non autorisé": "401 - Yetkisiz erişim",
+        "Aucune methode correspondante à : ": "Aşağıdakilere karşılık gelen bir yöntem yok:"
+    },
+    "plugins\/geoloc\/core\/class\/geoloc.class.php": {
+        "Inconnue": "Bilinmeyen",
+        "Rafraichir": "Yenile",
+        "Impossible de trouver une route": "",
+        "Impossible de resoudre l\\'url": "",
+        "Commande point de départ introuvable : ": "",
+        "Commande point d\\'arrivé introuvable : ": ""
+    },
+    "plugins\/geoloc\/core\/api\/jeeGeoloc.php": {
+        "Clef API non valide, vous n\\'êtes pas autorisé à effectuer cette action (geoloc)": "",
+        "Commande ID geoloc inconnu : ": "",
+        "Cette commande n\\'est pas de type geoloc : ": "",
+        "Cette commande de géoloc n\\'est pas dynamique : ": ""
     }
 }

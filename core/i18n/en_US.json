@@ -1,34 +1,59 @@
 {
-    "plugins/geoloc/desktop/php/geoloc.php": {
-        "Ajouter un équipement": "Add device",
-        "Rechercher": "Search",
-        "Mes équipements de géolocalisation": "My geolocation devices",
-        "Général": "Main",
-        "Nom de l'équipement": "Device name",
+    "plugins\/geoloc\/desktop\/php\/geoloc.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized access",
+        "Mes équipements de géolocalisation": "My geolocation equipment",
+        "Ajouter": "Add",
+        "Configuration avancée": "Advanced configuration",
+        "Dupliquer": "Duplicate",
+        "Sauvegarder": "Save",
+        "Supprimer": "Delete",
+        "Equipement": "Equipment",
+        "Commandes": "Commands",
+        "Nom de l'équipement": "Name of equipment",
         "Objet parent": "Parent object",
         "Aucun": "None",
         "Activer": "Activate",
         "Visible": "Visible",
-        "Commandes": "Commands",
-        "ID": "ID",
+        "Appareil Ios": "Ios device",
+        "Login iCloud": "ICloud login",
+        "Password iCloud": "ICloud password",
+        "Device": "Device",
+        "Charger les devices": "Load devices",
+        "Ne pas utiliser le widget spécifique": "Do not use the specific widget",
+        "Cliquez-ici pour retrouver vos coordonnées": "Click here to find your contact details",
         "Nom": "Name",
         "Type": "Type",
         "Options": "Options",
-        "Paramètres": "Settings",
-        "Supprimer": "Delete",
-        "Sauvegarder": "Save"
+        "Paramètres": "Settings"
     },
-    "plugins/geoloc/desktop/js/geoloc.js": {
-        "Fixe": "fixed",
+    "plugins\/geoloc\/desktop\/js\/geoloc.js": {
+        "Fixe": "Fixed",
         "Dynamique": "Dynamic",
-        "Distance": "Distance",
-        "Latitude,Longitude": "Latitude,Longitude",
+        "Distance": "Range",
+        "Temps de trajet": "Travel time",
+        "Distance trajet": "Trip distance",
+        "Latitude,Longitude": "Longitude latitude",
+        "Autoroutes": "Highways",
         "Historiser": "Historize",
         "Afficher": "Show",
         "Tester": "Test"
     },
-    "plugins/geoloc/plugin_info/info.xml": {
-        "Plugin pour la géolocalisation": "Plugin for geolocalization",
-        "Aucune": "None"
+    "plugins\/geoloc\/core\/ajax\/geoloc.ajax.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized access",
+        "Aucune methode correspondante à : ": "No method corresponding to:"
+    },
+    "plugins\/geoloc\/core\/class\/geoloc.class.php": {
+        "Inconnue": "Unknown",
+        "Rafraichir": "Refresh",
+        "Impossible de trouver une route": "Unable to find a route",
+        "Impossible de resoudre l\\'url": "Unable to resolve url",
+        "Commande point de départ introuvable : ": "Starting point command not found:",
+        "Commande point d\\'arrivé introuvable : ": "POI command not found:"
+    },
+    "plugins\/geoloc\/core\/api\/jeeGeoloc.php": {
+        "Clef API non valide, vous n\\'êtes pas autorisé à effectuer cette action (geoloc)": "API key not valid, you are not authorized to perform this action (geoloc)",
+        "Commande ID geoloc inconnu : ": "Unknown geoloc ID command:",
+        "Cette commande n\\'est pas de type geoloc : ": "This command is not of geoloc type:",
+        "Cette commande de géoloc n\\'est pas dynamique : ": "This geoloc command is not dynamic:"
     }
 }

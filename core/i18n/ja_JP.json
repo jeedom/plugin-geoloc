@@ -1,34 +1,59 @@
 {
-    "plugins/geoloc/desktop/php/geoloc.php": {
-        "Ajouter un équipement": "機器を追加します",
-        "Rechercher": "検索する",
-        "Mes équipements de géolocalisation": "私のジオロケーション機器",
-        "Général": "コモン",
+    "plugins\/geoloc\/desktop\/php\/geoloc.php": {
+        "401 - Accès non autorisé": "401-不正アクセス",
+        "Mes équipements de géolocalisation": "",
+        "Ajouter": "加えます",
+        "Configuration avancée": "高度な構成",
+        "Dupliquer": "重複",
+        "Sauvegarder": "セーブ",
+        "Supprimer": "取り除きます",
+        "Equipement": "設備",
+        "Commandes": "コマンド",
         "Nom de l'équipement": "機器の名前",
         "Objet parent": "親オブジェクト",
         "Aucun": "何でもありません",
-        "Activer": "アクティブにし",
+        "Activer": "アクティブ",
         "Visible": "目に見えます",
-        "Commandes": "コマンド",
-        "ID": "ID",
+        "Appareil Ios": "",
+        "Login iCloud": "",
+        "Password iCloud": "",
+        "Device": "",
+        "Charger les devices": "",
+        "Ne pas utiliser le widget spécifique": "",
+        "Cliquez-ici pour retrouver vos coordonnées": "",
         "Nom": "表題",
         "Type": "タイプ",
         "Options": "オプション",
-        "Paramètres": "設定",
-        "Supprimer": "取り除きます",
-        "Sauvegarder": "セーブ"
+        "Paramètres": "設定"
     },
-    "plugins/geoloc/desktop/js/geoloc.js": {
-        "Fixe": "一定",
-        "Dynamique": "ダイナミック",
-        "Distance": "距離",
-        "Latitude,Longitude": "緯度、経度",
-        "Historiser": "historicize",
+    "plugins\/geoloc\/desktop\/js\/geoloc.js": {
+        "Fixe": "",
+        "Dynamique": "",
+        "Distance": "",
+        "Temps de trajet": "",
+        "Distance trajet": "",
+        "Latitude,Longitude": "",
+        "Autoroutes": "",
+        "Historiser": "Historicize",
         "Afficher": "ディスプレイ",
         "Tester": "テスト"
     },
-    "plugins/geoloc/plugin_info/info.xml": {
-        "Plugin pour la géolocalisation": "ジオロケーションのためのプラグイン",
-        "Aucune": "何でもありません"
+    "plugins\/geoloc\/core\/ajax\/geoloc.ajax.php": {
+        "401 - Accès non autorisé": "401-不正アクセス",
+        "Aucune methode correspondante à : ": "以下に対応するメソッドはありません："
+    },
+    "plugins\/geoloc\/core\/class\/geoloc.class.php": {
+        "Inconnue": "不明",
+        "Rafraichir": "クール",
+        "Impossible de trouver une route": "",
+        "Impossible de resoudre l\\'url": "",
+        "Commande point de départ introuvable : ": "",
+        "Commande point d\\'arrivé introuvable : ": ""
+    },
+    "plugins\/geoloc\/core\/api\/jeeGeoloc.php": {
+        "Clef API non valide, vous n\\'êtes pas autorisé à effectuer cette action (geoloc)": "",
+        "Commande ID geoloc inconnu : ": "",
+        "Cette commande n\\'est pas de type geoloc : ": "",
+        "Cette commande de géoloc n\\'est pas dynamique : ": ""
     }
 }

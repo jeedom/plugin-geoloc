@@ -1,34 +1,59 @@
 {
     "plugins\/geoloc\/desktop\/php\/geoloc.php": {
-        "Ajouter un équipement": "Ajouter un équipement",
-        "Rechercher": "Rechercher",
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Mes équipements de géolocalisation": "Mes équipements de géolocalisation",
-        "Général": "Général",
+        "Ajouter": "Ajouter",
+        "Configuration avancée": "Configuration avancée",
+        "Dupliquer": "Dupliquer",
+        "Sauvegarder": "Sauvegarder",
+        "Supprimer": "Supprimer",
+        "Equipement": "Equipement",
+        "Commandes": "Commandes",
         "Nom de l'équipement": "Nom de l'équipement",
         "Objet parent": "Objet parent",
         "Aucun": "Aucun",
         "Activer": "Activer",
         "Visible": "Visible",
-        "Commandes": "Commandes",
-        "ID": "ID",
+        "Appareil Ios": "Appareil Ios",
+        "Login iCloud": "Login iCloud",
+        "Password iCloud": "Password iCloud",
+        "Device": "Device",
+        "Charger les devices": "Charger les devices",
+        "Ne pas utiliser le widget spécifique": "Ne pas utiliser le widget spécifique",
+        "Cliquez-ici pour retrouver vos coordonnées": "Cliquez-ici pour retrouver vos coordonnées",
         "Nom": "Nom",
         "Type": "Type",
         "Options": "Options",
-        "Paramètres": "Paramètres",
-        "Supprimer": "Supprimer",
-        "Sauvegarder": "Sauvegarder"
+        "Paramètres": "Paramètres"
     },
     "plugins\/geoloc\/desktop\/js\/geoloc.js": {
         "Fixe": "Fixe",
         "Dynamique": "Dynamique",
         "Distance": "Distance",
+        "Temps de trajet": "Temps de trajet",
+        "Distance trajet": "Distance trajet",
         "Latitude,Longitude": "Latitude,Longitude",
+        "Autoroutes": "Autoroutes",
         "Historiser": "Historiser",
         "Afficher": "Afficher",
         "Tester": "Tester"
     },
-    "plugins\/geoloc\/plugin_info\/info.xml": {
-        "Plugin pour la géolocalisation": "Plugin pour la géolocalisation",
-        "Aucune": "Aucune"
+    "plugins\/geoloc\/core\/ajax\/geoloc.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
+    },
+    "plugins\/geoloc\/core\/class\/geoloc.class.php": {
+        "Inconnue": "Inconnue",
+        "Rafraichir": "Rafraichir",
+        "Impossible de trouver une route": "Impossible de trouver une route",
+        "Impossible de resoudre l\\'url": "Impossible de resoudre l\\'url",
+        "Commande point de départ introuvable : ": "Commande point de départ introuvable : ",
+        "Commande point d\\'arrivé introuvable : ": "Commande point d\\'arrivé introuvable : "
+    },
+    "plugins\/geoloc\/core\/api\/jeeGeoloc.php": {
+        "Clef API non valide, vous n\\'êtes pas autorisé à effectuer cette action (geoloc)": "Clef API non valide, vous n\\'êtes pas autorisé à effectuer cette action (geoloc)",
+        "Commande ID geoloc inconnu : ": "Commande ID geoloc inconnu : ",
+        "Cette commande n\\'est pas de type geoloc : ": "Cette commande n\\'est pas de type geoloc : ",
+        "Cette commande de géoloc n\\'est pas dynamique : ": "Cette commande de géoloc n\\'est pas dynamique : "
     }
 }
