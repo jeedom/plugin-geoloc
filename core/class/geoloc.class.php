@@ -396,11 +396,10 @@ class geolocCmd extends cmd {
 						} catch (Exception $e) {
 							return 0;
 						}
-message::add('geoloc','refresh ' . date('H:i',time()));
 					}
 				}
-				break;
-			}
+			break;
+		}
 	}
 
 	/*	 * ***********************Methode static*************************** */
