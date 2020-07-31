@@ -55,5 +55,8 @@
         "Commande ID geoloc inconnu : ": "Unbekannter Geoloc-ID-Befehl:",
         "Cette commande n\\'est pas de type geoloc : ": "Dieser Befehl ist nicht vom Typ Geoloc:",
         "Cette commande de géoloc n\\'est pas dynamique : ": "Dieser Geoloc-Befehl ist nicht dynamisch:"
+    },
+    "info.json": {
+        "Plugin permettant à Jeedom de gérer la géolocalisation. (Uniquement pour Android via l'application Tasker)": "Plugin, mit dem Jeedom die Geolokalisierung verwalten kann. (Nur für Android über die Tasker App)"
     }
 }
