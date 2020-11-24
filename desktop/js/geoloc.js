@@ -86,15 +86,15 @@ function addCmdToTable(_cmd) {
     }
 
     var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '">';
-    tr += '<td>';
+    tr += '<td style="min-width:50px;width:70px;">';
     tr += '<span class="cmdAttr" data-l1key="id" ></span>';
     tr += '</td>';
-    tr += '<td>';
+    tr += '<td style="min-width:150px;width:250px;">';
     tr += '<input class="cmdAttr form-control input-sm" data-l1key="type" value="info" style="display : none;">';
     tr += '<input class="cmdAttr form-control input-sm" data-l1key="subtype" value="string" style="display : none;">';
     tr += '<input class="cmdAttr form-control input-sm" data-l1key="name" >';
     tr += '</td>';
-    tr += '<td>';
+    tr += '<td style="min-width:140px;width:180px;">';
 	if (_cmd.logicalId != 'refresh'){
     tr += '<select class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="mode">';
     tr += '<option value="fixe">{{Fixe}}</option>';
@@ -105,7 +105,12 @@ function addCmdToTable(_cmd) {
     tr += '</select>';
     tr += '</td>';
 	}
-    tr += '<td>';
+    tr += '<td style="min-width:120px;width:140px;">';
+    tr += '<span class="modeOption distance" style="display : none;"> ';
+    tr += '<label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isHistorized" data-size="mini" checked/>{{Historiser}}</label></span> ';
+    tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isVisible" data-size="mini" checked/>{{Afficher}}</label></span> ';
+    tr += '</td>';
+    tr += '<td style="min-width:180px;">';
 	if (_cmd.logicalId != 'refresh'){
     tr += '<span class="fixe modeOption">';
     tr += '<input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="coordinate" placeholder="{{Latitude,Longitude}}" >';
@@ -131,16 +136,12 @@ function addCmdToTable(_cmd) {
     tr += '</td>';
 	}
     tr += '<td>';
-    tr += '<span class="modeOption distance" style="display : none;"> ';
-    tr += '<label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isHistorized" data-size="mini" checked/>{{Historiser}}</label></span> ';
-    tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isVisible" data-size="mini" checked/>{{Afficher}}</label></span> ';
-    tr += '</td>';
-    tr += '<td>';
     if (is_numeric(_cmd.id)) {
-        tr += '<a class="btn btn-default btn-xs cmdAction expertModeVisible" data-action="configure"><i class="fa fa-cogs"></i></a> ';
-        tr += '<a class="btn btn-default btn-xs cmdAction" data-action="test"><i class="fa fa-rss"></i> {{Tester}}</a>';
+        tr += '<a class="btn btn-default btn-xs cmdAction" data-action="configure"><i class="fas fa-cogs"></i></a> ';
+        tr += '<a class="btn btn-default btn-xs cmdAction" data-action="test"><i class="fas fa-rss"></i> {{Tester}}</a>';
     }
-    tr += '<i class="fa fa-minus-circle pull-right cmdAction cursor" data-action="remove"></i></td>';
+    tr += '<i class="fas fa-minus-circle pull-right cmdAction cursor" data-action="remove"></i></td>';
+    tr += '</td>';
     tr += '</tr>';
     $('#table_cmd tbody').append(tr);
     $('#table_cmd tbody tr:last').setValues(_cmd, '.cmdAttr');
@@ -172,7 +173,7 @@ function searchDevices(_geoloc_iosEq_id,username,password) {
             		$('#device').val(data.result.cmd.devices[i].id);
             	}
             }
-           
+
         }
     });
 }
