@@ -1,30 +1,41 @@
 {
+    "plugins\/geoloc\/plugin_info\/configuration.php": {
+        "Clé API Google \"Directions API": "Chave de API do Google \"API de direções"
+    },
     "plugins\/geoloc\/desktop\/php\/geoloc.php": {
         "401 - Accès non autorisé": "401 - Acesso não autorizado",
-        "Mes équipements de géolocalisation": "Meu equipamento de geolocalização",
+        "Gestion": "Gestão",
         "Ajouter": "Adicionar",
+        "Configuration": "Configuração",
+        "Mes équipements de géolocalisation": "Meu equipamento de geolocalização",
+        "Rechercher": "Pesquisa",
         "Configuration avancée": "Configuração avançada",
         "Dupliquer": "Duplicar",
         "Sauvegarder": "Salvar",
         "Supprimer": "Remover",
         "Equipement": "Equipamento",
         "Commandes": "Comandos",
+        "Général": "Geral",
         "Nom de l'équipement": "Nome de equipamentos",
         "Objet parent": "Objeto pai",
         "Aucun": "Nemhum",
+        "Catégorie": "Categoria",
+        "Options": "Opções",
         "Activer": "Ativar",
         "Visible": "Visivél",
+        "Paramètres": "Configurações",
         "Appareil Ios": "Dispositivo iOS",
         "Login iCloud": "Login do ICloud",
         "Password iCloud": "Senha do ICloud",
         "Device": "Dispositivo",
         "Charger les devices": "Carregar dispositivos",
         "Ne pas utiliser le widget spécifique": "Não use o widget específico",
-        "Cliquez-ici pour retrouver vos coordonnées": "Clique aqui para encontrar seus detalhes de contato",
+        "Cliquez-ici pour retrouver vos coordonnées GPS": "Clique aqui para encontrar suas coordenadas GPS",
+        "Ajouter une commande": "Adicionar comando",
+        "Id": "ID",
         "Nom": "Nome",
         "Type": "Tipo",
-        "Options": "Opções",
-        "Paramètres": "Configurações"
+        "Action": "Ação"
     },
     "plugins\/geoloc\/desktop\/js\/geoloc.js": {
         "Fixe": "Fixed",
@@ -32,10 +43,10 @@
         "Distance": "Distância",
         "Temps de trajet": "Tempo de viagem",
         "Distance trajet": "Distância da viagem",
-        "Latitude,Longitude": "Latitude, Longitude",
-        "Autoroutes": "Rodovias",
         "Historiser": "Historicizar",
         "Afficher": "Display",
+        "Latitude,Longitude": "Latitude, Longitude",
+        "Autoroutes": "Rodovias",
         "Tester": "Teste"
     },
     "plugins\/geoloc\/core\/ajax\/geoloc.ajax.php": {
@@ -57,6 +68,6 @@
         "Cette commande de géoloc n\\'est pas dynamique : ": "Este comando geoloc não é dinâmico:"
     },
     "info.json": {
-        "Plugin permettant à Jeedom de gérer la géolocalisation. (Uniquement pour Android via l'application Tasker)": "Plugin que permite ao Jeedom gerenciar a localização geográfica. (Somente para Android pelo aplicativo Tasker)"
+        "Plugin permettant à Jeedom de gérer la géolocalisation (Uniquement pour Android via l'application Tasker).": "Plugin que permite ao Jeedom gerenciar geolocalização (somente para Android através do aplicativo Tasker)"
     }
 }

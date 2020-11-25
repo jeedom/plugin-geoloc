@@ -1,30 +1,41 @@
 {
+    "plugins\/geoloc\/plugin_info\/configuration.php": {
+        "Clé API Google \"Directions API": ""
+    },
     "plugins\/geoloc\/desktop\/php\/geoloc.php": {
         "401 - Accès non autorisé": "401 - Yetkisiz erişim",
-        "Mes équipements de géolocalisation": "",
+        "Gestion": "Idare",
         "Ajouter": "Ekle",
+        "Configuration": "Ayar",
+        "Mes équipements de géolocalisation": "",
+        "Rechercher": "Arayın",
         "Configuration avancée": "Gelişmiş ayarlar",
         "Dupliquer": "Kopyala",
         "Sauvegarder": "Kaydet",
         "Supprimer": "Sil",
         "Equipement": "Cihaz",
         "Commandes": "Komutalar",
+        "Général": "Genel",
         "Nom de l'équipement": "Ekipman ismi",
         "Objet parent": "Üst nesne",
         "Aucun": "Hiçbir",
+        "Catégorie": "Kategori",
+        "Options": "Opsiyonlar",
         "Activer": "Etkinleştir",
         "Visible": "Görülebilir",
+        "Paramètres": "Ayarlar ( Séçenekler )",
         "Appareil Ios": "",
         "Login iCloud": "",
         "Password iCloud": "",
         "Device": "",
         "Charger les devices": "",
         "Ne pas utiliser le widget spécifique": "",
-        "Cliquez-ici pour retrouver vos coordonnées": "",
+        "Cliquez-ici pour retrouver vos coordonnées GPS": "",
+        "Ajouter une commande": "Komuta ekle",
+        "Id": "Kimlik",
         "Nom": "İsim",
         "Type": "Çeşit",
-        "Options": "Opsiyonlar",
-        "Paramètres": "Ayarlar ( Séçenekler )"
+        "Action": "Eylem"
     },
     "plugins\/geoloc\/desktop\/js\/geoloc.js": {
         "Fixe": "",
@@ -32,10 +43,10 @@
         "Distance": "",
         "Temps de trajet": "",
         "Distance trajet": "",
-        "Latitude,Longitude": "",
-        "Autoroutes": "",
         "Historiser": "Tarihe göre sırala",
         "Afficher": "Göster",
+        "Latitude,Longitude": "",
+        "Autoroutes": "",
         "Tester": "Test et"
     },
     "plugins\/geoloc\/core\/ajax\/geoloc.ajax.php": {
@@ -57,6 +68,6 @@
         "Cette commande de géoloc n\\'est pas dynamique : ": ""
     },
     "info.json": {
-        "Plugin permettant à Jeedom de gérer la géolocalisation. (Uniquement pour Android via l'application Tasker)": ""
+        "Plugin permettant à Jeedom de gérer la géolocalisation (Uniquement pour Android via l'application Tasker).": ""
     }
 }

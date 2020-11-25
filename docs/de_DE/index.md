@@ -1,32 +1,29 @@
 # Geoloc-Plugin
 
+# Description
+
 Plugin zum Verwalten von Koordinaten und Berechnen der Entfernung zwischen 2 Punkten, der Fahrzeit (mit dem Auto) zwischen 2 Punkten sowie der Entfernung.
 
 # Configuration
 
-Sobald das Plugin über den Markt installiert und aktiviert ist, greifen Sie über auf die Seite des Geolocation-Plugins zu :
+Sobald das Plugin über den Markt installiert und aktiviert ist, können Sie über das Menü Plugins → Organisation → Geoloc auf die Seite Geolocation-Plugin zugreifen.
 
-![geoloc28](../images/geoloc28.jpg)
 
 Hier finden Sie alle Ihre Geoloc-Geräte :
 
 ![geoloc29](../images/geoloc29.jpg)
 
-> **Spitze**
->
-> Wie an vielen Stellen in Jeedom wird durch Platzieren der Maus ganz links ein Schnellzugriffsmenü angezeigt (Sie können es in Ihrem Profil immer sichtbar lassen).
-
-Sobald ein Gerät ausgewählt ist, erhalten Sie :
+Sobald ein Gerät ausgewählt wurde, gelangen Sie auf diese Seite :
 
 ![geoloc screenshot1](../images/geoloc_screenshot1.JPG)
 
-L'onglet « Général » permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité. L'onglet « Commande » permet de rajouter les informations que nous voulons obtenir. Sobald die Ausrüstung hinzugefügt wurde, haben wir die Wahl zwischen drei Arten von Steuerungen : fest, dynamisch und distanziert.
+L'onglet «Equipement» permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité. L'onglet «Commandes» permet d'ajouter les informations que nous voulons obtenir. Sobald die Ausrüstung hinzugefügt wurde, haben wir die Wahl zwischen drei Arten von Steuerungen : fest, dynamisch und distanziert.
 
 ![geoloc screenshot2](../images/geoloc_screenshot2.jpg)
 
 ## Fixe
 
-Stellt einen Punkt mit Koordinaten dar, die sich nicht ändern. Zum Beispiel die Koordinaten Ihres Hauses, Ihrer Arbeit ... Sie müssen nur die Koordinaten im Formular notieren : Breite, Länge.
+Stellt einen Punkt mit Koordinaten dar, die sich nicht ändern. Zum Beispiel die Koordinaten Ihres Hauses, Ihrer Arbeit usw. Sie müssen nur die Koordinaten in das Formular eintragen : ``Latitude,Longitude``.
 
 ![geoloc3](../images/geoloc3.jpg)
 

@@ -1,32 +1,29 @@
 # Plug-in Geoloc
 
+# Description
+
 Plug-in para gerenciar coordenadas e calcular a distância entre 2 pontos, tempo de viagem (de carro) entre 2 pontos e distância.
 
 # Configuration
 
-Depois que o plug-in é instalado e ativado no Market, você acessa a página do plug-in de geolocalização por :
+Assim que o plugin for instalado e ativado no Market, você pode acessar a página do plugin de geolocalização através do menu Plugins → Organização → Geoloc.
 
-![geoloc28](../images/geoloc28.jpg)
 
 Aqui você encontra todo o seu equipamento Geoloc :
 
 ![geoloc29](../images/geoloc29.jpg)
 
-> **Dica**
->
-> Como em muitos lugares do Jeedom, posicionar o mouse à extrema esquerda exibe um menu de acesso rápido (você pode, a partir do seu perfil, deixá-lo sempre visível).
-
-Depois que um equipamento é selecionado, você obtém :
+Depois de selecionar um item de equipamento, você chega nesta página :
 
 ![geoloc screenshot1](../images/geoloc_screenshot1.JPG)
 
-L'onglet « Général » permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité. L'onglet « Commande » permet de rajouter les informations que nous voulons obtenir. Após a adição do equipamento, temos a opção entre três tipos de controles : fixo, dinâmico e à distância.
+L'onglet «Equipement» permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité. L'onglet «Commandes» permet d'ajouter les informations que nous voulons obtenir. Após a adição do equipamento, temos a opção entre três tipos de controles : fixo, dinâmico e à distância.
 
 ![geoloc screenshot2](../images/geoloc_screenshot2.jpg)
 
 ## Fixe
 
-Representa um ponto com coordenadas que não mudam. Por exemplo, as coordenadas de sua casa, seu trabalho ... Você só precisa anotar as coordenadas no formulário : Latitude, Longitude.
+Representa um ponto com coordenadas que não mudam. Por exemplo, as coordenadas da sua casa, do seu trabalho, etc ... Basta anotar as coordenadas no formulário : ``Latitude,Longitude``.
 
 ![geoloc3](../images/geoloc3.jpg)
 

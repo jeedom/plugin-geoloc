@@ -1,30 +1,41 @@
 {
+    "plugins\/geoloc\/plugin_info\/configuration.php": {
+        "Clé API Google \"Directions API": ""
+    },
     "plugins\/geoloc\/desktop\/php\/geoloc.php": {
         "401 - Accès non autorisé": "401-不正アクセス",
-        "Mes équipements de géolocalisation": "",
+        "Gestion": "管理",
         "Ajouter": "加えます",
+        "Configuration": "コンフィギュレーション",
+        "Mes équipements de géolocalisation": "",
+        "Rechercher": "検索",
         "Configuration avancée": "高度な構成",
         "Dupliquer": "重複",
         "Sauvegarder": "セーブ",
         "Supprimer": "取り除きます",
         "Equipement": "設備",
         "Commandes": "コマンド",
+        "Général": "コモン",
         "Nom de l'équipement": "機器の名前",
         "Objet parent": "親オブジェクト",
         "Aucun": "何でもありません",
+        "Catégorie": "カテゴリ",
+        "Options": "オプション",
         "Activer": "アクティブ",
         "Visible": "目に見えます",
+        "Paramètres": "設定",
         "Appareil Ios": "",
         "Login iCloud": "",
         "Password iCloud": "",
         "Device": "",
         "Charger les devices": "",
         "Ne pas utiliser le widget spécifique": "",
-        "Cliquez-ici pour retrouver vos coordonnées": "",
+        "Cliquez-ici pour retrouver vos coordonnées GPS": "",
+        "Ajouter une commande": "コマンドの追加",
+        "Id": "",
         "Nom": "表題",
         "Type": "タイプ",
-        "Options": "オプション",
-        "Paramètres": "設定"
+        "Action": "アクション"
     },
     "plugins\/geoloc\/desktop\/js\/geoloc.js": {
         "Fixe": "",
@@ -32,10 +43,10 @@
         "Distance": "",
         "Temps de trajet": "",
         "Distance trajet": "",
-        "Latitude,Longitude": "",
-        "Autoroutes": "",
         "Historiser": "Historicize",
         "Afficher": "ディスプレイ",
+        "Latitude,Longitude": "",
+        "Autoroutes": "",
         "Tester": "テスト"
     },
     "plugins\/geoloc\/core\/ajax\/geoloc.ajax.php": {
@@ -57,6 +68,6 @@
         "Cette commande de géoloc n\\'est pas dynamique : ": ""
     },
     "info.json": {
-        "Plugin permettant à Jeedom de gérer la géolocalisation. (Uniquement pour Android via l'application Tasker)": ""
+        "Plugin permettant à Jeedom de gérer la géolocalisation (Uniquement pour Android via l'application Tasker).": ""
     }
 }

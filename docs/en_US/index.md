@@ -1,32 +1,29 @@
 # Geoloc plugin
 
+# Description
+
 Plugin for managing coordinates and calculating distance between 2 points, travel time (by car) between 2 points as well as distance.
 
 # Configuration
 
-Once the plugin is installed and activated from the Market, you access the page of the Geolocation plugin by :
+Once the plugin is installed and activated from the Market, you can access the Geolocation plugin page through the Plugins → Organization → Geoloc menu.
 
-![geoloc28](../images/geoloc28.jpg)
 
 Here you find all your Geoloc equipment :
 
 ![geoloc29](../images/geoloc29.jpg)
 
-> **Tip**
->
-> As in many places on Jeedom, placing the mouse to the far left brings up a quick access menu (you can from your profile always leave it visible).
-
-Once an equipment is selected you get :
+Once an equipment has been selected you will arrive on this page :
 
 ![geoloc screenshot1](../images/geoloc_screenshot1.JPG)
 
-L'onglet « Général » permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité. L'onglet « Commande » permet de rajouter les informations que nous voulons obtenir. Once the equipment has been added, we have the choice between three types of controls : fixed, dynamic and distance.
+L'onglet «Equipement» permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité. L'onglet «Commandes» permet d'ajouter les informations que nous voulons obtenir. Once the equipment has been added, we have the choice between three types of controls : fixed, dynamic and distance.
 
 ![geoloc screenshot2](../images/geoloc_screenshot2.jpg)
 
 ## Fixe
 
-Represents a point with coordinates that do not change. For example the coordinates of your home, your work ... You just have to note the coordinates in the form : Longitude latitude.
+Represents a point with coordinates that do not change. For example, the coordinates of your home, your work, etc ... You just have to write down the coordinates in the form : ``Latitude,Longitude``.
 
 ![geoloc3](../images/geoloc3.jpg)
 

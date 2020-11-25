@@ -1,32 +1,29 @@
 # Complemento Geoloc
 
+# Description
+
 Complemento para administrar coordenadas y calcular la distancia entre 2 puntos, el tiempo de viaje (en automóvil) entre 2 puntos y la distancia.
 
 # Configuration
 
-Una vez que el complemento está instalado y activado desde Market, puede acceder a la página del complemento Geolocalización :
+Una vez que el complemento está instalado y activado desde Market, puede acceder a la página del complemento de geolocalización a través del menú Complementos → Organización → Geoloc.
 
-![geoloc28](../images/geoloc28.jpg)
 
 Aquí encontrarás todos tus equipos Geoloc :
 
 ![geoloc29](../images/geoloc29.jpg)
 
-> **Punta**
->
-> Como en muchos lugares de Jeedom, al colocar el mouse en el extremo izquierdo aparece un menú de acceso rápido (desde su perfil siempre puede dejarlo visible).
-
-Una vez que se selecciona un equipo, obtienes :
+Una vez que se haya seleccionado un equipo, llegará a esta página :
 
 ![geoloc screenshot1](../images/geoloc_screenshot1.JPG)
 
-L'onglet « Général » permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité. L'onglet « Commande » permet de rajouter les informations que nous voulons obtenir. Una vez que se ha agregado el equipo, tenemos la opción de elegir entre tres tipos de controles : fijo, dinámico y distancia.
+L'onglet «Equipement» permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité. L'onglet «Commandes» permet d'ajouter les informations que nous voulons obtenir. Una vez que se ha agregado el equipo, tenemos la opción de elegir entre tres tipos de controles : fijo, dinámico y distancia.
 
 ![geoloc screenshot2](../images/geoloc_screenshot2.jpg)
 
 ## Fixe
 
-Representa un punto con coordenadas que no cambian. Por ejemplo, las coordenadas de su hogar, su trabajo ... Solo tiene que anotar las coordenadas en el formulario : Latitud longitud.
+Representa un punto con coordenadas que no cambian. Por ejemplo, las coordenadas de tu casa, tu trabajo, etc ... solo tienes que anotar las coordenadas en el formulario : ``Latitude,Longitude``.
 
 ![geoloc3](../images/geoloc3.jpg)
 
