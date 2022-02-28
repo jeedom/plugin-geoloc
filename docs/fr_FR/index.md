@@ -3,21 +3,34 @@
 # Description
 
 Plugin permettant de gérer des coordonnées et le calcul de distance entre 2 points, le temps de trajet (en voiture) entre 2 points ainsi que la distance.
+Pour calculer le temps de trajet, il est necessaire d'avoir un compte developpeur Google, afin d'acceder a 'Directions API'. Sans compte Google, vous pourrez calculer la distance entre 2 points (distance a vol d'oiseau), mais pas le temps de trajet, ni la distance routiere.
+
 
 # Configuration
 
 Une fois le plugin installé et activé à partir du Market, on accède à la page du plugin Géolocalisation par le menu Plugins → Organisation → Geoloc.
 
+La premiere étape est de configurer la clé API permettant la connection a Google. Pour cela, dans la configuration du plugin, entrez votre clé API dans la zone prévue (Direction API). Ensuite, vous pouvez limiter le nombre de requêtes Google maximum que le plugin pourra réaliser chaque jour. Cela permet d’éviter une surfacturation. Par défaut, 1000 requêtes seront possible chaque jour (1000 requêtes = 5$, donc 150$ par mois environ au max, ce qui est en dessous des 200$ offert par Google chaque mois). Pour avoir un nombre illimité de requêtes par jour, il faut specifier la valeur 0.
+Si la clé API Google n'est pas spécifiée, le calcul des distances (trajet et temps de trajet) ne seront pas calcule. Uniquement la distance "vol d'oiseau" sera calculée.
+
+![geoloc30](../images/geoloc30.png)
 
 Vous retrouvez ici tous vos équipements Geoloc :
 
-![geoloc29](../images/geoloc29.jpg)
+![geoloc29](../images/geoloc31.png)
 
 Une fois un équipement sélectionné vous arrivez sur cette page :
 
-![geoloc screenshot1](../images/geoloc_screenshot1.JPG)
+![geoloc screenshot1](../images/geoloc32.png)
 
-L’onglet «Equipement» permet de choisir le nom de l’équipement, l’objet parent ainsi que son état et sa visibilité. L’onglet «Commandes» permet d'ajouter les informations que nous voulons obtenir. Une fois l’équipement ajouté, nous avons le choix entre trois types de commandes : fixe, dynamique et distance.
+L’onglet «Equipement» permet de choisir le nom de l’équipement, l’objet parent ainsi que son état et sa visibilité.
+
+Vous pouvez ensuite choisir si cet équipement doit être rafraîchi toutes les 5 minutes. Par exemple, ce n'est pas nécessaire pour les équipements fixes (Maison ou Travail (Ben) dans mon cas), mais c'est utilise pour les équipements mobiles (Mobile Ben).
+Pour activer le rafraîchissement, la case "Automatique (cron)" doit être cochée.
+Ensuite, vous pouvez configurer la validité du cache. Par défaut, le cache est valide 5 minutes (300 secondes). Le cache est utilise si l’équipement ne s'est pas déplacé, quelque soit la validité du cache, ou si les informations sont encore valides. Il est toujours possible de forcer un rafraîchissement des informations au travers de la fonction "refresh" de l’équipement. Dans ce cas, les informations concernant l’équipement sont vides du cache, les informations récupérées de Google, et insérées de nouveau dans le cache pour une utilisation ultérieure.
+
+
+L’onglet «Commandes» permet d'ajouter les informations que nous voulons obtenir. Une fois l’équipement ajouté, nous avons le choix entre trois types de commandes : fixe, dynamique et distance.
 
 ![geoloc screenshot2](../images/geoloc_screenshot2.jpg)
 

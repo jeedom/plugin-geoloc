@@ -501,7 +501,7 @@ class geolocCmd extends cmd {
 		//Mise à jour sur refresh pour actualisation des données de trajet
 		switch ($this->getLogicalId()) {
 			case 'refresh':
-				log::add('geoloc', 'debug', 'BR>> cmd->execute(refresh) / ' . $this->getHumanName() . ' options=' . count($_options));
+				log::add('geoloc', 'debug', 'cmd->execute(refresh) / ' . $this->getHumanName() . ' options=' . count($_options));
 				if (count($_options) > 0) {
 					// this is an "ondemand" refresh (options[0] = user, options[1] = 1)
 					$geoloc = $this->getEqLogic();
@@ -516,7 +516,7 @@ class geolocCmd extends cmd {
 						$result = $this->getConfiguration('coordinate');
 						return $result;
 					case 'distance':
-						log::add('geoloc', 'debug', 'BR>> cmd->execute(distance) / ' . $this->getHumanName());
+						log::add('geoloc', 'debug', 'cmd->execute(distance) / ' . $this->getHumanName());
 						$from = cmd::byId($this->getConfiguration('from'));
 						$to = cmd::byId($this->getConfiguration('to'));
 						if (!is_object($from)) {
@@ -538,7 +538,7 @@ class geolocCmd extends cmd {
 						}
 						return 0;
 					case 'travelTime':
-						log::add('geoloc', 'debug', 'BR>> cmd->execute(travelTime) / ' . $this->getHumanName());
+						log::add('geoloc', 'debug', 'cmd->execute(travelTime) / ' . $this->getHumanName());
 						$from = cmd::byId($this->getConfiguration('from'));
 						$to = cmd::byId($this->getConfiguration('to'));
 						try {
@@ -552,7 +552,7 @@ class geolocCmd extends cmd {
 							return 0;
 						}
 					case 'travelDistance':
-						log::add('geoloc', 'debug', 'BR>> cmd->execute(travelDistance) / ' . $this->getHumanName());
+						log::add('geoloc', 'debug', 'cmd->execute(travelDistance) / ' . $this->getHumanName());
 						$from = cmd::byId($this->getConfiguration('from'));
 						$to = cmd::byId($this->getConfiguration('to'));
 						try {

@@ -33,7 +33,7 @@ if (!isConnect()) {
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="col-sm-4 control-label">{{Nombre maximum de requêtes par jour (0 pour illimités)"}}</label>
+			<label class="col-sm-4 control-label">{{Nombre maximum de requêtes par jour (0 pour illimités)}}</label>
 			<div class="col-xs-11 col-sm-7">
 				<input class="configKey form-control" data-l1key="maxRequestPerDay" placeholder="1000"/>
 			</div>
