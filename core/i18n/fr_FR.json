@@ -1,6 +1,7 @@
 {
     "plugins\/geoloc\/plugin_info\/configuration.php": {
-        "Clé API Google \"Directions API": "Clé API Google \"Directions API"
+        "Clé API Google \"Directions API": "Clé API Google \"Directions API",
+        "Nombre maximum de requêtes par jour (0 pour illimités)": "Nombre maximum de requêtes par jour (0 pour illimités)"
     },
     "plugins\/geoloc\/desktop\/php\/geoloc.php": {
         "401 - Accès non autorisé": "401 - Accès non autorisé",
@@ -30,6 +31,9 @@
         "Device": "Device",
         "Charger les devices": "Charger les devices",
         "Ne pas utiliser le widget spécifique": "Ne pas utiliser le widget spécifique",
+        "Paramétrage pour le rafraîchissement automatique toutes les 5 minutes": "Paramétrage pour le rafraîchissement automatique toutes les 5 minutes",
+        "Automatique (cron)": "Automatique (cron)",
+        "Validité du cache": "Validité du cache",
         "Cliquez-ici pour retrouver vos coordonnées GPS": "Cliquez-ici pour retrouver vos coordonnées GPS",
         "Ajouter une commande": "Ajouter une commande",
         "Id": "Id",
@@ -55,9 +59,12 @@
     },
     "plugins\/geoloc\/core\/class\/geoloc.class.php": {
         "Inconnue": "Inconnue",
+        "Merci de specifier combien de temps les informations reçues de Google sont considérées comme valide.": "Merci de specifier combien de temps les informations reçues de Google sont considérées comme valide.",
         "Rafraichir": "Rafraichir",
+        "Il manque l\\'origine ou la destination pour ": "Il manque l\\'origine ou la destination pour ",
         "Impossible de trouver une route": "Impossible de trouver une route",
-        "Impossible de resoudre l\\'url": "Impossible de resoudre l\\'url",
+        "Impossible de résoudre l\\'url": "Impossible de résoudre l\\'url",
+        "Vous avez dépassé le quota de requêtes google par jour": "Vous avez dépassé le quota de requêtes google par jour",
         "Commande point de départ introuvable : ": "Commande point de départ introuvable : ",
         "Commande point d\\'arrivé introuvable : ": "Commande point d\\'arrivé introuvable : "
     },

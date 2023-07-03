@@ -1,6 +1,7 @@
 {
     "plugins\/geoloc\/plugin_info\/configuration.php": {
-        "Clé API Google \"Directions API": "Google API key \"Directions API"
+        "Clé API Google \"Directions API": "Google API key \"Directions API",
+        "Nombre maximum de requêtes par jour (0 pour illimités)": "Maximum number of requests per day (0 for unlimited)"
     },
     "plugins\/geoloc\/desktop\/php\/geoloc.php": {
         "401 - Accès non autorisé": "401 - Unauthorized access",
@@ -30,6 +31,9 @@
         "Device": "Device",
         "Charger les devices": "Load devices",
         "Ne pas utiliser le widget spécifique": "Do not use the specific widget",
+        "Paramétrage pour le rafraîchissement automatique toutes les 5 minutes": "Setting for automatic refresh every 5 minutes",
+        "Automatique (cron)": "Automatic (cron)",
+        "Validité du cache": "Cache validity",
         "Cliquez-ici pour retrouver vos coordonnées GPS": "Click here to find your GPS coordinates",
         "Ajouter une commande": "Add a command",
         "Id": "ID",
@@ -55,9 +59,12 @@
     },
     "plugins\/geoloc\/core\/class\/geoloc.class.php": {
         "Inconnue": "Unknown",
+        "Merci de specifier combien de temps les informations reçues de Google sont considérées comme valide.": "Please specify how long information received from Google is considered valid",
         "Rafraichir": "Refresh",
+        "Il manque l\\'origine ou la destination pour ": "The origin or destination is missing for",
         "Impossible de trouver une route": "Unable to find a route",
-        "Impossible de resoudre l\\'url": "Unable to resolve url",
+        "Impossible de résoudre l\\'url": "Unable to resolve url",
+        "Vous avez dépassé le quota de requêtes google par jour": "You have exceeded the quota of google queries per day",
         "Commande point de départ introuvable : ": "Starting point command not found:",
         "Commande point d\\'arrivé introuvable : ": "POI command not found:"
     },

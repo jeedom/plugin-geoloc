@@ -3,21 +3,34 @@
 # Description
 
 Plugin for managing coordinates and calculating distance between 2 points, travel time (by car) between 2 points as well as distance.
+To calculate travel time, it is necessary to have a Google developer account, in order to access 'Directions API'. Without a Google account, you can calculate the distance between 2 points (distance as the crow flies), but not the travel time or the road distance.
+
 
 # Configuration
 
 Once the plugin is installed and activated from the Market, you can access the Geolocation plugin page through the Plugins → Organization → Geoloc menu.
 
+The first step is to configure the API key allowing the connection to Google. To do this, in the plugin configuration, enter your API key in the area provided (Direction API). Then you can limit the maximum number of Google requests that the plugin will be able to perform each day. This avoids overcharging. By default, 1000 requests will be possible each day (1000 requests = $5, so approximately $150 per month at the most, which is below the $200 offered by Google each month). To have an unlimited number of requests per day, you must specify the value 0.
+If the Google API key is not specified, the distance calculation (route and travel time) will not be calculated. Only the distance "as the crow flies" will be calculated.
+
+![geoloc30](../images/geoloc30.png)
 
 Here you find all your Geoloc equipment :
 
-![geoloc29](../images/geoloc29.jpg)
+![geoloc29](../images/geoloc31.png)
 
 Once an equipment has been selected you will arrive on this page :
 
-![geoloc screenshot1](../images/geoloc_screenshot1.JPG)
+![geoloc screenshot1](../images/geoloc32.png)
 
-L'onglet «Equipement» permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité. L'onglet «Commandes» permet d'ajouter les informations que nous voulons obtenir. Once the equipment has been added, we have the choice between three types of controls : fixed, dynamic and distance.
+L'onglet «Equipement» permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité.
+
+You can then choose whether this equipment should be refreshed every 5 minutes. For example, it is not needed for fixed equipment (Home or Work (Ben) in my case), but it is used for mobile equipment (Mobile Ben).
+To activate the refresh, the box "Automatic (cron)" must be checked.
+Then you can configure cache validity. By default, the cache is valid for 5 minutes (300 seconds). The cache is used if the equipment has not moved, whatever the validity of the cache, or if the information is still valid. It is always possible to force a refresh of the information through the "refresh" function of the equipment. In this case, the information about the equipment is cleared from the cache, the information retrieved from Google, and inserted back into the cache for later use.
+
+
+L'onglet «Commandes» permet d'ajouter les informations que nous voulons obtenir. Once the equipment has been added, we have the choice between three types of controls : fixed, dynamic and distance.
 
 ![geoloc screenshot2](../images/geoloc_screenshot2.jpg)
 

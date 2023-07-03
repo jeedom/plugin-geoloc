@@ -3,21 +3,34 @@
 # Description
 
 Plug-in para gerenciar coordenadas e calcular a distância entre 2 pontos, tempo de viagem (de carro) entre 2 pontos e distância.
+Para calcular o tempo de viagem, é necessário ter uma conta de desenvolvedor do Google, para acessar 'Directions API'. Sem uma conta do Google, você pode calcular a distância entre 2 pontos (distância em linha reta), mas não o tempo de viagem ou a distância na estrada.
+
 
 # Configuration
 
 Assim que o plugin for instalado e ativado no Market, você pode acessar a página do plugin de geolocalização através do menu Plugins → Organização → Geoloc.
 
+O primeiro passo é configurar a chave API que permite a conexão com o Google. Para fazer isso, na configuração do plug-in, insira sua chave API na área fornecida (Direction API). Em seguida, você pode limitar o número máximo de solicitações do Google que o plug-in poderá realizar a cada dia. Isso evita sobrecarga. Por padrão, 1.000 solicitações serão possíveis a cada dia (1.000 solicitações = US$ 5, portanto, aproximadamente US$ 150 por mês no máximo, o que está abaixo dos US$ 200 oferecidos pelo Google a cada mês). Para ter um número ilimitado de solicitações por dia, você deve especificar o valor 0.
+Se a chave API do Google não for especificada, o cálculo da distância (rota e tempo de viagem) não será calculado. Apenas a distância "como o corvo voa" será calculada.
+
+![geoloc30](../images/geoloc30.png)
 
 Aqui você encontra todo o seu equipamento Geoloc :
 
-![geoloc29](../images/geoloc29.jpg)
+![geoloc29](../images/geoloc31.png)
 
 Depois de selecionar um item de equipamento, você chega nesta página :
 
-![geoloc screenshot1](../images/geoloc_screenshot1.JPG)
+![geoloc screenshot1](../images/geoloc32.png)
 
-L'onglet «Equipement» permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité. L'onglet «Commandes» permet d'ajouter les informations que nous voulons obtenir. Após a adição do equipamento, temos a opção entre três tipos de controles : fixo, dinâmico e à distância.
+L'onglet «Equipement» permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité.
+
+Você pode então escolher se este equipamento deve ser atualizado a cada 5 minutos. Por exemplo, não é necessário para equipamentos fixos (Casa ou Trabalho (Ben) no meu caso), mas é usado para equipamentos móveis (Mobile Ben).
+Para ativar a atualização, a caixa "Automático (cron)" deve ser marcada.
+Então você pode configurar a validade do cache. Por padrão, o cache é válido por 5 minutos (300 segundos). A cache é utilizada caso o equipamento não tenha movimentado, seja qual for a validade da cache, ou se a informação ainda for válida. Sempre é possível forçar uma atualização das informações através da função "refresh" do equipamento. Nesse caso, as informações sobre o equipamento são apagadas do cache, as informações recuperadas do Google e inseridas de volta no cache para uso posterior.
+
+
+L'onglet «Commandes» permet d'ajouter les informations que nous voulons obtenir. Após a adição do equipamento, temos a opção entre três tipos de controles : fixo, dinâmico e à distância.
 
 ![geoloc screenshot2](../images/geoloc_screenshot2.jpg)
 

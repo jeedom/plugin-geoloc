@@ -1,6 +1,7 @@
 {
     "plugins\/geoloc\/plugin_info\/configuration.php": {
-        "Clé API Google \"Directions API": "Chave de API do Google \"API de direções"
+        "Clé API Google \"Directions API": "Chave de API do Google \"API de direções",
+        "Nombre maximum de requêtes par jour (0 pour illimités)": "Número máximo de solicitações por dia (0 para ilimitado)"
     },
     "plugins\/geoloc\/desktop\/php\/geoloc.php": {
         "401 - Accès non autorisé": "401 - Acesso não autorizado",
@@ -30,6 +31,9 @@
         "Device": "Dispositivo",
         "Charger les devices": "Carregar dispositivos",
         "Ne pas utiliser le widget spécifique": "Não use o widget específico",
+        "Paramétrage pour le rafraîchissement automatique toutes les 5 minutes": "Configuração para atualização automática a cada 5 minutos",
+        "Automatique (cron)": "Automático (cron)",
+        "Validité du cache": "Validade do cache",
         "Cliquez-ici pour retrouver vos coordonnées GPS": "Clique aqui para encontrar suas coordenadas GPS",
         "Ajouter une commande": "Adicionar comando",
         "Id": "ID",
@@ -55,9 +59,12 @@
     },
     "plugins\/geoloc\/core\/class\/geoloc.class.php": {
         "Inconnue": "Desconhecido",
+        "Merci de specifier combien de temps les informations reçues de Google sont considérées comme valide.": "Especifique por quanto tempo as informações recebidas do Google são consideradas válidas",
         "Rafraichir": "Legal",
+        "Il manque l\\'origine ou la destination pour ": "A origem ou destino está faltando para",
         "Impossible de trouver une route": "Não foi possível encontrar uma rota",
-        "Impossible de resoudre l\\'url": "Não foi possível resolver o URL",
+        "Impossible de résoudre l\\'url": "Não foi possível resolver o URL",
+        "Vous avez dépassé le quota de requêtes google par jour": "Você excedeu a cota de consultas do Google por dia",
         "Commande point de départ introuvable : ": "Comando do ponto de partida não encontrado:",
         "Commande point d\\'arrivé introuvable : ": "Comando POI não encontrado:"
     },

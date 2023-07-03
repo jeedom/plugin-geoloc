@@ -3,21 +3,34 @@
 # Description
 
 Plugin zum Verwalten von Koordinaten und Berechnen der Entfernung zwischen 2 Punkten, der Fahrzeit (mit dem Auto) zwischen 2 Punkten sowie der Entfernung.
+Um die Reisezeit zu berechnen, ist ein Google-Entwicklerkonto erforderlich, um auf die „Directions API“ zugreifen zu können'. Ohne Google-Konto können Sie die Entfernung zwischen 2 Punkten (Entfernung in der Luftlinie) berechnen, nicht jedoch die Reisezeit oder die Straßenentfernung.
+
 
 # Configuration
 
 Sobald das Plugin über den Markt installiert und aktiviert ist, können Sie über das Menü Plugins → Organisation → Geoloc auf die Seite Geolocation-Plugin zugreifen.
 
+Der erste Schritt besteht darin, den API-Schlüssel zu konfigurieren, der die Verbindung zu Google ermöglicht. Geben Sie dazu in der Plugin-Konfiguration Ihren API-Schlüssel in den dafür vorgesehenen Bereich ein (Direction API). Anschließend können Sie die maximale Anzahl der Google-Anfragen begrenzen, die das Plugin täglich ausführen kann. Dadurch wird eine Überladung vermieden. Standardmäßig sind 1.000 Anfragen pro Tag möglich (1.000 Anfragen = 5 $, also höchstens etwa 150 $ pro Monat, was unter den 200 $ liegt, die Google jeden Monat anbietet). Um eine unbegrenzte Anzahl von Anfragen pro Tag zu haben, müssen Sie den Wert 0 angeben.
+Wenn der Google API-Schlüssel nicht angegeben ist, wird die Entfernungsberechnung (Route und Reisezeit) nicht berechnet. Es wird nur die Entfernung „Luftlinie“ berechnet.
+
+![geoloc30](../images/geoloc30.png)
 
 Hier finden Sie alle Ihre Geoloc-Geräte :
 
-![geoloc29](../images/geoloc29.jpg)
+![geoloc29](../images/geoloc31.png)
 
 Sobald ein Gerät ausgewählt wurde, gelangen Sie auf diese Seite :
 
-![geoloc screenshot1](../images/geoloc_screenshot1.JPG)
+![geoloc screenshot1](../images/geoloc32.png)
 
-L'onglet «Equipement» permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité. L'onglet «Commandes» permet d'ajouter les informations que nous voulons obtenir. Sobald die Ausrüstung hinzugefügt wurde, haben wir die Wahl zwischen drei Arten von Steuerungen : fest, dynamisch und distanziert.
+L'onglet «Equipement» permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité.
+
+Anschließend können Sie wählen, ob dieses Gerät alle 5 Minuten aktualisiert werden soll. Beispielsweise wird es nicht für feste Geräte (in meinem Fall Home or Work (Ben)) benötigt, sondern für mobile Geräte (Mobile Ben)).
+Um die Aktualisierung zu aktivieren, muss das Kästchen „Automatisch (cron)“ aktiviert werden.
+Anschließend können Sie die Cache-Gültigkeit konfigurieren. Standardmäßig ist der Cache 5 Minuten (300 Sekunden) gültig). Der Cache wird verwendet, wenn sich das Gerät nicht bewegt hat, unabhängig von der Gültigkeit des Caches, oder wenn die Informationen noch gültig sind. Über die „Refresh“-Funktion des Geräts ist es jederzeit möglich, eine Aktualisierung der Informationen zu erzwingen. In diesem Fall werden die Informationen über das Gerät aus dem Cache gelöscht, die Informationen von Google abgerufen und zur späteren Verwendung wieder in den Cache eingefügt.
+
+
+L'onglet «Commandes» permet d'ajouter les informations que nous voulons obtenir. Sobald die Ausrüstung hinzugefügt wurde, haben wir die Wahl zwischen drei Arten von Steuerungen : fest, dynamisch und distanziert.
 
 ![geoloc screenshot2](../images/geoloc_screenshot2.jpg)
 

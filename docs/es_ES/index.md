@@ -3,21 +3,34 @@
 # Description
 
 Complemento para administrar coordenadas y calcular la distancia entre 2 puntos, el tiempo de viaje (en automóvil) entre 2 puntos y la distancia.
+Para calcular el tiempo de viaje, es necesario tener una cuenta de desarrollador de Google, para poder acceder a 'API de indicaciones'. Sin una cuenta de Google, puede calcular la distancia entre 2 puntos (distancia en línea recta), pero no el tiempo de viaje o la distancia por carretera.
+
 
 # Configuration
 
 Una vez que el complemento está instalado y activado desde Market, puede acceder a la página del complemento de geolocalización a través del menú Complementos → Organización → Geoloc.
 
+El primer paso es configurar la clave API que permite la conexión con Google. Para hacer esto, en la configuración del complemento, ingrese su clave API en el área proporcionada (Dirección API). Luego, puede limitar la cantidad máxima de solicitudes de Google que el complemento podrá realizar cada día. Esto evita la sobrecarga. De forma predeterminada, se podrán realizar 1000 solicitudes cada día (1000 solicitudes = $ 5, por lo que aproximadamente $ 150 por mes como máximo, que está por debajo de los $ 200 que ofrece Google cada mes)). Para tener un número ilimitado de solicitudes por día, debe especificar el valor 0.
+Si no se especifica la clave API de Google, no se calculará el cálculo de la distancia (ruta y tiempo de viaje). Solo se calculará la distancia "a vuelo de pájaro".
+
+![geoloc30](../images/geoloc30.png)
 
 Aquí encontrarás todos tus equipos Geoloc :
 
-![geoloc29](../images/geoloc29.jpg)
+![geoloc29](../images/geoloc31.png)
 
 Una vez que se haya seleccionado un equipo, llegará a esta página :
 
-![geoloc screenshot1](../images/geoloc_screenshot1.JPG)
+![geoloc screenshot1](../images/geoloc32.png)
 
-L'onglet «Equipement» permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité. L'onglet «Commandes» permet d'ajouter les informations que nous voulons obtenir. Una vez que se ha agregado el equipo, tenemos la opción de elegir entre tres tipos de controles : fijo, dinámico y distancia.
+L'onglet «Equipement» permet de choisir le nom de l'équipement, l'objet parent ainsi que son état et sa visibilité.
+
+Luego puede elegir si este equipo debe actualizarse cada 5 minutos. Por ejemplo, no se necesita para equipos fijos (Home o Work (Ben) en mi caso), pero si para equipos móviles (Mobile Ben).
+Para activar el refresco se debe marcar la casilla "Automático (cron)".
+Luego puede configurar la validez de la memoria caché. De forma predeterminada, la caché es válida durante 5 minutos (300 segundos). La caché se utiliza si el equipo no se ha movido, sea cual sea la validez de la caché, o si la información sigue siendo válida. Siempre es posible forzar un refresco de la información a través de la función "refrescar" del equipo. En este caso, la información sobre el equipo se borra del caché, la información se recupera de Google y se vuelve a insertar en el caché para su uso posterior.
+
+
+L'onglet «Commandes» permet d'ajouter les informations que nous voulons obtenir. Una vez que se ha agregado el equipo, tenemos la opción de elegir entre tres tipos de controles : fijo, dinámico y distancia.
 
 ![geoloc screenshot2](../images/geoloc_screenshot2.jpg)
 
